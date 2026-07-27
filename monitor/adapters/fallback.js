@@ -5,23 +5,57 @@
 
 import * as cheerio from "cheerio";
 
-// --- Option 1: JSearch (RapidAPI). Free tier is small, so use it only for
-// agencies you can't scrape. Set RAPIDAPI_KEY in the environment. ---
+// --- Option 1: JSearch (RapidAPI). Needs a paid-ish key (RAPIDAPI_KEY) because
+// the free tier is tiny. JSearch aggregates Google-for-Jobs, so results span
+// Indeed, LinkedIn, ZipRecruiter, SimplyHired, Glassdoor, etc. ---
+const JS_HOST = "jsearch.p.rapidapi.com";
+const jsHeaders = key => ({ "X-RapidAPI-Key": key, "X-RapidAPI-Host": JS_HOST });
+
+async function jsQuery(key, query) {
+  const url = `https://${JS_HOST}/search?query=${encodeURIComponent(query)}&remote_jobs_only=true&num_pages=1`;
+  const r = await fetch(url, { headers: jsHeaders(key) });
+  if (!r.ok) return [];
+  const data = await r.json();
+  return data.data || [];
+}
+
+const mapJob = (agency, j) => ({
+  agency,
+  title: j.job_title,
+  location: j.job_city || j.job_state || j.job_country || "Remote",
+  description: (j.job_description || "").slice(0, 4000),
+  url: j.job_apply_link,
+  postedAt: j.job_posted_at_datetime_utc || null,
+  source: j.job_publisher || "JSearch",
+});
+
+// Per-agency: search the aggregator by company name across our role buckets.
 export async function jsearch(agency, _token, { name }) {
   const key = process.env.RAPIDAPI_KEY;
   if (!key) return [];
-  const q = encodeURIComponent(`${name} remote customer service OR data entry OR call center`);
-  const url = `https://jsearch.p.rapidapi.com/search?query=${q}&remote_jobs_only=true&num_pages=1`;
-  const r = await fetch(url, {
-    headers: { "X-RapidAPI-Key": key, "X-RapidAPI-Host": "jsearch.p.rapidapi.com" },
-  });
-  if (!r.ok) return [];
-  const data = await r.json();
-  return (data.data || []).map(j => ({
-    agency, title: j.job_title, location: j.job_city || j.job_country || "Remote",
-    description: (j.job_description || "").slice(0, 4000),
-    url: j.job_apply_link, postedAt: j.job_posted_at_datetime_utc || null, source: "JSearch",
-  }));
+  const q = `${name} remote (customer service OR chat OR data entry OR call center OR medical records OR member services OR sales OR collections)`;
+  return (await jsQuery(key, q)).map(j => mapJob(agency, j));
+}
+
+// --- "Job board" feature: broad aggregator sweep NOT tied to any one agency.
+// Runs a few role-bucket queries; each result is attributed to its real employer
+// (from JSearch) with the source publisher (Indeed/ZipRecruiter/SimplyHired/...). ---
+const AGGREGATOR_QUERIES = [
+  "remote customer service OR customer support OR help desk OR chat support",
+  "remote call center OR data entry OR medical records OR claims OR member services",
+  "remote sales representative OR appointment setter OR collections OR virtual assistant",
+];
+
+export async function aggregator() {
+  const key = process.env.RAPIDAPI_KEY;
+  if (!key) return [];
+  const out = [];
+  for (const q of AGGREGATOR_QUERIES) {
+    for (const j of await jsQuery(key, q)) {
+      out.push(mapJob(j.employer_name || "Job Board", j));
+    }
+  }
+  return out;
 }
 
 // --- Option 2: generic scrape. Grabs anchor tags that look like job links.

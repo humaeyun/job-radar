@@ -14,13 +14,17 @@ import fs from "node:fs/promises";
 import { ATS } from "./adapters/ats.js";
 import { haley } from "./adapters/haley.js";
 import { sitemap } from "./adapters/sitemap.js";
-import { jsearch, scrape } from "./adapters/fallback.js";
+import { jsearch, scrape, aggregator } from "./adapters/fallback.js";
 import { classify, jobKey } from "./config.js";
 import { notifyTelegram } from "./notify.js";
 
 const AGENCIES = "./data/agencies.json";
 const SEEN = "./data/seen.json";     // { [key]: firstSeenISO }
 const FEED = "./data/feed.json";     // rolling list the dashboard renders
+
+// The JSearch (paid) tier costs API quota, so it runs only a couple times a day
+// instead of every 30-min sweep. Free adapters (Haley/sitemap/scrape/ATS) always run.
+const PAID_EVERY_HOURS = 12;
 
 const readJSON = async (p, fallback) => { try { return JSON.parse(await fs.readFile(p, "utf8")); } catch { return fallback; } };
 
@@ -39,29 +43,46 @@ async function fetchAgency(a) {
 }
 
 async function main() {
-  const agencies = (await readJSON(AGENCIES, [])).filter(a => a.enabled);
+  const all = (await readJSON(AGENCIES, [])).filter(a => a.enabled);
   const seen = await readJSON(SEEN, {});
   const feed = await readJSON(FEED, []);
-  const now = new Date().toISOString();
+  const now = new Date();
+  const nowIso = now.toISOString();
+
+  // Free adapters run every sweep. The paid JSearch tier (per-agency queries +
+  // the job-board aggregator) runs only a couple times a day, or on a manual
+  // "Run workflow" click, so it stays within the API quota.
+  const manual = process.env.GITHUB_EVENT_NAME === "workflow_dispatch";
+  const runPaid = manual || (now.getUTCHours() % PAID_EVERY_HOURS === 0 && now.getUTCMinutes() < 30);
+
+  const agencies = runPaid ? all : all.filter(a => a.ats !== "jsearch");
 
   const fresh = [];
+  const consider = (job) => {
+    if (!job || !job.url || !job.title) return;
+    const tag = classify(job.title, job.location, job.description);
+    if (!tag) return;
+    const key = jobKey(job);
+    if (seen[key]) return;                    // already alerted on a prior sweep
+    seen[key] = nowIso;
+    fresh.push({
+      id: key, agency: job.agency, title: job.title,
+      category: tag.category, maybeHybrid: tag.maybeHybrid,
+      byod: tag.byod, equipment: tag.equipment,
+      location: job.location || "Remote", source: job.source,
+      url: job.url, postedAt: job.postedAt, firstSeen: nowIso,
+    });
+  };
+
   for (const a of agencies) {
     const raw = await fetchAgency(a);
-    for (const job of raw) {
-      const tag = classify(job.title, job.location, job.description);
-      if (!tag) continue;
-      const key = jobKey(job);
-      if (seen[key]) continue;               // already alerted on a prior sweep
-      seen[key] = now;
-      const entry = {
-        id: key, agency: job.agency, title: job.title,
-        category: tag.category, maybeHybrid: tag.maybeHybrid,
-        byod: tag.byod, equipment: tag.equipment,
-        location: job.location || "Remote", source: job.source,
-        url: job.url, postedAt: job.postedAt, firstSeen: now,
-      };
-      fresh.push(entry);
-    }
+    for (const job of raw) consider(job);
+  }
+
+  // Job-board aggregator (Indeed/ZipRecruiter/SimplyHired via JSearch).
+  if (runPaid) {
+    try { for (const job of await aggregator()) consider(job); }
+    catch (e) { console.warn(`  ! aggregator: ${e.message}`); }
   }
 
   // Newest first; keep the feed to the last 500 so the file stays small.
@@ -70,7 +91,8 @@ async function main() {
   await fs.writeFile(SEEN, JSON.stringify(seen, null, 0));
   await fs.writeFile(FEED, JSON.stringify(merged, null, 2));
 
-  console.log(`Sweep done: ${fresh.length} new remote role(s) across ${agencies.length} agencies.`);
+  const tier = runPaid ? "free + paid tier (incl. job boards)" : "free tier";
+  console.log(`Sweep done: ${fresh.length} new remote role(s) across ${agencies.length} agencies [${tier}].`);
   if (fresh.length) await notifyTelegram(fresh);
 }
 

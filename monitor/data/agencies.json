@@ -15,7 +15,7 @@
     "careersUrl": "https://www.jobsource.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 3,
@@ -24,7 +24,7 @@
     "careersUrl": "https://www.dawsoncareers.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 4,
@@ -51,7 +51,7 @@
     "careersUrl": "https://www.cornerstonestaffing.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 7,
@@ -60,7 +60,7 @@
     "careersUrl": "https://www.scionstaffing.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 8,
@@ -69,7 +69,7 @@
     "careersUrl": "https://www.hireparamount.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 9,
@@ -78,7 +78,7 @@
     "careersUrl": "https://www.allegiancestaffing.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "careersUrl": "https://www.integritystaffing.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 11,
@@ -96,7 +96,7 @@
     "careersUrl": "https://www.zempleo.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 12,
@@ -105,7 +105,7 @@
     "careersUrl": "https://www.ultimatestaffing.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 13,
@@ -114,7 +114,7 @@
     "careersUrl": "https://www.ledgent.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 14,
@@ -123,7 +123,7 @@
     "careersUrl": "https://www.adamsmartingroup.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 15,
@@ -132,7 +132,7 @@
     "careersUrl": "https://www.appleone.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 16,
@@ -141,7 +141,7 @@
     "careersUrl": "https://www.nelsonconnects.com/job-seekers",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 17,
@@ -150,7 +150,7 @@
     "careersUrl": "https://www.spherion.com/job-seekers/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 18,
@@ -159,7 +159,7 @@
     "careersUrl": "https://www.remedystaffing.com/jobs/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 19,
@@ -168,7 +168,7 @@
     "careersUrl": "https://www.westaff.com/jobs/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 20,
@@ -177,7 +177,7 @@
     "careersUrl": "https://staffmark.com/job-seekers/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 21,
@@ -195,7 +195,7 @@
     "careersUrl": "https://www.atriumstaff.com/job-seekers",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 23,
@@ -204,7 +204,7 @@
     "careersUrl": "https://www.careergroupcompanies.com/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 24,
@@ -213,7 +213,7 @@
     "careersUrl": "https://www.findclarity.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 25,
@@ -231,7 +231,7 @@
     "careersUrl": "https://www.noorstaffing.com/candidates/apply-for-job/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 27,
@@ -240,7 +240,7 @@
     "careersUrl": "https://www.atlanticgrp.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 28,
@@ -249,7 +249,7 @@
     "careersUrl": "https://greenkeyllc.com/jobs/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 29,
@@ -267,7 +267,7 @@
     "careersUrl": "https://www.tandymgroup.com/careers/?_gl=1*oczpi0*_gcl_au*Mjk0NTQ5NTA4LjE3NTE5MjM0NDk.*_ga*MTUwMDIwMjI2MC4xNzUxOTIzNDQ5*_ga_350H3NX1TP*czE3NTczNjU0MTkkbzQ5JGcxJHQxNzU3MzY1NTA2JGo0MCRsMCRoMA..&_ga=2.126612237.1431459667.1757365419-1500202260.1751923449#/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 31,
@@ -285,7 +285,7 @@
     "careersUrl": "https://www.mitchellmartin.com/careers/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 33,
@@ -294,7 +294,7 @@
     "careersUrl": "https://www2.jobdiva.com/portal/?a=nyjdnw8rs3eurnjvdink7d2fl4mnyy0b22tjlzi328snknlo1pzpk0ue533mvm7r&compid=2#/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 34,
@@ -303,7 +303,7 @@
     "careersUrl": "https://www.iconma.com/career",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 35,
@@ -312,7 +312,7 @@
     "careersUrl": "https://www.snicompanies.com/jobs/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 36,
@@ -330,7 +330,7 @@
     "careersUrl": "https://www.thelasallenetwork.com/job-search/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 38,
@@ -339,7 +339,7 @@
     "careersUrl": "https://www.advancedresources.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 39,
@@ -348,7 +348,7 @@
     "careersUrl": "https://www.thelarkogroup.com/submit-direct-hire-job-order-form/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 40,
@@ -357,7 +357,7 @@
     "careersUrl": "https://www.swoonstaffing.com/jobs/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 41,
@@ -366,7 +366,7 @@
     "careersUrl": "https://www.24seventalent.com/jobs/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 42,
@@ -402,7 +402,7 @@
     "careersUrl": "https://murrayresources.com/jobs-in-houston/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 46,
@@ -411,7 +411,7 @@
     "careersUrl": "https://www.thehtgroup.com/find-a-job/commercial-construction-jobs/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 47,
@@ -438,7 +438,7 @@
     "careersUrl": "https://twitter.com/jobpeeps/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 50,
@@ -447,7 +447,7 @@
     "careersUrl": "https://www.executeam.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 51,
@@ -465,7 +465,7 @@
     "careersUrl": "https://www.trctalent.com/job_seekers/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 53,
@@ -474,7 +474,7 @@
     "careersUrl": "https://hiredynamics.com/about-us/internal-careers/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 54,
@@ -483,7 +483,7 @@
     "careersUrl": "https://jobs.bosstaff.com/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 55,
@@ -501,7 +501,7 @@
     "careersUrl": "http://jobs.getcrg.com/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 57,
@@ -519,7 +519,7 @@
     "careersUrl": "https://www1.jobdiva.com/portal/?a=gljdnwq43svrf8k4hns2e9ghgd6ay106bdll5fi4d4yyqqzsfts4ytud3ffuqs38&compid=0#/login",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 59,
@@ -537,7 +537,7 @@
     "careersUrl": "https://www.fgp.com/job-search/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 61,
@@ -555,7 +555,7 @@
     "careersUrl": "https://www.sparksgroupinc.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 63,
@@ -573,7 +573,7 @@
     "careersUrl": "https://www.flexprofessionalsllc.com/job-seekers/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 65,
@@ -591,7 +591,7 @@
     "careersUrl": "https://themomproject.com/careers",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 67,
@@ -609,7 +609,7 @@
     "careersUrl": "https://careers.jacobsononline.com/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 69,
@@ -627,7 +627,7 @@
     "careersUrl": "https://questpro.com/tech-it-professional-jobs/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 71,
@@ -654,7 +654,7 @@
     "careersUrl": "https://www.versique.com/jobs/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 74,
@@ -663,7 +663,7 @@
     "careersUrl": "https://www.awardstaffing.com/about/recruiting-careers/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 75,
@@ -681,7 +681,7 @@
     "careersUrl": "https://www.seekcareers.com/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 77,
@@ -690,7 +690,7 @@
     "careersUrl": "https://www.qtigroup.com/find-a-job",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 78,
@@ -699,7 +699,7 @@
     "careersUrl": "https://www.trilliumstaffing.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 79,
@@ -717,7 +717,7 @@
     "careersUrl": "https://thatsgoodhr.com/jobs/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 81,
@@ -726,7 +726,7 @@
     "careersUrl": "https://www.celebritystaff.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 82,
@@ -735,7 +735,7 @@
     "careersUrl": "https://www.hemphillsearch.com/job-openings",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 83,
@@ -744,7 +744,7 @@
     "careersUrl": "https://www.aureusgroup.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 84,
@@ -753,7 +753,7 @@
     "careersUrl": "https://www.trnstaffing.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 85,
@@ -762,7 +762,7 @@
     "careersUrl": "https://www.acloche.com/jobs-now-hiring/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 86,
@@ -780,7 +780,7 @@
     "careersUrl": "https://www.snelling.com/jobs/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 88,
@@ -789,7 +789,7 @@
     "careersUrl": "https://www.psgstaffing.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 89,
@@ -798,7 +798,7 @@
     "careersUrl": "https://www.hollisterstaff.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 90,
@@ -807,7 +807,7 @@
     "careersUrl": "https://masisstaffing.com/jobs",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 91,
@@ -816,7 +816,7 @@
     "careersUrl": "https://www.completestaffingsolutions.com/job-request",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 92,
@@ -825,7 +825,7 @@
     "careersUrl": "https://www.monroestaffing.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 93,
@@ -852,7 +852,7 @@
     "careersUrl": "https://www.medixteam.com/blog/category/career-tips/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 96,
@@ -861,7 +861,7 @@
     "careersUrl": "https://www.healthcaresupport.com/jobs",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 97,
@@ -870,7 +870,7 @@
     "careersUrl": "https://www.csicompanies.com/job-seekers",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 98,
@@ -879,7 +879,7 @@
     "careersUrl": "https://www.favoritestaffing.com/job-posting",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 99,
@@ -888,7 +888,7 @@
     "careersUrl": "https://pacestaffing.com/job-seekers/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 100,
@@ -897,7 +897,7 @@
     "careersUrl": "https://verstela.com/job-seekers",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 101,
@@ -924,7 +924,7 @@
     "careersUrl": "https://www.bolywelch.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 104,
@@ -933,7 +933,7 @@
     "careersUrl": "https://emeraldstaffing.com/jobs/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 105,
@@ -951,7 +951,7 @@
     "careersUrl": "https://www.premiertalentpartners.com/jobs",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 107,
@@ -978,7 +978,7 @@
     "careersUrl": "https://www.kimco.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 110,
@@ -987,7 +987,7 @@
     "careersUrl": "https://www.eastridge.com/careers",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 111,
@@ -996,7 +996,7 @@
     "careersUrl": "https://www.barringtonstaffing.com/jobs-thousand-oaks/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 112,
@@ -1005,7 +1005,7 @@
     "careersUrl": "https://www.tricomquest.com/contact-us/?select=Job%20Seeker",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 113,
@@ -1014,7 +1014,7 @@
     "careersUrl": "https://equivityva.com/about/careers/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 114,
@@ -1023,7 +1023,7 @@
     "careersUrl": "https://boldly.com/jobs/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 115,
@@ -1032,7 +1032,7 @@
     "careersUrl": "https://belaysolutions.com/jobs",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 116,
@@ -1041,7 +1041,7 @@
     "careersUrl": "https://www.zirtual.com/jobs/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 117,
@@ -1050,7 +1050,7 @@
     "careersUrl": "https://shiftingcareers.blogs.nytimes.com/2008/08/17/when-the-assistant-is-an-entrepreneur/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 118,
@@ -1059,7 +1059,7 @@
     "careersUrl": "https://www.virtualassistusa.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 119,
@@ -1068,7 +1068,7 @@
     "careersUrl": "https://laredotechnical.com/job-seeker/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 120,
@@ -1077,7 +1077,7 @@
     "careersUrl": "https://www.dawarconsulting.com/careers",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 121,
@@ -1086,7 +1086,7 @@
     "careersUrl": "https://www.jzanus.com/jobs/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 122,
@@ -1095,7 +1095,7 @@
     "careersUrl": "https://www.randstadusa.com/jobs/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 123,
@@ -1113,7 +1113,7 @@
     "careersUrl": "https://cvmaker.adecco.com/en-us/recommended-jobs?_gl=1*184z9m2*_ga*MTI4MDcyMjAzMi4xNzcyMTIwODQ2*_ga_ZY6KEMK0NQ*czE3NzI2NDY2OTEkbzgkZzEkdDE3NzI2NDY3MDIkajQ5JGwwJGgw*_gcl_au*MzAwNjAwMTkzLjE3NzIxMjA4NDY.",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 125,
@@ -1131,7 +1131,7 @@
     "careersUrl": "https://insightglobal.com/jobs/",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 127,
@@ -1140,7 +1140,7 @@
     "careersUrl": "https://jobs.aerotek.com/us/en?icid=jb_aero_n_gen_xx_rtk.cmsrchjb_xx_na_usa_20201002_66610422",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 128,
@@ -1149,7 +1149,7 @@
     "careersUrl": "https://www.manpower.com/en/for-job-seekers",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 129,
@@ -1158,7 +1158,7 @@
     "careersUrl": "https://www.kforce.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 130,
@@ -1167,7 +1167,7 @@
     "careersUrl": "https://careers.astoncarter.com/us/en",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 131,
@@ -1176,7 +1176,7 @@
     "careersUrl": "https://www.expresspros.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 132,
@@ -1185,7 +1185,7 @@
     "careersUrl": "https://www.volt.com",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   },
   {
     "id": 133,
@@ -1194,6 +1194,6 @@
     "careersUrl": "https://aquent.com/privacy-policy/job-scams",
     "ats": "jsearch",
     "atsToken": "",
-    "enabled": false
+    "enabled": true
   }
 ]
