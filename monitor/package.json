@@ -1,0 +1,13 @@
+{
+  "name": "remote-job-radar",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Monitors 121 US staffing agencies for new remote CSR/chat/data-entry/call-center/medical-records roles.",
+  "scripts": {
+    "scan": "node scan.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  }
+}

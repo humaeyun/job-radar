@@ -1,0 +1,1199 @@
+[
+  {
+    "id": 1,
+    "name": "Helpmates Staffing",
+    "site": "https://www.helpmates.com",
+    "careersUrl": "https://jobs.helpmates.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.helpmates.com",
+    "enabled": true
+  },
+  {
+    "id": 2,
+    "name": "JobSource",
+    "site": "https://www.jobsource.com",
+    "careersUrl": "https://www.jobsource.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 3,
+    "name": "Dawson",
+    "site": "https://www.dawsoncareers.com",
+    "careersUrl": "https://www.dawsoncareers.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 4,
+    "name": "Thrivas",
+    "site": "https://www.thrivas.com",
+    "careersUrl": "https://www.thrivas.com",
+    "ats": "sitemap",
+    "atsToken": "https://www.thrivas.com",
+    "enabled": true
+  },
+  {
+    "id": 5,
+    "name": "RemX",
+    "site": "https://www.remx.com",
+    "careersUrl": "https://remx.com/jobs",
+    "ats": "scrape",
+    "atsToken": "",
+    "enabled": true
+  },
+  {
+    "id": 6,
+    "name": "CornerStone Staffing",
+    "site": "https://www.cornerstonestaffing.com",
+    "careersUrl": "https://www.cornerstonestaffing.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 7,
+    "name": "Scion Staffing",
+    "site": "https://www.scionstaffing.com",
+    "careersUrl": "https://www.scionstaffing.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 8,
+    "name": "Paramount Staffing",
+    "site": "https://www.hireparamount.com",
+    "careersUrl": "https://www.hireparamount.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 9,
+    "name": "Allegiance Staffing",
+    "site": "https://www.allegiancestaffing.com",
+    "careersUrl": "https://www.allegiancestaffing.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 10,
+    "name": "Integrity Staffing Solutions",
+    "site": "https://www.integritystaffing.com",
+    "careersUrl": "https://www.integritystaffing.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 11,
+    "name": "Zempleo",
+    "site": "https://www.zempleo.com",
+    "careersUrl": "https://www.zempleo.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 12,
+    "name": "Ultimate Staffing",
+    "site": "https://www.ultimatestaffing.com",
+    "careersUrl": "https://www.ultimatestaffing.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 13,
+    "name": "Ledgent Finance & Accounting",
+    "site": "https://www.ledgent.com",
+    "careersUrl": "https://www.ledgent.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 14,
+    "name": "Adams & Martin Group",
+    "site": "https://www.adamsmartingroup.com",
+    "careersUrl": "https://www.adamsmartingroup.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 15,
+    "name": "AppleOne",
+    "site": "https://www.appleone.com",
+    "careersUrl": "https://www.appleone.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 16,
+    "name": "Nelson Connects",
+    "site": "https://www.nelsonconnects.com",
+    "careersUrl": "https://www.nelsonconnects.com/job-seekers",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 17,
+    "name": "Spherion",
+    "site": "https://www.spherion.com",
+    "careersUrl": "https://www.spherion.com/job-seekers/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 18,
+    "name": "Remedy Intelligent Staffing",
+    "site": "https://www.remedystaffing.com",
+    "careersUrl": "https://www.remedystaffing.com/jobs/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 19,
+    "name": "Westaff",
+    "site": "https://www.westaff.com",
+    "careersUrl": "https://www.westaff.com/jobs/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 20,
+    "name": "Staffmark",
+    "site": "https://www.staffmark.com",
+    "careersUrl": "https://staffmark.com/job-seekers/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 21,
+    "name": "PrideStaff",
+    "site": "https://www.pridestaff.com",
+    "careersUrl": "https://www.pridestaff.com",
+    "ats": "sitemap",
+    "atsToken": "https://www.pridestaff.com",
+    "enabled": true
+  },
+  {
+    "id": 22,
+    "name": "Atrium",
+    "site": "https://www.atriumstaff.com",
+    "careersUrl": "https://www.atriumstaff.com/job-seekers",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 23,
+    "name": "Career Group Companies",
+    "site": "https://www.careergroupcompanies.com",
+    "careersUrl": "https://www.careergroupcompanies.com/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 24,
+    "name": "Clarity Recruiting",
+    "site": "https://www.findclarity.com",
+    "careersUrl": "https://www.findclarity.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 25,
+    "name": "Taylor Hodson Staffing",
+    "site": "https://www.taylorhodson.com",
+    "careersUrl": "https://jobs.taylorhodson.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.taylorhodson.com",
+    "enabled": true
+  },
+  {
+    "id": 26,
+    "name": "Noor Staffing Group",
+    "site": "https://www.noorstaffing.com",
+    "careersUrl": "https://www.noorstaffing.com/candidates/apply-for-job/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 27,
+    "name": "Atlantic Group",
+    "site": "https://www.atlanticgrp.com",
+    "careersUrl": "https://www.atlanticgrp.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 28,
+    "name": "Green Key Resources",
+    "site": "https://www.greenkeyllc.com",
+    "careersUrl": "https://greenkeyllc.com/jobs/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 29,
+    "name": "Phaxis",
+    "site": "https://www.phaxis.com",
+    "careersUrl": "https://jobs.phaxis.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.phaxis.com",
+    "enabled": true
+  },
+  {
+    "id": 30,
+    "name": "Tandym Group",
+    "site": "https://www.tandymgroup.com",
+    "careersUrl": "https://www.tandymgroup.com/careers/?_gl=1*oczpi0*_gcl_au*Mjk0NTQ5NTA4LjE3NTE5MjM0NDk.*_ga*MTUwMDIwMjI2MC4xNzUxOTIzNDQ5*_ga_350H3NX1TP*czE3NTczNjU0MTkkbzQ5JGcxJHQxNzU3MzY1NTA2JGo0MCRsMCRoMA..&_ga=2.126612237.1431459667.1757365419-1500202260.1751923449#/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 31,
+    "name": "Lloyd Staffing",
+    "site": "https://www.lloydstaffing.com",
+    "careersUrl": "https://jobs.lloydstaffing.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.lloydstaffing.com",
+    "enabled": true
+  },
+  {
+    "id": 32,
+    "name": "Mitchell Martin",
+    "site": "https://www.mitchellmartin.com",
+    "careersUrl": "https://www.mitchellmartin.com/careers/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 33,
+    "name": "Russell Tobin",
+    "site": "https://www.russelltobin.com",
+    "careersUrl": "https://www2.jobdiva.com/portal/?a=nyjdnw8rs3eurnjvdink7d2fl4mnyy0b22tjlzi328snknlo1pzpk0ue533mvm7r&compid=2#/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 34,
+    "name": "ICONMA",
+    "site": "https://www.iconma.com",
+    "careersUrl": "https://www.iconma.com/career",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 35,
+    "name": "SNI Companies",
+    "site": "https://www.snicompanies.com",
+    "careersUrl": "https://www.snicompanies.com/jobs/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 36,
+    "name": "Creative Financial Staffing",
+    "site": "https://www.cfstaffing.com",
+    "careersUrl": "https://www.cfstaffing.com",
+    "ats": "sitemap",
+    "atsToken": "https://www.cfstaffing.com",
+    "enabled": true
+  },
+  {
+    "id": 37,
+    "name": "LaSalle Network",
+    "site": "https://www.thelasallenetwork.com",
+    "careersUrl": "https://www.thelasallenetwork.com/job-search/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 38,
+    "name": "Advanced Resources",
+    "site": "https://www.advancedresources.com",
+    "careersUrl": "https://www.advancedresources.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 39,
+    "name": "The Larko Group",
+    "site": "https://www.thelarkogroup.com",
+    "careersUrl": "https://www.thelarkogroup.com/submit-direct-hire-job-order-form/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 40,
+    "name": "Swoon",
+    "site": "https://www.swoonstaffing.com",
+    "careersUrl": "https://www.swoonstaffing.com/jobs/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 41,
+    "name": "24 Seven Talent",
+    "site": "https://www.24seventalent.com",
+    "careersUrl": "https://www.24seventalent.com/jobs/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 42,
+    "name": "Frontline Source Group",
+    "site": "https://www.frontlinesourcegroup.com",
+    "careersUrl": "https://jobs.frontlinesourcegroup.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.frontlinesourcegroup.com",
+    "enabled": true
+  },
+  {
+    "id": 43,
+    "name": "Burnett Specialists",
+    "site": "https://www.burnettspecialists.com",
+    "careersUrl": "https://jobs.burnettspecialists.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.burnettspecialists.com",
+    "enabled": true
+  },
+  {
+    "id": 44,
+    "name": "Meador Staffing Services",
+    "site": "https://www.meador.com",
+    "careersUrl": "",
+    "ats": "greenhouse",
+    "atsToken": "openwork",
+    "enabled": true
+  },
+  {
+    "id": 45,
+    "name": "Murray Resources",
+    "site": "https://www.murrayresources.com",
+    "careersUrl": "https://murrayresources.com/jobs-in-houston/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 46,
+    "name": "The HT Group",
+    "site": "https://www.thehtgroup.com",
+    "careersUrl": "https://www.thehtgroup.com/find-a-job/commercial-construction-jobs/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 47,
+    "name": "Hire Priority",
+    "site": "https://www.hirepriority.com",
+    "careersUrl": "https://jobs.hirepriority.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.hirepriority.com",
+    "enabled": true
+  },
+  {
+    "id": 48,
+    "name": "Imprimis Group",
+    "site": "https://www.imprimis.com",
+    "careersUrl": "https://jobs.imprimis.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.imprimis.com",
+    "enabled": true
+  },
+  {
+    "id": 49,
+    "name": "Delta Dallas",
+    "site": "https://www.deltadallas.com",
+    "careersUrl": "https://twitter.com/jobpeeps/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 50,
+    "name": "ExecuTeam Staffing",
+    "site": "https://www.executeam.com",
+    "careersUrl": "https://www.executeam.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 51,
+    "name": "Team1Medical",
+    "site": "https://www.team1medical.com",
+    "careersUrl": "https://jobs.team1medical.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.team1medical.com",
+    "enabled": true
+  },
+  {
+    "id": 52,
+    "name": "TRC Staffing",
+    "site": "https://www.trcstaffing.com",
+    "careersUrl": "https://www.trctalent.com/job_seekers/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 53,
+    "name": "Hire Dynamics",
+    "site": "https://www.hiredynamics.com",
+    "careersUrl": "https://hiredynamics.com/about-us/internal-careers/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 54,
+    "name": "BOS Staffing",
+    "site": "https://www.bosstaff.com",
+    "careersUrl": "https://jobs.bosstaff.com/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 55,
+    "name": "Greene Resources",
+    "site": "https://www.greeneresources.com",
+    "careersUrl": "https://www.greeneresources.com",
+    "ats": "sitemap",
+    "atsToken": "https://www.greeneresources.com",
+    "enabled": true
+  },
+  {
+    "id": 56,
+    "name": "CRG",
+    "site": "https://www.getcrg.com",
+    "careersUrl": "http://jobs.getcrg.com/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 57,
+    "name": "AccruePartners",
+    "site": "https://www.accruepartners.com",
+    "careersUrl": "https://www.accruepartners.com",
+    "ats": "sitemap",
+    "atsToken": "https://www.accruepartners.com",
+    "enabled": true
+  },
+  {
+    "id": 58,
+    "name": "TalentBridge",
+    "site": "https://www.talentbridge.com",
+    "careersUrl": "https://www1.jobdiva.com/portal/?a=gljdnwq43svrf8k4hns2e9ghgd6ay106bdll5fi4d4yyqqzsfts4ytud3ffuqs38&compid=0#/login",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 59,
+    "name": "Debbie's Staffing",
+    "site": "https://www.debbiesstaffing.com",
+    "careersUrl": "https://jobs.debbiesstaffing.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.debbiesstaffing.com",
+    "enabled": true
+  },
+  {
+    "id": 60,
+    "name": "Find Great People",
+    "site": "https://www.fgp.com",
+    "careersUrl": "https://www.fgp.com/job-search/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 61,
+    "name": "Godshall Recruiting",
+    "site": "https://www.godshall.com",
+    "careersUrl": "https://jobs.godshall.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.godshall.com",
+    "enabled": true
+  },
+  {
+    "id": 62,
+    "name": "Sparks Group",
+    "site": "https://www.sparksgroupinc.com",
+    "careersUrl": "https://www.sparksgroupinc.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 63,
+    "name": "NRI Staffing",
+    "site": "https://www.nri-staffing.com",
+    "careersUrl": "https://jobs.nri-staffing.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.nri-staffing.com",
+    "enabled": true
+  },
+  {
+    "id": 64,
+    "name": "FlexProfessionals",
+    "site": "https://www.flexprofessionalsllc.com",
+    "careersUrl": "https://www.flexprofessionalsllc.com/job-seekers/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 65,
+    "name": "Corps Team",
+    "site": "https://www.corpsteam.com",
+    "careersUrl": "https://jobs.corpsteam.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.corpsteam.com",
+    "enabled": true
+  },
+  {
+    "id": 66,
+    "name": "The Mom Project",
+    "site": "https://www.themomproject.com",
+    "careersUrl": "https://themomproject.com/careers",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 67,
+    "name": "Wahve",
+    "site": "https://www.wahve.com",
+    "careersUrl": "https://jobs.wahve.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.wahve.com",
+    "enabled": true
+  },
+  {
+    "id": 68,
+    "name": "The Jacobson Group",
+    "site": "https://www.jacobsononline.com",
+    "careersUrl": "https://careers.jacobsononline.com/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 69,
+    "name": "Insurance Relief",
+    "site": "https://www.insurance-relief.com",
+    "careersUrl": "https://www.insurance-relief.com",
+    "ats": "sitemap",
+    "atsToken": "https://www.insurance-relief.com",
+    "enabled": true
+  },
+  {
+    "id": 70,
+    "name": "Questpro",
+    "site": "https://www.questpro.com",
+    "careersUrl": "https://questpro.com/tech-it-professional-jobs/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 71,
+    "name": "Dahl Consulting",
+    "site": "https://www.dahlconsulting.com",
+    "careersUrl": "https://careers.dahlconsulting.com",
+    "ats": "haley",
+    "atsToken": "https://careers.dahlconsulting.com",
+    "enabled": true
+  },
+  {
+    "id": 72,
+    "name": "Doherty Staffing Solutions",
+    "site": "https://www.doherty.com",
+    "careersUrl": "https://jobs.doherty.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.doherty.com",
+    "enabled": true
+  },
+  {
+    "id": 73,
+    "name": "Versique",
+    "site": "https://www.versique.com",
+    "careersUrl": "https://www.versique.com/jobs/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 74,
+    "name": "Award Staffing",
+    "site": "https://www.awardstaffing.com",
+    "careersUrl": "https://www.awardstaffing.com/about/recruiting-careers/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 75,
+    "name": "QPS Employment Group",
+    "site": "https://www.qpsemployment.com",
+    "careersUrl": "https://jobs.qpsemployment.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.qpsemployment.com",
+    "enabled": true
+  },
+  {
+    "id": 76,
+    "name": "SEEK Careers/Staffing",
+    "site": "https://www.seekcareers.com",
+    "careersUrl": "https://www.seekcareers.com/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 77,
+    "name": "The QTI Group",
+    "site": "https://www.qtigroup.com",
+    "careersUrl": "https://www.qtigroup.com/find-a-job",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 78,
+    "name": "Trillium Staffing",
+    "site": "https://www.trilliumstaffing.com",
+    "careersUrl": "https://www.trilliumstaffing.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 79,
+    "name": "Qualified Staffing",
+    "site": "https://www.q-staffing.com",
+    "careersUrl": "https://jobs.q-staffing.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.q-staffing.com",
+    "enabled": true
+  },
+  {
+    "id": 80,
+    "name": "That's Good HR",
+    "site": "https://www.thatsgoodhr.com",
+    "careersUrl": "https://thatsgoodhr.com/jobs/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 81,
+    "name": "Celebrity Staff",
+    "site": "https://www.celebritystaff.com",
+    "careersUrl": "https://www.celebritystaff.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 82,
+    "name": "Hemphill Search Group",
+    "site": "https://www.hemphillsearch.com",
+    "careersUrl": "https://www.hemphillsearch.com/job-openings",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 83,
+    "name": "Aureus Group",
+    "site": "https://www.aureusgroup.com",
+    "careersUrl": "https://www.aureusgroup.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 84,
+    "name": "The Reserves Network",
+    "site": "https://www.trnstaffing.com",
+    "careersUrl": "https://www.trnstaffing.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 85,
+    "name": "Acloché",
+    "site": "https://www.acloche.com",
+    "careersUrl": "https://www.acloche.com/jobs-now-hiring/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 86,
+    "name": "Crown Services",
+    "site": "https://www.crownservices.com",
+    "careersUrl": "https://www.crownservices.com",
+    "ats": "sitemap",
+    "atsToken": "https://www.crownservices.com",
+    "enabled": true
+  },
+  {
+    "id": 87,
+    "name": "Snelling Staffing",
+    "site": "https://www.snelling.com",
+    "careersUrl": "https://www.snelling.com/jobs/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 88,
+    "name": "Professional Staffing Group",
+    "site": "https://www.psgstaffing.com",
+    "careersUrl": "https://www.psgstaffing.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 89,
+    "name": "Hollister Staffing",
+    "site": "https://www.hollisterstaff.com",
+    "careersUrl": "https://www.hollisterstaff.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 90,
+    "name": "Masis Staffing Solutions",
+    "site": "https://www.masisstaffing.com",
+    "careersUrl": "https://masisstaffing.com/jobs",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 91,
+    "name": "Complete Staffing Solutions",
+    "site": "https://www.completestaffingsolutions.com",
+    "careersUrl": "https://www.completestaffingsolutions.com/job-request",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 92,
+    "name": "Monroe Staffing Services",
+    "site": "https://www.monroestaffing.com",
+    "careersUrl": "https://www.monroestaffing.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 93,
+    "name": "A.R. Mazzotta Employment",
+    "site": "https://www.armazzotta.com",
+    "careersUrl": "https://jobs.armazzotta.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.armazzotta.com",
+    "enabled": true
+  },
+  {
+    "id": 94,
+    "name": "J. Morrissey & Company",
+    "site": "https://www.jmorrissey.com",
+    "careersUrl": "https://jobs.jmorrissey.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.jmorrissey.com",
+    "enabled": true
+  },
+  {
+    "id": 95,
+    "name": "Medix",
+    "site": "https://www.medixteam.com",
+    "careersUrl": "https://www.medixteam.com/blog/category/career-tips/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 96,
+    "name": "HealthCare Support",
+    "site": "https://www.healthcaresupport.com",
+    "careersUrl": "https://www.healthcaresupport.com/jobs",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 97,
+    "name": "The CSI Companies",
+    "site": "https://www.thecsicompanies.com",
+    "careersUrl": "https://www.csicompanies.com/job-seekers",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 98,
+    "name": "Favorite Healthcare Staffing",
+    "site": "https://www.favoritestaffing.com",
+    "careersUrl": "https://www.favoritestaffing.com/job-posting",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 99,
+    "name": "PACE Staffing Network",
+    "site": "https://www.pacestaffing.com",
+    "careersUrl": "https://pacestaffing.com/job-seekers/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 100,
+    "name": "TERRA Staffing Group",
+    "site": "https://www.terrastaffinggroup.com",
+    "careersUrl": "https://verstela.com/job-seekers",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 101,
+    "name": "Provisional Recruiting",
+    "site": "https://www.provisional.com",
+    "careersUrl": "https://careers.provisional.com",
+    "ats": "haley",
+    "atsToken": "https://careers.provisional.com",
+    "enabled": true
+  },
+  {
+    "id": 102,
+    "name": "NW Staffing Resources",
+    "site": "https://www.nwstaffing.com",
+    "careersUrl": "https://jobs.nwstaffing.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.nwstaffing.com",
+    "enabled": true
+  },
+  {
+    "id": 103,
+    "name": "Boly:Welch",
+    "site": "https://www.bolywelch.com",
+    "careersUrl": "https://www.bolywelch.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 104,
+    "name": "Emerald Staffing",
+    "site": "https://www.emeraldstaffing.com",
+    "careersUrl": "https://emeraldstaffing.com/jobs/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 105,
+    "name": "Opti Staffing Group",
+    "site": "https://www.optistaffing.com",
+    "careersUrl": "https://jobs.optistaffing.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.optistaffing.com",
+    "enabled": true
+  },
+  {
+    "id": 106,
+    "name": "Premier Talent Partners",
+    "site": "https://www.premiertalentpartners.com",
+    "careersUrl": "https://www.premiertalentpartners.com/jobs",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 107,
+    "name": "Star Staffing",
+    "site": "https://www.starhr.com",
+    "careersUrl": "https://jobs.starhr.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.starhr.com",
+    "enabled": true
+  },
+  {
+    "id": 108,
+    "name": "Bolt Staffing",
+    "site": "https://www.boltstaffing.com",
+    "careersUrl": "https://jobs.boltstaffing.com",
+    "ats": "haley",
+    "atsToken": "https://jobs.boltstaffing.com",
+    "enabled": true
+  },
+  {
+    "id": 109,
+    "name": "Kimco Staffing Services",
+    "site": "https://www.kimco.com",
+    "careersUrl": "https://www.kimco.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 110,
+    "name": "Eastridge Workforce Solutions",
+    "site": "https://www.eastridge.com",
+    "careersUrl": "https://www.eastridge.com/careers",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 111,
+    "name": "Barrington Staffing",
+    "site": "https://www.barringtonstaffing.com",
+    "careersUrl": "https://www.barringtonstaffing.com/jobs-thousand-oaks/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 112,
+    "name": "TriCom Quest",
+    "site": "https://www.tricomquest.com",
+    "careersUrl": "https://www.tricomquest.com/contact-us/?select=Job%20Seeker",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 113,
+    "name": "Equivity",
+    "site": "https://www.equivityva.com",
+    "careersUrl": "https://equivityva.com/about/careers/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 114,
+    "name": "Boldly",
+    "site": "https://www.boldly.com",
+    "careersUrl": "https://boldly.com/jobs/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 115,
+    "name": "BELAY",
+    "site": "https://www.belaysolutions.com",
+    "careersUrl": "https://belaysolutions.com/jobs",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 116,
+    "name": "Zirtual",
+    "site": "https://www.zirtual.com",
+    "careersUrl": "https://www.zirtual.com/jobs/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 117,
+    "name": "Delegate Solutions",
+    "site": "https://www.delegatesolutions.com",
+    "careersUrl": "https://shiftingcareers.blogs.nytimes.com/2008/08/17/when-the-assistant-is-an-entrepreneur/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 118,
+    "name": "Virtual Assist USA",
+    "site": "https://www.virtualassistusa.com",
+    "careersUrl": "https://www.virtualassistusa.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 119,
+    "name": "LTSi",
+    "site": "https://www.laredotechnical.com",
+    "careersUrl": "https://laredotechnical.com/job-seeker/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 120,
+    "name": "Dawar Consulting",
+    "site": "https://www.dawarconsulting.com",
+    "careersUrl": "https://www.dawarconsulting.com/careers",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 121,
+    "name": "Jzanus Consulting",
+    "site": "https://www.jzanus.com",
+    "careersUrl": "https://www.jzanus.com/jobs/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 122,
+    "name": "Randstad",
+    "site": "https://www.randstadusa.com",
+    "careersUrl": "https://www.randstadusa.com/jobs/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 123,
+    "name": "Robert Half",
+    "site": "https://www.roberthalf.com",
+    "careersUrl": "https://careers.roberthalf.com",
+    "ats": "sitemap",
+    "atsToken": "https://careers.roberthalf.com",
+    "enabled": true
+  },
+  {
+    "id": 124,
+    "name": "Adecco",
+    "site": "https://www.adeccousa.com",
+    "careersUrl": "https://cvmaker.adecco.com/en-us/recommended-jobs?_gl=1*184z9m2*_ga*MTI4MDcyMjAzMi4xNzcyMTIwODQ2*_ga_ZY6KEMK0NQ*czE3NzI2NDY2OTEkbzgkZzEkdDE3NzI2NDY3MDIkajQ5JGwwJGgw*_gcl_au*MzAwNjAwMTkzLjE3NzIxMjA4NDY.",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 125,
+    "name": "Kelly Services",
+    "site": "https://www.kellyservices.us",
+    "careersUrl": "https://careers.kellyocg.com",
+    "ats": "sitemap",
+    "atsToken": "https://careers.kellyocg.com",
+    "enabled": true
+  },
+  {
+    "id": 126,
+    "name": "Insight Global",
+    "site": "https://www.insightglobal.com",
+    "careersUrl": "https://insightglobal.com/jobs/",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 127,
+    "name": "Aerotek",
+    "site": "https://www.aerotek.com",
+    "careersUrl": "https://jobs.aerotek.com/us/en?icid=jb_aero_n_gen_xx_rtk.cmsrchjb_xx_na_usa_20201002_66610422",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 128,
+    "name": "Manpower",
+    "site": "https://www.manpower.com",
+    "careersUrl": "https://www.manpower.com/en/for-job-seekers",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 129,
+    "name": "Kforce",
+    "site": "https://www.kforce.com",
+    "careersUrl": "https://www.kforce.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 130,
+    "name": "Aston Carter",
+    "site": "https://www.astoncarter.com",
+    "careersUrl": "https://careers.astoncarter.com/us/en",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 131,
+    "name": "Express Employment Professionals",
+    "site": "https://www.expresspros.com",
+    "careersUrl": "https://www.expresspros.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 132,
+    "name": "Volt",
+    "site": "https://www.volt.com",
+    "careersUrl": "https://www.volt.com",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  },
+  {
+    "id": 133,
+    "name": "Aquent",
+    "site": "https://www.aquent.com",
+    "careersUrl": "https://aquent.com/privacy-policy/job-scams",
+    "ats": "jsearch",
+    "atsToken": "",
+    "enabled": false
+  }
+]
