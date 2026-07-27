@@ -3,7 +3,7 @@
 // detection (especially NOT flagging company-provided/shipped equipment).
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { classify, jobKey } from "../config.js";
+import { classify, jobKey, extractPay, extractEmployment } from "../config.js";
 
 const c = (desc, title = "Remote Customer Service", loc = "Remote") => classify(title, loc, desc);
 
@@ -53,6 +53,20 @@ test("company provides/ships gear -> byod false", () => {
 test("equipment items are detected without RAM false-positives", () => {
   assert.deepEqual(c("Requires your own dual monitors and a webcam.").equipment, ["Dual monitors", "Webcam"]);
   assert.equal(c("Join our program for remote customer service work.").equipment.length, 0); // 'program' must not match RAM
+});
+
+test("extractPay reads hourly rates", () => {
+  assert.deepEqual(extractPay("16/Hr REMOTE CSR"), { min: 16, max: 16, label: "$16/hr" });
+  assert.deepEqual(extractPay("$15-$18 per hour"), { min: 15, max: 18, label: "$15–18/hr" });
+  assert.equal(extractPay("competitive pay").label, "");     // no rate
+  assert.equal(extractPay("$45,000/year").label, "");        // yearly, not hourly text
+});
+
+test("extractEmployment reads job type", () => {
+  assert.equal(extractEmployment("Temp-to-Hire Data Entry"), "Temp-to-hire");
+  assert.equal(extractEmployment("Seasonal Remote CSR"), "Seasonal");
+  assert.equal(extractEmployment("Contract Customer Service (1099)"), "Contract");
+  assert.equal(extractEmployment("Full-time remote rep"), "");
 });
 
 test("jobKey is stable and deterministic", () => {

@@ -15,7 +15,7 @@ import { ATS } from "./adapters/ats.js";
 import { haley } from "./adapters/haley.js";
 import { sitemap } from "./adapters/sitemap.js";
 import { jsearch, scrape, aggregator } from "./adapters/fallback.js";
-import { classify, jobKey } from "./config.js";
+import { classify, jobKey, extractPay, extractEmployment, payLabel } from "./config.js";
 import { notifyTelegram } from "./notify.js";
 
 const AGENCIES = "./data/agencies.json";
@@ -73,10 +73,18 @@ async function main() {
     const key = jobKey(job);
     if (seen[key]) return;                    // already alerted on a prior sweep
     seen[key] = nowIso;
+
+    // Pay: prefer structured (JSearch) hourly, else parse from title/description.
+    const text = `${job.title} ${job.description || ""}`;
+    let payMin = job.payMin ?? null, payMax = job.payMax ?? null;
+    if (payMin == null && payMax == null) { const p = extractPay(text); payMin = p.min; payMax = p.max; }
+    const employment = extractEmployment(text);
+
     fresh.push({
       id: key, agency: job.agency, title: job.title,
       category: tag.category, maybeHybrid: tag.maybeHybrid,
       byod: tag.byod, equipment: tag.equipment,
+      pay: payLabel(payMin, payMax), payMin, payMax, employment,
       location: job.location || "Remote", source: job.source,
       url: job.url, postedAt: job.postedAt, firstSeen: nowIso,
     });

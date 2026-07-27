@@ -37,11 +37,15 @@ in a new `adapters/sites/<agency>.js` returning the same shape as the ATS adapte
 ## Output contract (never change — the dashboard depends on it)
 `data/feed.json` = array, newest first, of:
 ```
-{ id, agency, title, category, maybeHybrid, byod, equipment, location, source, url, postedAt, firstSeen }
+{ id, agency, title, category, maybeHybrid, byod, equipment, pay, payMin, payMax, employment, location, source, url, postedAt, firstSeen }
 ```
 `byod` (bool) is true only when the posting requires the worker to supply their
 own gear; `equipment` is an array of matched item labels (e.g. `["Dual monitors",
-"USB/wired headset"]`), empty when none are detected.
+"USB/wired headset"]`), empty when none are detected. `pay` is a display label
+(e.g. `"$16/hr"`, `""` if unknown) with `payMin`/`payMax` the hourly numbers (or
+null); `employment` is one of Temp-to-hire/Seasonal/Temporary/Contract/Part-time
+or `""`. The dashboard ranks BYOD-likely roles (low pay + temp/seasonal/contract)
+to the top without hiding anything.
 
 ## Guardrails
 - Respect robots.txt; keep to one sweep per 30 min. Set a real User-Agent (already done).

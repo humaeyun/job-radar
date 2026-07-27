@@ -19,6 +19,18 @@ async function jsQuery(key, query) {
   return data.data || [];
 }
 
+// Convert JSearch structured salary to an hourly number.
+const toHourly = (v, per) => {
+  if (v == null) return null;
+  switch (String(per || "").toUpperCase()) {
+    case "HOUR": return v;
+    case "WEEK": return v / 40;
+    case "MONTH": return (v * 12) / 2080;
+    case "YEAR": return v / 2080;
+    default: return null;
+  }
+};
+
 const mapJob = (agency, j) => ({
   agency,
   title: j.job_title,
@@ -27,6 +39,9 @@ const mapJob = (agency, j) => ({
   url: j.job_apply_link,
   postedAt: j.job_posted_at_datetime_utc || null,
   source: j.job_publisher || "JSearch",
+  // structured pay when JSearch provides it (scan.js falls back to text parsing)
+  payMin: toHourly(j.job_min_salary, j.job_salary_period),
+  payMax: toHourly(j.job_max_salary, j.job_salary_period),
 });
 
 // Per-agency: search the aggregator by company name across our role buckets.

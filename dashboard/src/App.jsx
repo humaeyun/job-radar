@@ -43,6 +43,15 @@ const timeAgo = (iso) => {
   return `${Math.floor(h / 24)}d ago`;
 };
 
+/* ---- BYOD-relevance signals (per user's criteria) ----
+ * Never hides low-rate remote jobs; used to rank the likely-BYOD ones up top.
+ * Signals: confirmed BYOD, low hourly pay ($10-18), and temp/seasonal/contract. */
+const EMP_BYOD = new Set(["Temp-to-hire", "Seasonal", "Temporary", "Contract"]);
+const inBand = (j) => j.payMin != null && j.payMin <= 18;        // low-wage target band
+const isHighPay = (j) => j.payMin != null && j.payMin > 18;
+const byodLikely = (j) => !!j.byod || inBand(j) || EMP_BYOD.has(j.employment);
+const relScore = (j) => (j.byod ? 4 : 0) + (inBand(j) ? 3 : 0) + (EMP_BYOD.has(j.employment) ? 2 : 0);
+
 export default function App() {
   const [jobs, setJobs] = useState([]);
   const [feedError, setFeedError] = useState(null);
@@ -52,7 +61,10 @@ export default function App() {
   const [tab, setTab] = useState("new");
   const [q, setQ] = useState("");
   const [activeCats, setActiveCats] = useState([]);
-  const [equipFilter, setEquipFilter] = useState("all"); // all | only | hide
+  const [agency, setAgency] = useState("all");           // agency name or "all"
+  const [payFilter, setPayFilter] = useState("all");     // all | band ($10-18) | high (>$18) | none
+  const [focus, setFocus] = useState("all");             // all | likely | confirmed (BYOD)
+  const [sortBy, setSortBy] = useState("relevance");     // relevance | newest
   const [showAlerts, setShowAlerts] = useState(false);
   const [ready, setReady] = useState(false);
   const [settings, setSettings] = useState({ channel: "telegram", chatId: "", email: "" });
@@ -89,20 +101,27 @@ export default function App() {
 
   const newIds = useMemo(() => jobs.filter(j => !seen.includes(j.id)).map(j => j.id), [jobs, seen]);
 
+  const agencies = useMemo(() => [...new Set(jobs.map(j => j.agency))].sort((a, b) => a.localeCompare(b)), [jobs]);
+
   const visible = useMemo(() => {
     let list = jobs;
     if (tab === "new") list = list.filter(j => newIds.includes(j.id) && !dismissed.includes(j.id));
     else if (tab === "saved") list = list.filter(j => saved.includes(j.id));
     else list = list.filter(j => !dismissed.includes(j.id));
     if (activeCats.length) list = list.filter(j => activeCats.includes(j.category));
-    if (equipFilter === "only") list = list.filter(j => j.byod);
-    else if (equipFilter === "hide") list = list.filter(j => !j.byod);
+    if (agency !== "all") list = list.filter(j => j.agency === agency);
+    if (payFilter === "band") list = list.filter(inBand);
+    else if (payFilter === "high") list = list.filter(isHighPay);
+    else if (payFilter === "none") list = list.filter(j => j.payMin == null);
+    if (focus === "likely") list = list.filter(byodLikely);
+    else if (focus === "confirmed") list = list.filter(j => j.byod);
     if (q.trim()) {
       const s = q.toLowerCase();
       list = list.filter(j => (j.title + j.agency + j.category).toLowerCase().includes(s));
     }
-    return [...list].sort((a, b) => new Date(b.firstSeen) - new Date(a.firstSeen));
-  }, [jobs, tab, newIds, dismissed, saved, activeCats, equipFilter, q]);
+    const byNew = (a, b) => new Date(b.firstSeen) - new Date(a.firstSeen);
+    return [...list].sort(sortBy === "newest" ? byNew : (a, b) => (relScore(b) - relScore(a)) || byNew(a, b));
+  }, [jobs, tab, newIds, dismissed, saved, activeCats, agency, payFilter, focus, sortBy, q]);
 
   const counts = {
     new: jobs.filter(j => newIds.includes(j.id) && !dismissed.includes(j.id)).length,
@@ -212,19 +231,45 @@ export default function App() {
           )}
         </div>
 
-        {/* ---- equipment / BYOD filter ---- */}
-        <div style={{ display: "flex", gap: 7, alignItems: "center", flexWrap: "wrap", marginBottom: 18 }}>
-          <span style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", color: T.faint, textTransform: "uppercase" }}>Equipment</span>
-          {[["all", "All roles"], ["only", "Equipment required"], ["hide", "No equipment"]].map(([k, label]) => {
-            const on = equipFilter === k;
-            return (
-              <button key={k} className="chip" onClick={() => setEquipFilter(k)}
-                style={{ padding: "5px 11px", border: `1px solid ${on ? T.amber : T.border}`,
-                  background: on ? T.amberDim : "transparent", color: on ? T.amber : T.muted }}>
-                {label}
-              </button>
-            );
-          })}
+        {/* ---- agency + sort ---- */}
+        <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap", marginBottom: 12 }}>
+          <select value={agency} onChange={e => setAgency(e.target.value)}
+            style={{ padding: "8px 10px", borderRadius: 9, background: T.panel, border: `1px solid ${agency !== "all" ? T.teal : T.border}`,
+              color: agency !== "all" ? T.teal : T.text, fontFamily: MONO, fontSize: 12, maxWidth: 260 }}>
+            <option value="all">All agencies ({agencies.length})</option>
+            {agencies.map(a => <option key={a} value={a}>{a}</option>)}
+          </select>
+          <select value={sortBy} onChange={e => setSortBy(e.target.value)}
+            style={{ padding: "8px 10px", borderRadius: 9, background: T.panel, border: `1px solid ${T.border}`, color: T.muted, fontFamily: MONO, fontSize: 12 }}>
+            <option value="relevance">Sort: BYOD relevance</option>
+            <option value="newest">Sort: Newest first</option>
+          </select>
+        </div>
+
+        {/* ---- pay + BYOD-focus filters ---- */}
+        <div style={{ display: "flex", gap: 16, alignItems: "center", flexWrap: "wrap", marginBottom: 18 }}>
+          <div style={{ display: "flex", gap: 7, alignItems: "center", flexWrap: "wrap" }}>
+            <span style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", color: T.faint, textTransform: "uppercase" }}>Pay</span>
+            {[["all", "Any"], ["band", "$10–18/hr"], ["high", ">$18/hr"], ["none", "Not listed"]].map(([k, label]) => {
+              const on = payFilter === k;
+              return (
+                <button key={k} className="chip" onClick={() => setPayFilter(k)}
+                  style={{ padding: "5px 11px", border: `1px solid ${on ? T.amber : T.border}`,
+                    background: on ? T.amberDim : "transparent", color: on ? T.amber : T.muted }}>{label}</button>
+              );
+            })}
+          </div>
+          <div style={{ display: "flex", gap: 7, alignItems: "center", flexWrap: "wrap" }}>
+            <span style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", color: T.faint, textTransform: "uppercase" }}>BYOD</span>
+            {[["all", "All"], ["likely", "Likely"], ["confirmed", "Confirmed"]].map(([k, label]) => {
+              const on = focus === k;
+              return (
+                <button key={k} className="chip" onClick={() => setFocus(k)}
+                  style={{ padding: "5px 11px", border: `1px solid ${on ? T.teal : T.border}`,
+                    background: on ? "rgba(62,214,176,.12)" : "transparent", color: on ? T.teal : T.muted }}>{label}</button>
+              );
+            })}
+          </div>
         </div>
 
         {/* ---- feed ---- */}
@@ -234,7 +279,7 @@ export default function App() {
           <Empty
             title={tab === "new" ? "No new remote roles since your last sweep." :
               tab === "saved" ? "Nothing saved yet." : "No roles match those filters."}
-            body={tab === "new" ? "The radar's still watching all 121 agencies. New posts land here the moment they appear." :
+            body={tab === "new" ? "The radar's still watching every agency. New posts land here the moment they appear." :
               tab === "saved" ? "Star a role to keep it here while you apply." : "Try clearing a filter or the search box."} />
         ) : (
           <div style={{ display: "flex", flexDirection: "column", gap: 9 }}>
@@ -264,14 +309,16 @@ export default function App() {
                       </a>
                       <div style={{ marginTop: 7, display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
                         <Tag color={T.teal}>{j.category}</Tag>
+                        {j.pay && <Tag color={inBand(j) ? T.amber : T.muted}>{j.pay}</Tag>}
+                        {j.employment && <Tag color={EMP_BYOD.has(j.employment) ? T.amber : T.muted}>{j.employment}</Tag>}
                         <span style={{ fontFamily: MONO, fontSize: 11, color: T.muted }}>{j.location}</span>
                         <span style={{ fontFamily: MONO, fontSize: 11, color: T.faint }}>via {j.source}</span>
                         {j.maybeHybrid && <Tag color={T.red}>maybe hybrid</Tag>}
-                        {j.byod && (
-                          <Tag color={T.amber}>
-                            ⚙ equipment{j.equipment?.length ? `: ${j.equipment.join(", ")}` : " required"}
-                          </Tag>
-                        )}
+                        {j.byod ? (
+                          <Tag color={T.amber}>⚙ BYOD{j.equipment?.length ? `: ${j.equipment.join(", ")}` : ""}</Tag>
+                        ) : byodLikely(j) ? (
+                          <Tag color={T.faint}>likely BYOD</Tag>
+                        ) : null}
                       </div>
                     </div>
                     {/* actions */}

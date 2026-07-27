@@ -86,6 +86,46 @@ export function classify(title = "", location = "", description = "") {
   return { category: matched, maybeHybrid, byod, equipment };
 }
 
+// ---- Pay + employment-type extraction (drive the dashboard's relevance sort) --
+// BYOD roles tend to be low hourly ($10-18) and seasonal/temp/contract, so we
+// surface those signals for ranking without hiding anything.
+
+const money = n => (Number.isInteger(n) ? `${n}` : `${Math.round(n * 100) / 100}`);
+
+// Format an hourly min/max into a display label. Shared by text + structured pay.
+export function payLabel(min, max) {
+  if (min == null && max == null) return "";
+  if (min != null && max != null && min !== max) return `$${money(min)}–${money(max)}/hr`;
+  const v = min ?? max;
+  return `$${money(v)}/hr`;
+}
+
+// Pull an HOURLY pay range from free text. Returns { min, max, label }.
+export function extractPay(text = "") {
+  const t = String(text).replace(/,/g, " ");
+  const hr = "(?:\\/|\\s|per\\s)?\\s*(?:hr|hour|hourly|an\\s*hour)\\b";
+  // range: $15-$18/hr  |  15 to 18 per hour
+  let m = t.match(new RegExp(`\\$?\\s*(\\d{1,3}(?:\\.\\d{1,2})?)\\s*(?:-|–|—|to)\\s*\\$?\\s*(\\d{1,3}(?:\\.\\d{1,2})?)\\s*${hr}`, "i"));
+  if (m) { const a = Math.min(+m[1], +m[2]), b = Math.max(+m[1], +m[2]); return { min: a, max: b, label: payLabel(a, b) }; }
+  // single: $16/hr  |  16.50 per hour
+  m = t.match(new RegExp(`\\$?\\s*(\\d{1,3}(?:\\.\\d{1,2})?)\\s*${hr}`, "i"));
+  if (m) { const a = +m[1]; if (a >= 5 && a <= 150) return { min: a, max: a, label: payLabel(a, a) }; }
+  return { min: null, max: null, label: "" };
+}
+
+// Employment type; earlier patterns win (more specific first).
+const EMPLOYMENT_RULES = [
+  ["Temp-to-hire",  /(temp|contract)[-\s]*to[-\s]*(hire|perm)/i],
+  ["Seasonal",      /\bseasonal\b/i],
+  ["Temporary",     /\btemp(orary)?\b/i],
+  ["Contract",      /\bcontract\b|\b1099\b|independent contractor/i],
+  ["Part-time",     /\bpart[-\s]?time\b/i],
+];
+export function extractEmployment(text = "") {
+  for (const [label, re] of EMPLOYMENT_RULES) if (re.test(text)) return label;
+  return "";
+}
+
 // Stable id so the same posting is never alerted twice.
 export function jobKey({ agency, title, url }) {
   const raw = `${agency}::${title}::${url}`.toLowerCase().replace(/\s+/g, " ").trim();
