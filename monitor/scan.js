@@ -22,9 +22,14 @@ const AGENCIES = "./data/agencies.json";
 const SEEN = "./data/seen.json";     // { [key]: firstSeenISO }
 const FEED = "./data/feed.json";     // rolling list the dashboard renders
 
-// The JSearch (paid) tier costs API quota, so it runs only a couple times a day
-// instead of every 30-min sweep. Free adapters (Haley/sitemap/scrape/ATS) always run.
-const PAID_EVERY_HOURS = 12;
+// The JSearch (paid) tier costs API quota, so it's throttled below the free
+// adapters (which sweep every ~30 min). Two independent cadences keep monthly
+// usage well under the plan cap while still surfacing new roles fast:
+//   - job-board aggregator: only 3 requests/run -> cheap -> run every sweep
+//   - 97 per-agency name searches: expensive     -> run ~once a day
+// Budget at these defaults ≈ 3*48*30 + 97*1*30 ≈ 7,230 requests/month (< 10k).
+const AGGREGATOR_EVERY_HOURS = 0.5;   // job boards: every 30-min sweep (near real-time)
+const PAID_AGENCY_EVERY_HOURS = 24;   // per-agency JSearch: ~1x/day
 
 const readJSON = async (p, fallback) => { try { return JSON.parse(await fs.readFile(p, "utf8")); } catch { return fallback; } };
 
@@ -53,9 +58,12 @@ async function main() {
   // the job-board aggregator) runs only a couple times a day, or on a manual
   // "Run workflow" click, so it stays within the API quota.
   const manual = process.env.GITHUB_EVENT_NAME === "workflow_dispatch";
-  const runPaid = manual || (now.getUTCHours() % PAID_EVERY_HOURS === 0 && now.getUTCMinutes() < 30);
+  const slot = Math.floor((now.getUTCHours() * 60 + now.getUTCMinutes()) / 30); // 30-min slot of day
+  const everyNSlots = h => Math.max(1, Math.round(h * 2));
+  const runAgencies = manual || (slot % everyNSlots(PAID_AGENCY_EVERY_HOURS) === 0);
+  const runAgg      = manual || (slot % everyNSlots(AGGREGATOR_EVERY_HOURS) === 0);
 
-  const agencies = runPaid ? all : all.filter(a => a.ats !== "jsearch");
+  const agencies = runAgencies ? all : all.filter(a => a.ats !== "jsearch");
 
   const fresh = [];
   const consider = (job) => {
@@ -80,7 +88,7 @@ async function main() {
   }
 
   // Job-board aggregator (Indeed/ZipRecruiter/SimplyHired via JSearch).
-  if (runPaid) {
+  if (runAgg) {
     try { for (const job of await aggregator()) consider(job); }
     catch (e) { console.warn(`  ! aggregator: ${e.message}`); }
   }
@@ -91,8 +99,10 @@ async function main() {
   await fs.writeFile(SEEN, JSON.stringify(seen, null, 0));
   await fs.writeFile(FEED, JSON.stringify(merged, null, 2));
 
-  const tier = runPaid ? "free + paid tier (incl. job boards)" : "free tier";
-  console.log(`Sweep done: ${fresh.length} new remote role(s) across ${agencies.length} agencies [${tier}].`);
+  const parts = ["free"];
+  if (runAgencies) parts.push("agencies");
+  if (runAgg) parts.push("job-boards");
+  console.log(`Sweep done: ${fresh.length} new remote role(s) across ${agencies.length} agencies [${parts.join("+")}].`);
   if (fresh.length) await notifyTelegram(fresh);
 }
 
