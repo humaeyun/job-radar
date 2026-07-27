@@ -1,0 +1,29 @@
+name: Remote job radar
+
+# Free scheduler. GitHub cron is best-effort; ~every 30 min is plenty for jobs.
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch: {}   # lets you run a sweep manually from the Actions tab
+
+permissions:
+  contents: write         # allows committing the updated feed back to the repo
+
+concurrency:
+  group: radar
+  cancel-in-progress: false
+
+defaults:
+  run:
+    working-directory: monitor   # scraper lives in monitor/ within the monorepo
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm ci || npm install
+   %
