@@ -1,5 +1,23 @@
 [
   {
+    "id": "8d1e18e8",
+    "agency": "RemX",
+    "title": "$16 Remote Medical Call Center Customer Service Representative",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "Careers page",
+    "url": "https://www.remx.com/jobs/detail/1293320/",
+    "postedAt": null,
+    "firstSeen": "2026-07-27T22:54:43.833Z"
+  },
+  {
     "id": "39671c82",
     "agency": "RemX",
     "title": "Remote Healthcare Customer Service Representative",
