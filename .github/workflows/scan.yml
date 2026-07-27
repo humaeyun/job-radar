@@ -1,29 +1,32 @@
 name: Remote job radar
-
-# Free scheduler. GitHub cron is best-effort; ~every 30 min is plenty for jobs.
 on:
   schedule:
     - cron: "*/30 * * * *"
-  workflow_dispatch: {}   # lets you run a sweep manually from the Actions tab
-
+  workflow_dispatch:
 permissions:
-  contents: write         # allows committing the updated feed back to the repo
-
-concurrency:
-  group: radar
-  cancel-in-progress: false
-
-defaults:
-  run:
-    working-directory: monitor   # scraper lives in monitor/ within the monorepo
-
+  contents: write
 jobs:
   sweep:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: monitor
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
       - run: npm ci || npm install
-   %
+      - name: Sweep
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+        run: node scan.js
+      - name: Save new findings
+        run: |
+          git config user.name "job-radar"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/seen.json data/feed.json
+          git commit -m "sweep: update feed [skip ci]" || echo "nothing new"
+          git push
