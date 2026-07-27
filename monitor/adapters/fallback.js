@@ -60,6 +60,8 @@ const AGGREGATOR_QUERIES = [
   "remote call center OR data entry OR medical records OR claims OR member services",
   "remote sales representative OR appointment setter OR collections OR virtual assistant",
 ];
+// How many JSearch requests one aggregator run costs (for the monthly budget cap).
+export const AGGREGATOR_QUERY_COUNT = AGGREGATOR_QUERIES.length;
 
 export async function aggregator() {
   const key = process.env.RAPIDAPI_KEY;

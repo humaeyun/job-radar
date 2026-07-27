@@ -14,7 +14,7 @@ import fs from "node:fs/promises";
 import { ATS } from "./adapters/ats.js";
 import { haley } from "./adapters/haley.js";
 import { sitemap } from "./adapters/sitemap.js";
-import { jsearch, scrape, aggregator } from "./adapters/fallback.js";
+import { jsearch, scrape, aggregator, AGGREGATOR_QUERY_COUNT } from "./adapters/fallback.js";
 import { classify, jobKey, extractPay, extractEmployment, payLabel } from "./config.js";
 import { notifyTelegram } from "./notify.js";
 
@@ -30,6 +30,11 @@ const FEED = "./data/feed.json";     // rolling list the dashboard renders
 // Budget at these defaults ≈ 3*48*30 + 97*1*30 ≈ 7,230 requests/month (< 10k).
 const AGGREGATOR_EVERY_HOURS = 0.5;   // job boards: every 30-min sweep (near real-time)
 const PAID_AGENCY_EVERY_HOURS = 24;   // per-agency JSearch: ~1x/day
+
+// Hard monthly ceiling on JSearch requests, enforced in code so overage can
+// never be billed even if RapidAPI has no hard-limit toggle. Set safely under
+// the plan's 10,000/mo cap. The running count persists in seen.json.
+const MONTHLY_JSEARCH_CAP = 9500;
 
 const readJSON = async (p, fallback) => { try { return JSON.parse(await fs.readFile(p, "utf8")); } catch { return fallback; } };
 
@@ -63,7 +68,17 @@ async function main() {
   const runAgencies = manual || (slot % everyNSlots(PAID_AGENCY_EVERY_HOURS) === 0);
   const runAgg      = manual || (slot % everyNSlots(AGGREGATOR_EVERY_HOURS) === 0);
 
-  const agencies = runAgencies ? all : all.filter(a => a.ats !== "jsearch");
+  // ---- monthly JSearch budget guard (never exceed the plan cap) ----
+  const hasKey = !!process.env.RAPIDAPI_KEY;
+  const month = nowIso.slice(0, 7); // YYYY-MM (UTC)
+  const budget = (seen.__budget && seen.__budget.month === month) ? seen.__budget.count : 0;
+  let spent = budget;
+  const jsearchCost = all.filter(a => a.ats === "jsearch").length; // 1 request per jsearch agency
+  // Only spend paid quota if there's a key AND this run fits under the cap.
+  const doAgencies = runAgencies && hasKey && (spent + jsearchCost <= MONTHLY_JSEARCH_CAP);
+  const doAgg      = runAgg      && hasKey && (spent + AGGREGATOR_QUERY_COUNT <= MONTHLY_JSEARCH_CAP);
+
+  const agencies = doAgencies ? all : all.filter(a => a.ats !== "jsearch");
 
   const fresh = [];
   const consider = (job) => {
@@ -94,12 +109,17 @@ async function main() {
     const raw = await fetchAgency(a);
     for (const job of raw) consider(job);
   }
+  if (doAgencies) spent += jsearchCost;
 
   // Job-board aggregator (Indeed/ZipRecruiter/SimplyHired via JSearch).
-  if (runAgg) {
+  if (doAgg) {
     try { for (const job of await aggregator()) consider(job); }
     catch (e) { console.warn(`  ! aggregator: ${e.message}`); }
+    spent += AGGREGATOR_QUERY_COUNT;
   }
+
+  // Persist the month's running JSearch spend so the cap survives across runs.
+  seen.__budget = { month, count: spent };
 
   // Newest first; keep the feed to the last 500 so the file stays small.
   const merged = [...fresh, ...feed].slice(0, 500);
@@ -108,9 +128,10 @@ async function main() {
   await fs.writeFile(FEED, JSON.stringify(merged, null, 2));
 
   const parts = ["free"];
-  if (runAgencies) parts.push("agencies");
-  if (runAgg) parts.push("job-boards");
-  console.log(`Sweep done: ${fresh.length} new remote role(s) across ${agencies.length} agencies [${parts.join("+")}].`);
+  if (doAgencies) parts.push("agencies");
+  if (doAgg) parts.push("job-boards");
+  const capNote = hasKey ? ` | JSearch used ${spent}/${MONTHLY_JSEARCH_CAP} this month` : "";
+  console.log(`Sweep done: ${fresh.length} new remote role(s) across ${agencies.length} agencies [${parts.join("+")}]${capNote}.`);
   if (fresh.length) await notifyTelegram(fresh);
 }
 
