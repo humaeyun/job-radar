@@ -1039,8 +1039,8 @@
     "name": "Zirtual",
     "site": "https://www.zirtual.com",
     "careersUrl": "https://www.zirtual.com/jobs/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "workable",
+    "atsToken": "zirtual-llc",
     "enabled": true
   },
   {
