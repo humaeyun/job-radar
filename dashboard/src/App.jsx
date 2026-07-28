@@ -127,6 +127,14 @@ export default function App() {
     return c;
   }, [tabBase]);
 
+  // Source counts across ALL tiers in the tab, so a selected source isn't
+  // silently zeroed by the tier filter without the user seeing there are jobs.
+  const sourceCounts = useMemo(() => {
+    const m = { boards: 0, direct: 0 };
+    for (const j of tabBase) { m[j.source] = (m[j.source] || 0) + 1; if (isJobBoard(j.source)) m.boards++; else m.direct++; }
+    return m;
+  }, [tabBase]);
+
   const visible = useMemo(() => {
     let list = tabBase;
     if (tier !== "all") list = list.filter(j => tierOf(j) === tier);
@@ -256,10 +264,10 @@ export default function App() {
           <datalist id="agencyList">{agencies.map(a => <option key={a} value={a} />)}</datalist>
           <select value={source} onChange={e => setSource(e.target.value)}
             style={{ padding: "9px 10px", borderRadius: 9, background: T.panel, border: `1px solid ${source !== "all" ? T.teal : T.border}`, color: source !== "all" ? T.teal : T.muted, fontFamily: MONO, fontSize: 12 }}>
-            <option value="all">All sources</option>
-            <option value="boards">Job boards (Indeed/LinkedIn/…)</option>
-            <option value="direct">Agency direct</option>
-            <optgroup label="Specific source">{sources.map(s => <option key={s} value={s}>{s}</option>)}</optgroup>
+            <option value="all">All sources ({tabBase.length})</option>
+            <option value="boards">Job boards ({sourceCounts.boards})</option>
+            <option value="direct">Agency direct ({sourceCounts.direct})</option>
+            <optgroup label="Specific source">{sources.map(s => <option key={s} value={s}>{s} ({sourceCounts[s] || 0})</option>)}</optgroup>
           </select>
           <select value={sortBy} onChange={e => setSortBy(e.target.value)}
             style={{ padding: "9px 10px", borderRadius: 9, background: T.panel, border: `1px solid ${T.border}`, color: T.muted, fontFamily: MONO, fontSize: 12 }}>
@@ -294,10 +302,12 @@ export default function App() {
           <Empty title="Warming up the radar…" body="Loading your saved and seen roles." />
         ) : visible.length === 0 ? (
           <Empty
-            title={tier === "confirmed" ? "No confirmed-BYOD roles match right now." :
-              tab === "saved" ? "Nothing saved yet." : "No roles match those filters."}
-            body={tier === "confirmed" ? "Confirmed BYOD (own computer + listed specs) is rare — that's the point. Check the Likely and Maybe tabs, or wait for the next sweep." :
-              tab === "saved" ? "Star a role to keep it here while you apply." : "Try a different tier, clear a filter, or the search box."} />
+            title={(source !== "all" || agency !== "all") && tier !== "all" ? "None in this tier — but there are jobs here." :
+              tier === "confirmed" ? "No confirmed-BYOD roles match right now." :
+                tab === "saved" ? "Nothing saved yet." : "No roles match those filters."}
+            body={(source !== "all" || agency !== "all") && tier !== "all" ? `Click the "All" tier tab (top) to see every role from this ${source !== "all" ? "source" : "agency"} — the Confirmed/Likely/Maybe tiers are filtering them out.` :
+              tier === "confirmed" ? "Confirmed BYOD (own computer + listed specs) is rare — that's the point. Check the Likely and Maybe tabs, or wait for the next sweep." :
+                tab === "saved" ? "Star a role to keep it here while you apply." : "Try a different tier, clear a filter, or the search box."} />
         ) : (
           <div style={{ display: "flex", flexDirection: "column", gap: 9 }}>
             {visible.map(j => {
