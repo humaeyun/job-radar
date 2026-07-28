@@ -109,10 +109,16 @@ async function main() {
     });
   };
 
-  for (const a of agencies) {
-    const raw = await fetchAgency(a);
-    for (const job of raw) consider(job);
-  }
+  // Fetch agencies concurrently (network-bound). consider() is synchronous so
+  // interleaving is safe. Keeps sweeps fast as the agency count grows.
+  let ai = 0;
+  await Promise.all(Array.from({ length: 6 }, async () => {
+    while (ai < agencies.length) {
+      const a = agencies[ai++];
+      const raw = await fetchAgency(a);
+      for (const job of raw) consider(job);
+    }
+  }));
   if (doAgencies) spent += jsearchCost;
 
   // Job-board aggregator (Indeed/ZipRecruiter/SimplyHired via JSearch).

@@ -102,7 +102,11 @@ export async function sitemap(agency, base) {
   const origin = (() => { try { return new URL(base).origin; } catch { return String(base).replace(/\/+$/, ""); } })();
   const locs = await harvest(origin);
   // pre-filter by slug so we only fetch role-relevant pages
-  const candidates = locs.filter(u => ROLE_HINT.test(roughTitle(u))).slice(0, MAX_FETCH);
+  // Keep role-relevant slugs, and fetch remote-labeled ones FIRST so big
+  // onsite-heavy boards don't bury their few remote roles past the fetch cap.
+  const candidates = locs.filter(u => ROLE_HINT.test(roughTitle(u)))
+    .sort((a, b) => (REMOTE_HINT.test(roughTitle(b)) ? 1 : 0) - (REMOTE_HINT.test(roughTitle(a)) ? 1 : 0))
+    .slice(0, MAX_FETCH);
   const jobs = [];
   for (const url of candidates) {
     const html = await getText(url);

@@ -84,9 +84,9 @@
     "id": 10,
     "name": "Integrity Staffing Solutions",
     "site": "https://www.integritystaffing.com",
-    "careersUrl": "https://www.integritystaffing.com",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://careers.integritystaffing.com",
+    "ats": "sitemap",
+    "atsToken": "https://careers.integritystaffing.com",
     "enabled": true
   },
   {
@@ -138,9 +138,9 @@
     "id": 16,
     "name": "Nelson Connects",
     "site": "https://www.nelsonconnects.com",
-    "careersUrl": "https://www.nelsonconnects.com/job-seekers",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://jobs.nelsonconnects.com",
+    "ats": "sitemap",
+    "atsToken": "https://jobs.nelsonconnects.com",
     "enabled": true
   },
   {
@@ -156,18 +156,18 @@
     "id": 18,
     "name": "Remedy Intelligent Staffing",
     "site": "https://www.remedystaffing.com",
-    "careersUrl": "https://www.remedystaffing.com/jobs/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://remedystaffing.com",
+    "ats": "sitemap",
+    "atsToken": "https://remedystaffing.com",
     "enabled": true
   },
   {
     "id": 19,
     "name": "Westaff",
     "site": "https://www.westaff.com",
-    "careersUrl": "https://www.westaff.com/jobs/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://westaff.com",
+    "ats": "sitemap",
+    "atsToken": "https://westaff.com",
     "enabled": true
   },
   {
@@ -399,9 +399,9 @@
     "id": 45,
     "name": "Murray Resources",
     "site": "https://www.murrayresources.com",
-    "careersUrl": "https://murrayresources.com/jobs-in-houston/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://jobs.murrayresources.com",
+    "ats": "sitemap",
+    "atsToken": "https://jobs.murrayresources.com",
     "enabled": true
   },
   {
@@ -435,9 +435,9 @@
     "id": 49,
     "name": "Delta Dallas",
     "site": "https://www.deltadallas.com",
-    "careersUrl": "https://twitter.com/jobpeeps/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://jobs.deltadallas.com",
+    "ats": "sitemap",
+    "atsToken": "https://jobs.deltadallas.com",
     "enabled": true
   },
   {
@@ -471,18 +471,18 @@
     "id": 53,
     "name": "Hire Dynamics",
     "site": "https://www.hiredynamics.com",
-    "careersUrl": "https://hiredynamics.com/about-us/internal-careers/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://hiredynamics.com",
+    "ats": "sitemap",
+    "atsToken": "https://hiredynamics.com",
     "enabled": true
   },
   {
     "id": 54,
     "name": "BOS Staffing",
     "site": "https://www.bosstaff.com",
-    "careersUrl": "https://jobs.bosstaff.com/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://jobs.bosstaff.com",
+    "ats": "sitemap",
+    "atsToken": "https://jobs.bosstaff.com",
     "enabled": true
   },
   {
@@ -516,9 +516,9 @@
     "id": 58,
     "name": "TalentBridge",
     "site": "https://www.talentbridge.com",
-    "careersUrl": "https://www1.jobdiva.com/portal/?a=gljdnwq43svrf8k4hns2e9ghgd6ay106bdll5fi4d4yyqqzsfts4ytud3ffuqs38&compid=0#/login",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://talentbridge.com",
+    "ats": "sitemap",
+    "atsToken": "https://talentbridge.com",
     "enabled": true
   },
   {
@@ -534,9 +534,9 @@
     "id": 60,
     "name": "Find Great People",
     "site": "https://www.fgp.com",
-    "careersUrl": "https://www.fgp.com/job-search/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://fgp.com",
+    "ats": "sitemap",
+    "atsToken": "https://fgp.com",
     "enabled": true
   },
   {
@@ -714,9 +714,9 @@
     "id": 80,
     "name": "That's Good HR",
     "site": "https://www.thatsgoodhr.com",
-    "careersUrl": "https://thatsgoodhr.com/jobs/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://thatsgoodhr.com",
+    "ats": "sitemap",
+    "atsToken": "https://thatsgoodhr.com",
     "enabled": true
   },
   {
@@ -777,9 +777,9 @@
     "id": 87,
     "name": "Snelling Staffing",
     "site": "https://www.snelling.com",
-    "careersUrl": "https://www.snelling.com/jobs/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://snelling.com",
+    "ats": "sitemap",
+    "atsToken": "https://snelling.com",
     "enabled": true
   },
   {
@@ -849,9 +849,9 @@
     "id": 95,
     "name": "Medix",
     "site": "https://www.medixteam.com",
-    "careersUrl": "https://www.medixteam.com/blog/category/career-tips/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://jobs.medixteam.com",
+    "ats": "sitemap",
+    "atsToken": "https://jobs.medixteam.com",
     "enabled": true
   },
   {
@@ -876,9 +876,9 @@
     "id": 98,
     "name": "Favorite Healthcare Staffing",
     "site": "https://www.favoritestaffing.com",
-    "careersUrl": "https://www.favoritestaffing.com/job-posting",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://favoritestaffing.com",
+    "ats": "sitemap",
+    "atsToken": "https://favoritestaffing.com",
     "enabled": true
   },
   {
@@ -1020,9 +1020,9 @@
     "id": 114,
     "name": "Boldly",
     "site": "https://www.boldly.com",
-    "careersUrl": "https://boldly.com/jobs/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://boldly.com",
+    "ats": "sitemap",
+    "atsToken": "https://boldly.com",
     "enabled": true
   },
   {
@@ -1083,9 +1083,9 @@
     "id": 121,
     "name": "Jzanus Consulting",
     "site": "https://www.jzanus.com",
-    "careersUrl": "https://www.jzanus.com/jobs/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://jzanus.com",
+    "ats": "sitemap",
+    "atsToken": "https://jzanus.com",
     "enabled": true
   },
   {
@@ -1128,18 +1128,18 @@
     "id": 126,
     "name": "Insight Global",
     "site": "https://www.insightglobal.com",
-    "careersUrl": "https://insightglobal.com/jobs/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://careers.insightglobal.com",
+    "ats": "sitemap",
+    "atsToken": "https://careers.insightglobal.com",
     "enabled": true
   },
   {
     "id": 127,
     "name": "Aerotek",
     "site": "https://www.aerotek.com",
-    "careersUrl": "https://jobs.aerotek.com/us/en?icid=jb_aero_n_gen_xx_rtk.cmsrchjb_xx_na_usa_20201002_66610422",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://jobs.aerotek.com",
+    "ats": "sitemap",
+    "atsToken": "https://jobs.aerotek.com",
     "enabled": true
   },
   {
@@ -1164,9 +1164,9 @@
     "id": 130,
     "name": "Aston Carter",
     "site": "https://www.astoncarter.com",
-    "careersUrl": "https://careers.astoncarter.com/us/en",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://careers.astoncarter.com",
+    "ats": "sitemap",
+    "atsToken": "https://careers.astoncarter.com",
     "enabled": true
   },
   {
@@ -1182,9 +1182,9 @@
     "id": 132,
     "name": "Volt",
     "site": "https://www.volt.com",
-    "careersUrl": "https://www.volt.com",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://jobs.volt.com",
+    "ats": "sitemap",
+    "atsToken": "https://jobs.volt.com",
     "enabled": true
   },
   {
