@@ -12,12 +12,21 @@ const JS_HOST = "jsearch.p.rapidapi.com";
 const jsHeaders = key => ({ "X-RapidAPI-Key": key, "X-RapidAPI-Host": JS_HOST });
 
 async function jsQuery(key, query) {
-  const url = `https://${JS_HOST}/search?query=${encodeURIComponent(query)}&remote_jobs_only=true&num_pages=1`;
+  // JSearch v5: endpoint is /search-v2 and jobs live under data.jobs.
+  const url = `https://${JS_HOST}/search-v2?query=${encodeURIComponent(query)}&remote_jobs_only=true&num_pages=1`;
   const r = await fetch(url, { headers: jsHeaders(key) });
   if (!r.ok) return [];
   const data = await r.json();
-  return data.data || [];
+  return (data.data && data.data.jobs) || [];
 }
+
+// v5 remote roles often report job_is_remote / job_location "Anywhere" rather than a city.
+const jsLocation = (j) => {
+  const cs = [j.job_city, j.job_state].filter(Boolean).join(", ");
+  if (cs) return cs;
+  if (j.job_is_remote) return "Remote";
+  return (j.job_location && j.job_location !== "Anywhere" ? j.job_location : j.job_country) || "Remote";
+};
 
 // Convert JSearch structured salary to an hourly number.
 const toHourly = (v, per) => {
@@ -34,7 +43,7 @@ const toHourly = (v, per) => {
 const mapJob = (agency, j) => ({
   agency,
   title: j.job_title,
-  location: j.job_city || j.job_state || j.job_country || "Remote",
+  location: jsLocation(j),
   description: (j.job_description || "").slice(0, 4000),
   url: j.job_apply_link,
   postedAt: j.job_posted_at_datetime_utc || null,

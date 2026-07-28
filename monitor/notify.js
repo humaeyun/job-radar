@@ -7,13 +7,25 @@ export async function notifyTelegram(jobs) {
   const chat = process.env.TELEGRAM_CHAT_ID;
   if (!token || !chat || jobs.length === 0) return;
 
-  // Batch into messages of ~8 roles to stay under Telegram's length limit.
-  for (let i = 0; i < jobs.length; i += 8) {
-    const batch = jobs.slice(i, i + 8);
-    const lines = batch.map(j =>
-      `🟡 <b>${esc(j.title)}</b>\n${esc(j.agency)} · ${esc(j.category)}${j.maybeHybrid ? " · ⚠️ maybe hybrid" : ""}\n<a href="${j.url}">Open posting</a>`
-    );
-    const text = `<b>${jobs.length} new remote role${jobs.length > 1 ? "s" : ""} on the radar</b>\n\n${lines.join("\n\n")}`;
+  // Cap the number of individual pings so a big sweep can't flood your phone;
+  // the rest still land in the feed/dashboard. Batch into ~8 per message.
+  const MAX = 12;
+  const show = jobs.slice(0, MAX);
+  const more = jobs.length - show.length;
+
+  for (let i = 0; i < show.length; i += 8) {
+    const batch = show.slice(i, i + 8);
+    const lines = batch.map(j => {
+      const bits = [esc(j.category)];
+      if (j.pay) bits.push(esc(j.pay));
+      if (j.employment) bits.push(esc(j.employment));
+      if (j.byod) bits.push("⚙ BYOD");
+      else if (j.maybeHybrid) bits.push("⚠️ maybe hybrid");
+      return `🟡 <b>${esc(j.title)}</b>\n${esc(j.agency)} · ${bits.join(" · ")}\n<a href="${j.url}">Open posting</a>`;
+    });
+    const header = `<b>${jobs.length} new remote role${jobs.length > 1 ? "s" : ""} on the radar</b>`;
+    const footer = (i + 8 >= show.length && more > 0) ? `\n\n➕ +${more} more — see the dashboard` : "";
+    const text = `${header}\n\n${lines.join("\n\n")}${footer}`;
     await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
