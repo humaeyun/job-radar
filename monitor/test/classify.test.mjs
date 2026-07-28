@@ -29,29 +29,37 @@ test("hybrid is flagged but not blocked", () => {
   assert.equal(t.maybeHybrid, true);
 });
 
-test("BYOD required -> byod true", () => {
+test("CONFIRMED BYOD = own computer + specs", () => {
   for (const d of [
-    "You must provide your own laptop and USB headset.",
-    "Bring your own computer and webcam.",
-    "Requires your own dual monitors.",
-    "BYOD environment; must have wired ethernet.",
-    "We provide paid training; you supply your own laptop and headset.", // BYOD wins over provider phrase
-  ]) assert.equal(c(d).byod, true, `expected byod=true for: ${d}`);
+    "You must provide your own Windows 11 laptop with 8GB RAM.",
+    "Use your own computer (Windows 10, 16 GB RAM, SSD).",
+    "Requires a personal laptop with an i5 processor and 256GB storage.",
+  ]) assert.equal(c(d).byod, true, `expected confirmed byod for: ${d}`);
+});
+
+test("NOT confirmed without specs or without own-computer", () => {
+  assert.equal(c("Bring your own computer and webcam.").byod, false);       // no specs
+  assert.equal(c("USB headset and wired internet required.").byod, false);  // peripherals only, no computer
+  assert.equal(c("Provide your own laptop and USB headset.").byod, false);  // own computer but no specs
+});
+
+test("softBYOD flags bring-your-own without full specs", () => {
+  assert.equal(c("Bring your own laptop.").softBYOD, true);
+  assert.equal(c("You must provide your own Windows 11 laptop with 8GB RAM.").softBYOD, false); // confirmed, not soft
 });
 
 test("company provides/ships gear -> byod false", () => {
   for (const d of [
-    "Equipment Provided and shipped directly to your home.",
-    "We will ship a company laptop, USB headset and dual monitors to your home.",
-    "A Windows 11 laptop and headset will be mailed to you.",
-    "All equipment will be provided.",
-    "Company-issued laptop and headset.",
-    "Your laptop and monitor will be sent to you before day one.",
+    "We will ship a Windows 11 laptop with 16GB RAM to your home.",
+    "A company laptop (Windows 10, 8GB RAM) will be mailed to you.",
+    "All equipment provided; own computer not required.",
+    "Company-issued laptop with 16 GB RAM.",
   ]) assert.equal(c(d).byod, false, `expected byod=false for: ${d}`);
 });
 
-test("equipment items are detected without RAM false-positives", () => {
-  assert.deepEqual(c("Requires your own dual monitors and a webcam.").equipment, ["Dual monitors", "Webcam"]);
+test("equipment detected (specs + peripherals), no RAM false-positive", () => {
+  assert.ok(c("Use your own laptop: Windows 11, 8GB RAM, webcam.").equipment.includes("Windows 10/11"));
+  assert.deepEqual(c("Requires a webcam and dual monitors.").equipment, ["Webcam", "Dual monitors"]);
   assert.equal(c("Join our program for remote customer service work.").equipment.length, 0); // 'program' must not match RAM
 });
 

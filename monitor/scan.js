@@ -101,10 +101,19 @@ async function main() {
     if (payMin == null && payMax == null) { const p = extractPay(text); payMin = p.min; payMax = p.max; }
     const employment = extractEmployment(text);
 
+    // BYOD tier: confirmed (own computer + specs) > likely (gig type / $10-18 /
+    // soft "bring your own") > maybe (seasonal, part-time, or peripheral-only).
+    const gig = ["Contract", "Temp-to-hire", "Temporary"].includes(employment) || /\b1099\b/i.test(text);
+    const payInBand = payMin != null && payMin >= 8 && payMin <= 18;
+    let byodTier = "";
+    if (tag.byod) byodTier = "confirmed";
+    else if (tag.softBYOD || gig || payInBand) byodTier = "likely";
+    else if (["Seasonal", "Part-time"].includes(employment) || tag.equipment.length > 0) byodTier = "maybe";
+
     fresh.push({
       id: key, agency: job.agency, title: job.title,
       category: tag.category, maybeHybrid: tag.maybeHybrid,
-      byod: tag.byod, equipment: tag.equipment,
+      byod: tag.byod, byodTier, equipment: tag.equipment,
       pay: payLabel(payMin, payMax), payMin, payMax, employment,
       location: job.location || "Remote", source: job.source,
       url: job.url, postedAt: job.postedAt, firstSeen: nowIso,

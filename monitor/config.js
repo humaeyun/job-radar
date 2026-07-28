@@ -18,30 +18,41 @@ const REMOTE_HINTS = ["remote", "work from home", "wfh", "work-from-home", "tele
 const NON_REMOTE_TRAPS = ["hybrid", "on-site", "onsite", "in office", "in-office"]; // downgrade, don't hard-block
 
 // ---- Equipment / BYOD detection --------------------------------------------
-// Each item pairs a display label with the patterns that indicate it. Word
-// boundaries keep short tokens (ram, cpu) from matching inside unrelated words
-// like "program" or "capture".
-const EQUIPMENT_RULES = [
-  { label: "Windows 10/11 laptop",    patterns: [/windows\s*1[01]/, /windows (laptop|pc|computer)/] },
-  { label: "USB/wired headset",       patterns: [/\b(usb|wired)\s+headset/, /\bheadset\b/] },
-  { label: "Dual monitors",           patterns: [/\bdual\s+monitor/, /\btwo\s+monitor/, /\b2\s+monitor/, /\bsecond\s+monitor/] },
-  { label: "Webcam",                  patterns: [/\bweb\s?cam(era)?\b/] },
-  { label: "Wired/Ethernet internet", patterns: [/\bethernet\b/, /wired\s+(internet|connection)/, /hard[\s-]?wired/] },
-  { label: "Minimum RAM/CPU specs",   patterns: [/\bram\b/, /\bcpu\b/, /\bghz\b/, /\bprocessor\b/] },
+// CONFIRMED BYOD (the real target) = the posting requires the applicant's OWN
+// computer/laptop AND lists computer specs (Windows 10/11, RAM, storage, CPU).
+// Peripheral-only mentions (headset, webcam, internet) are NOT confirmed BYOD —
+// they're a weaker "maybe" signal handled downstream.
+
+// Computer specs — the tell-tale of a real "use your own machine" requirement.
+const SPEC_RULES = [
+  ["Windows 10/11", /\bwindows\s*1[01]\b/i],
+  ["RAM",           /\b\d{1,3}\s*gb\b[^.]{0,15}\bram\b|\bram\b[^.]{0,15}\b\d{1,3}\s*gb\b|\b\d{1,3}\s*gb\s*ram\b/i],
+  ["Storage/SSD",   /\b(ssd|solid[- ]state|hard\s*drive|\d{2,4}\s*gb\s*(ssd|storage|hdd)|\d\s*tb)\b/i],
+  ["CPU/processor", /\b(cpu|processor|\d\.?\d?\s*ghz|i[3579]-?\d{3,}|ryzen|dual[- ]core|quad[- ]core)\b/i],
 ];
 
-// Phrases that say the WORKER must supply the gear -> points to BYOD.
-const BYOD_PHRASES = [
-  /\bbyod\b/,
-  /(provide|supply|bring|use)\s+your\s+own/,
-  /your\s+own\s+(equipment|laptop|computer|device|pc)/,
-  /own\s+(equipment|laptop|computer|device)/,
+// Peripherals — a soft "maybe" signal only, never confirmed BYOD on their own.
+const PERIPHERAL_RULES = [
+  ["USB headset",    /\b(usb|wired)?\s*headset\b/i],
+  ["Webcam",         /\bweb\s?cam(era)?\b/i],
+  ["Dual monitors",  /\b(dual|two|second|2)\s+monitors?\b/i],
+  ["Wired internet", /\b(ethernet|wired\s+(internet|connection)|hard[\s-]?wired)\b/i],
 ];
 
-// Phrases that say the COMPANY supplies the gear -> suppress BYOD. Covers the
-// many ways a posting says "we'll get equipment to you": provided/supplied/
-// furnished, we (will) ship/mail/send/issue, "<gear> will be provided/shipped",
-// and "shipped/mailed/sent to your home / to you".
+// The applicant must supply their OWN computer/laptop. Allow a few words between
+// "own"/"personal" and the machine noun ("your own Windows 11 laptop").
+const OWN_COMPUTER = [
+  /\bown\b[^.]{0,30}?\b(laptop|computer|pc|desktop)\b/i,
+  /\bpersonal\b[^.]{0,25}?\b(laptop|computer|pc|desktop)\b/i,
+  /\b(must|need(?:s)?\s+to|required\s+to|able\s+to)\b[^.]{0,25}?\b(have|provide|own|supply|furnish|use)\b[^.]{0,25}?\b(laptop|computer|pc|desktop)\b/i,
+  /\b(laptop|computer|pc|desktop)\s+(?:is\s+)?(required|needed|a\s+must|mandatory)\b/i,
+  /\bown\s+(equipment|device)s?\b/i,
+];
+
+// A softer "bring your own" signal (no specs) — feeds the "likely" tier.
+const SOFT_BYOD = [/\bbyod\b/i, /(provide|supply|bring|use)\s+your\s+own/i, /your\s+own\s+(equipment|laptop|computer|device)/i];
+
+// Phrases that say the COMPANY supplies the gear -> suppress BYOD.
 const PROVIDED_HINTS = [
   /\bprovided\b/, /\bsupplied\b/, /\bfurnished\b/,
   /(we|company|employer|client)(?:'?ll| will)?\s+(?:provide|ship|mail|send|supply|furnish|issue|give)\b/i,
@@ -52,20 +63,20 @@ const PROVIDED_HINTS = [
   /provided\s+by\s+(?:the\s+)?(?:company|employer|us)/i,
 ];
 
-// Returns { byod, equipment }. `equipment` lists every gear item mentioned.
-// `byod` is true only when that gear is stated as the worker's responsibility:
-// an explicit "bring/use your own" phrase, or specific gear called out — unless
-// the posting says the company provides/ships it (and there's no explicit BYOD).
+// Returns { byod, equipment, softBYOD }.
+//  - byod (CONFIRMED): own-computer requirement + at least one computer spec,
+//    and the company doesn't say it provides the gear.
+//  - equipment: matched spec + peripheral labels (for display).
+//  - softBYOD: a "bring your own" signal without full specs (a "likely" hint).
 function detectEquipment(hay) {
-  const equipment = [];
-  for (const item of EQUIPMENT_RULES) {
-    if (item.patterns.some(re => re.test(hay))) equipment.push(item.label);
-  }
-  const hasStrong = BYOD_PHRASES.some(re => re.test(hay));
-  const providerSupplies = PROVIDED_HINTS.some(re => re.test(hay));
-  let byod = hasStrong || equipment.length > 0;
-  if (providerSupplies && !hasStrong) byod = false;
-  return { byod, equipment };
+  const specs = SPEC_RULES.filter(([, re]) => re.test(hay)).map(([l]) => l);
+  const peripherals = PERIPHERAL_RULES.filter(([, re]) => re.test(hay)).map(([l]) => l);
+  const provided = PROVIDED_HINTS.some(re => re.test(hay));
+  const ownComputer = OWN_COMPUTER.some(re => re.test(hay));
+  const soft = SOFT_BYOD.some(re => re.test(hay)) || ownComputer;
+
+  const byod = ownComputer && specs.length > 0 && !provided;   // CONFIRMED
+  return { byod, equipment: [...specs, ...peripherals], softBYOD: soft && !provided && !byod };
 }
 
 export function classify(title = "", location = "", description = "") {
@@ -82,8 +93,8 @@ export function classify(title = "", location = "", description = "") {
 
   // Flag likely-hybrid so the dashboard can show it dimmer.
   const maybeHybrid = NON_REMOTE_TRAPS.some(h => hay.includes(h));
-  const { byod, equipment } = detectEquipment(hay);
-  return { category: matched, maybeHybrid, byod, equipment };
+  const { byod, equipment, softBYOD } = detectEquipment(hay);
+  return { category: matched, maybeHybrid, byod, equipment, softBYOD };
 }
 
 // ---- Pay + employment-type extraction (drive the dashboard's relevance sort) --

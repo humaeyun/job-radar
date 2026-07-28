@@ -43,14 +43,23 @@ const timeAgo = (iso) => {
   return `${Math.floor(h / 24)}d ago`;
 };
 
-/* ---- BYOD-relevance signals (per user's criteria) ----
- * Never hides low-rate remote jobs; used to rank the likely-BYOD ones up top.
- * Signals: confirmed BYOD, low hourly pay ($10-18), and temp/seasonal/contract. */
-const EMP_BYOD = new Set(["Temp-to-hire", "Seasonal", "Temporary", "Contract"]);
-const inBand = (j) => j.payMin != null && j.payMin <= 18;        // low-wage target band
+/* ---- BYOD tiers ----
+ * confirmed = own computer + specs (the target). likely = gig type / $10-18 /
+ * soft "bring your own". maybe = seasonal / part-time / peripheral-only. */
+const EMP_LIKELY = new Set(["Contract", "Temp-to-hire", "Temporary"]);
+const EMP_MAYBE = new Set(["Seasonal", "Part-time"]);
+const inBand = (j) => j.payMin != null && j.payMin >= 8 && j.payMin <= 18;
 const isHighPay = (j) => j.payMin != null && j.payMin > 18;
-const byodLikely = (j) => !!j.byod || inBand(j) || EMP_BYOD.has(j.employment);
-const relScore = (j) => (j.byod ? 4 : 0) + (inBand(j) ? 3 : 0) + (EMP_BYOD.has(j.employment) ? 2 : 0);
+// Prefer the tier the monitor stored; fall back to deriving it from fields.
+const tierOf = (j) => j.byodTier || (
+  j.byod ? "confirmed"
+    : (inBand(j) || EMP_LIKELY.has(j.employment)) ? "likely"
+      : (EMP_MAYBE.has(j.employment) || (j.equipment && j.equipment.length)) ? "maybe"
+        : "");
+const TIER_RANK = { confirmed: 3, likely: 2, maybe: 1, "": 0 };
+// Group job-board publishers vs direct agency reads for the source filter.
+const DIRECT_SOURCES = new Set(["Haley", "Sitemap", "RSS", "Avionté", "Workable", "Greenhouse", "Lever", "Ashby", "SmartRecruiters", "Careers page"]);
+const isJobBoard = (src) => !DIRECT_SOURCES.has(src);
 
 export default function App() {
   const [jobs, setJobs] = useState([]);
@@ -62,8 +71,9 @@ export default function App() {
   const [q, setQ] = useState("");
   const [activeCats, setActiveCats] = useState([]);
   const [agency, setAgency] = useState("all");           // agency name or "all"
+  const [source, setSource] = useState("all");           // all | boards | direct | <specific>
+  const [tier, setTier] = useState("confirmed");         // confirmed | likely | maybe | all  (PRIMARY)
   const [payFilter, setPayFilter] = useState("all");     // all | band ($10-18) | high (>$18) | none
-  const [focus, setFocus] = useState("all");             // all | likely | confirmed (BYOD)
   const [sortBy, setSortBy] = useState("relevance");     // relevance | newest
   const [showAlerts, setShowAlerts] = useState(false);
   const [ready, setReady] = useState(false);
@@ -102,26 +112,39 @@ export default function App() {
   const newIds = useMemo(() => jobs.filter(j => !seen.includes(j.id)).map(j => j.id), [jobs, seen]);
 
   const agencies = useMemo(() => [...new Set(jobs.map(j => j.agency))].sort((a, b) => a.localeCompare(b)), [jobs]);
+  const sources = useMemo(() => [...new Set(jobs.map(j => j.source).filter(Boolean))].sort(), [jobs]);
+
+  // Base list for the active tab (before tier/other filters) — powers tier counts.
+  const tabBase = useMemo(() => {
+    if (tab === "new") return jobs.filter(j => newIds.includes(j.id) && !dismissed.includes(j.id));
+    if (tab === "saved") return jobs.filter(j => saved.includes(j.id));
+    return jobs.filter(j => !dismissed.includes(j.id));
+  }, [jobs, tab, newIds, dismissed, saved]);
+
+  const tierCounts = useMemo(() => {
+    const c = { confirmed: 0, likely: 0, maybe: 0, all: tabBase.length };
+    for (const j of tabBase) { const t = tierOf(j); if (c[t] != null) c[t]++; }
+    return c;
+  }, [tabBase]);
 
   const visible = useMemo(() => {
-    let list = jobs;
-    if (tab === "new") list = list.filter(j => newIds.includes(j.id) && !dismissed.includes(j.id));
-    else if (tab === "saved") list = list.filter(j => saved.includes(j.id));
-    else list = list.filter(j => !dismissed.includes(j.id));
+    let list = tabBase;
+    if (tier !== "all") list = list.filter(j => tierOf(j) === tier);
     if (activeCats.length) list = list.filter(j => activeCats.includes(j.category));
-    if (agency !== "all") list = list.filter(j => j.agency === agency);
+    if (agency !== "all") { const an = agency.toLowerCase(); list = list.filter(j => j.agency.toLowerCase().includes(an)); }
+    if (source === "boards") list = list.filter(j => isJobBoard(j.source));
+    else if (source === "direct") list = list.filter(j => !isJobBoard(j.source));
+    else if (source !== "all") list = list.filter(j => j.source === source);
     if (payFilter === "band") list = list.filter(inBand);
     else if (payFilter === "high") list = list.filter(isHighPay);
     else if (payFilter === "none") list = list.filter(j => j.payMin == null);
-    if (focus === "likely") list = list.filter(byodLikely);
-    else if (focus === "confirmed") list = list.filter(j => j.byod);
     if (q.trim()) {
       const s = q.toLowerCase();
       list = list.filter(j => (j.title + j.agency + j.category).toLowerCase().includes(s));
     }
     const byNew = (a, b) => new Date(b.firstSeen) - new Date(a.firstSeen);
-    return [...list].sort(sortBy === "newest" ? byNew : (a, b) => (relScore(b) - relScore(a)) || byNew(a, b));
-  }, [jobs, tab, newIds, dismissed, saved, activeCats, agency, payFilter, focus, sortBy, q]);
+    return [...list].sort(sortBy === "newest" ? byNew : (a, b) => (TIER_RANK[tierOf(b)] - TIER_RANK[tierOf(a)]) || byNew(a, b));
+  }, [tabBase, tier, activeCats, agency, source, payFilter, sortBy, q]);
 
   const counts = {
     new: jobs.filter(j => newIds.includes(j.id) && !dismissed.includes(j.id)).length,
@@ -206,70 +229,64 @@ export default function App() {
           )}
         </div>
 
-        {/* ---- search + category filters ---- */}
-        <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap", marginBottom: 12 }}>
-          <input value={q} onChange={e => setQ(e.target.value)} placeholder="Search title or agency…"
-            style={{ flex: "1 1 220px", padding: "9px 12px", borderRadius: 9, background: T.panel,
-              border: `1px solid ${T.border}`, color: T.text, fontFamily: SANS, fontSize: 13.5 }} />
+        {/* ---- BYOD tier (PRIMARY filter) ---- */}
+        <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 12 }}>
+          {[["confirmed", "🎯 Confirmed BYOD", T.amber], ["likely", "Likely", T.teal], ["maybe", "Maybe", T.muted], ["all", "All", T.muted]].map(([k, label, col]) => {
+            const on = tier === k;
+            return (
+              <button key={k} onClick={() => setTier(k)}
+                style={{ padding: "9px 14px", borderRadius: 10, cursor: "pointer", fontFamily: MONO, fontSize: 12.5, letterSpacing: ".02em",
+                  border: `1px solid ${on ? col : T.border}`, background: on ? (k === "likely" ? "rgba(62,214,176,.12)" : k === "confirmed" ? T.amberDim : T.panelHi) : "transparent",
+                  color: on ? col : T.muted, fontWeight: k === "confirmed" ? 700 : 500 }}>
+                {label} <span style={{ opacity: .7 }}>{tierCounts[k]}</span>
+              </button>
+            );
+          })}
         </div>
-        <div style={{ display: "flex", gap: 7, flexWrap: "wrap", marginBottom: 18 }}>
+
+        {/* ---- search + agency + source + sort ---- */}
+        <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap", marginBottom: 10 }}>
+          <input value={q} onChange={e => setQ(e.target.value)} placeholder="Search title or agency…"
+            style={{ flex: "1 1 190px", padding: "9px 12px", borderRadius: 9, background: T.panel,
+              border: `1px solid ${T.border}`, color: T.text, fontFamily: SANS, fontSize: 13.5 }} />
+          <input list="agencyList" value={agency === "all" ? "" : agency}
+            onChange={e => setAgency(e.target.value.trim() ? e.target.value : "all")} placeholder="Agency…"
+            style={{ flex: "0 1 150px", padding: "9px 12px", borderRadius: 9, background: T.panel,
+              border: `1px solid ${agency !== "all" ? T.teal : T.border}`, color: agency !== "all" ? T.teal : T.text, fontFamily: MONO, fontSize: 12 }} />
+          <datalist id="agencyList">{agencies.map(a => <option key={a} value={a} />)}</datalist>
+          <select value={source} onChange={e => setSource(e.target.value)}
+            style={{ padding: "9px 10px", borderRadius: 9, background: T.panel, border: `1px solid ${source !== "all" ? T.teal : T.border}`, color: source !== "all" ? T.teal : T.muted, fontFamily: MONO, fontSize: 12 }}>
+            <option value="all">All sources</option>
+            <option value="boards">Job boards (Indeed/LinkedIn/…)</option>
+            <option value="direct">Agency direct</option>
+            <optgroup label="Specific source">{sources.map(s => <option key={s} value={s}>{s}</option>)}</optgroup>
+          </select>
+          <select value={sortBy} onChange={e => setSortBy(e.target.value)}
+            style={{ padding: "9px 10px", borderRadius: 9, background: T.panel, border: `1px solid ${T.border}`, color: T.muted, fontFamily: MONO, fontSize: 12 }}>
+            <option value="relevance">Sort: BYOD tier</option>
+            <option value="newest">Sort: Newest</option>
+          </select>
+        </div>
+
+        {/* ---- category + pay chips ---- */}
+        <div style={{ display: "flex", gap: 7, flexWrap: "wrap", alignItems: "center", marginBottom: 18 }}>
           {CATS.map(c => {
             const on = activeCats.includes(c);
             return (
               <button key={c} className="chip" onClick={() => toggleCat(c)}
                 style={{ padding: "5px 11px", border: `1px solid ${on ? T.teal : T.border}`,
-                  background: on ? "rgba(62,214,176,.12)" : "transparent", color: on ? T.teal : T.muted }}>
-                {c}
-              </button>
+                  background: on ? "rgba(62,214,176,.12)" : "transparent", color: on ? T.teal : T.muted }}>{c}</button>
             );
           })}
-          {activeCats.length > 0 && (
-            <button className="chip" onClick={() => setActiveCats([])}
-              style={{ padding: "5px 11px", border: `1px solid ${T.border}`, background: "transparent", color: T.faint }}>
-              clear ✕
-            </button>
-          )}
-        </div>
-
-        {/* ---- agency + sort ---- */}
-        <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap", marginBottom: 12 }}>
-          <select value={agency} onChange={e => setAgency(e.target.value)}
-            style={{ padding: "8px 10px", borderRadius: 9, background: T.panel, border: `1px solid ${agency !== "all" ? T.teal : T.border}`,
-              color: agency !== "all" ? T.teal : T.text, fontFamily: MONO, fontSize: 12, maxWidth: 260 }}>
-            <option value="all">All agencies ({agencies.length})</option>
-            {agencies.map(a => <option key={a} value={a}>{a}</option>)}
-          </select>
-          <select value={sortBy} onChange={e => setSortBy(e.target.value)}
-            style={{ padding: "8px 10px", borderRadius: 9, background: T.panel, border: `1px solid ${T.border}`, color: T.muted, fontFamily: MONO, fontSize: 12 }}>
-            <option value="relevance">Sort: BYOD relevance</option>
-            <option value="newest">Sort: Newest first</option>
-          </select>
-        </div>
-
-        {/* ---- pay + BYOD-focus filters ---- */}
-        <div style={{ display: "flex", gap: 16, alignItems: "center", flexWrap: "wrap", marginBottom: 18 }}>
-          <div style={{ display: "flex", gap: 7, alignItems: "center", flexWrap: "wrap" }}>
-            <span style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", color: T.faint, textTransform: "uppercase" }}>Pay</span>
-            {[["all", "Any"], ["band", "$10–18/hr"], ["high", ">$18/hr"], ["none", "Not listed"]].map(([k, label]) => {
-              const on = payFilter === k;
-              return (
-                <button key={k} className="chip" onClick={() => setPayFilter(k)}
-                  style={{ padding: "5px 11px", border: `1px solid ${on ? T.amber : T.border}`,
-                    background: on ? T.amberDim : "transparent", color: on ? T.amber : T.muted }}>{label}</button>
-              );
-            })}
-          </div>
-          <div style={{ display: "flex", gap: 7, alignItems: "center", flexWrap: "wrap" }}>
-            <span style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", color: T.faint, textTransform: "uppercase" }}>BYOD</span>
-            {[["all", "All"], ["likely", "Likely"], ["confirmed", "Confirmed"]].map(([k, label]) => {
-              const on = focus === k;
-              return (
-                <button key={k} className="chip" onClick={() => setFocus(k)}
-                  style={{ padding: "5px 11px", border: `1px solid ${on ? T.teal : T.border}`,
-                    background: on ? "rgba(62,214,176,.12)" : "transparent", color: on ? T.teal : T.muted }}>{label}</button>
-              );
-            })}
-          </div>
+          <span style={{ width: 1, height: 15, background: T.border, margin: "0 3px" }} />
+          {[["all", "Any $"], ["band", "$10–18/hr"], ["high", ">$18/hr"], ["none", "No pay"]].map(([k, label]) => {
+            const on = payFilter === k;
+            return (
+              <button key={k} className="chip" onClick={() => setPayFilter(k)}
+                style={{ padding: "5px 11px", border: `1px solid ${on ? T.amber : T.border}`,
+                  background: on ? T.amberDim : "transparent", color: on ? T.amber : T.muted }}>{label}</button>
+            );
+          })}
         </div>
 
         {/* ---- feed ---- */}
@@ -277,10 +294,10 @@ export default function App() {
           <Empty title="Warming up the radar…" body="Loading your saved and seen roles." />
         ) : visible.length === 0 ? (
           <Empty
-            title={tab === "new" ? "No new remote roles since your last sweep." :
+            title={tier === "confirmed" ? "No confirmed-BYOD roles match right now." :
               tab === "saved" ? "Nothing saved yet." : "No roles match those filters."}
-            body={tab === "new" ? "The radar's still watching every agency. New posts land here the moment they appear." :
-              tab === "saved" ? "Star a role to keep it here while you apply." : "Try clearing a filter or the search box."} />
+            body={tier === "confirmed" ? "Confirmed BYOD (own computer + listed specs) is rare — that's the point. Check the Likely and Maybe tabs, or wait for the next sweep." :
+              tab === "saved" ? "Star a role to keep it here while you apply." : "Try a different tier, clear a filter, or the search box."} />
         ) : (
           <div style={{ display: "flex", flexDirection: "column", gap: 9 }}>
             {visible.map(j => {
@@ -308,17 +325,16 @@ export default function App() {
                         {j.title}
                       </a>
                       <div style={{ marginTop: 7, display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
-                        <Tag color={T.teal}>{j.category}</Tag>
+                        {(() => { const t = tierOf(j); return t === "confirmed"
+                          ? <Tag color={T.amber}>🎯 Confirmed BYOD{j.equipment?.length ? `: ${j.equipment.join(", ")}` : ""}</Tag>
+                          : t === "likely" ? <Tag color={T.teal}>Likely BYOD</Tag>
+                            : t === "maybe" ? <Tag color={T.faint}>Maybe BYOD</Tag> : null; })()}
                         {j.pay && <Tag color={inBand(j) ? T.amber : T.muted}>{j.pay}</Tag>}
-                        {j.employment && <Tag color={EMP_BYOD.has(j.employment) ? T.amber : T.muted}>{j.employment}</Tag>}
+                        {j.employment && <Tag color={EMP_LIKELY.has(j.employment) || EMP_MAYBE.has(j.employment) ? T.amber : T.muted}>{j.employment}</Tag>}
+                        <Tag color={T.teal}>{j.category}</Tag>
                         <span style={{ fontFamily: MONO, fontSize: 11, color: T.muted }}>{j.location}</span>
                         <span style={{ fontFamily: MONO, fontSize: 11, color: T.faint }}>via {j.source}</span>
                         {j.maybeHybrid && <Tag color={T.red}>maybe hybrid</Tag>}
-                        {j.byod ? (
-                          <Tag color={T.amber}>⚙ BYOD{j.equipment?.length ? `: ${j.equipment.join(", ")}` : ""}</Tag>
-                        ) : byodLikely(j) ? (
-                          <Tag color={T.faint}>likely BYOD</Tag>
-                        ) : null}
                       </div>
                     </div>
                     {/* actions */}

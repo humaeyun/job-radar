@@ -37,15 +37,15 @@ in a new `adapters/sites/<agency>.js` returning the same shape as the ATS adapte
 ## Output contract (never change — the dashboard depends on it)
 `data/feed.json` = array, newest first, of:
 ```
-{ id, agency, title, category, maybeHybrid, byod, equipment, pay, payMin, payMax, employment, location, source, url, postedAt, firstSeen }
+{ id, agency, title, category, maybeHybrid, byod, byodTier, equipment, pay, payMin, payMax, employment, location, source, url, postedAt, firstSeen }
 ```
-`byod` (bool) is true only when the posting requires the worker to supply their
-own gear; `equipment` is an array of matched item labels (e.g. `["Dual monitors",
-"USB/wired headset"]`), empty when none are detected. `pay` is a display label
-(e.g. `"$16/hr"`, `""` if unknown) with `payMin`/`payMax` the hourly numbers (or
-null); `employment` is one of Temp-to-hire/Seasonal/Temporary/Contract/Part-time
-or `""`. The dashboard ranks BYOD-likely roles (low pay + temp/seasonal/contract)
-to the top without hiding anything.
+`byod` (bool) = CONFIRMED BYOD: the posting requires the applicant's OWN
+computer/laptop AND lists computer specs (Windows 10/11, RAM, storage, CPU).
+`byodTier` is `"confirmed"` | `"likely"` (soft "bring your own" / gig type /
+$10-18 pay) | `"maybe"` (seasonal, part-time, or peripheral-only mention) | `""`.
+`equipment` = matched spec + peripheral labels. `pay` is a display label
+(`"$16/hr"`, `""` if unknown) with `payMin`/`payMax` hourly numbers (or null);
+`employment` is Temp-to-hire/Seasonal/Temporary/Contract/Part-time or `""`.
 
 ## Guardrails
 - Respect robots.txt; keep to one sweep per 30 min. Set a real User-Agent (already done).
