@@ -174,9 +174,9 @@
     "id": 20,
     "name": "Staffmark",
     "site": "https://www.staffmark.com",
-    "careersUrl": "https://staffmark.com/job-seekers/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://staffmark.com",
+    "ats": "sitemap",
+    "atsToken": "https://staffmark.com",
     "enabled": true
   },
   {
@@ -192,9 +192,9 @@
     "id": 22,
     "name": "Atrium",
     "site": "https://www.atriumstaff.com",
-    "careersUrl": "https://www.atriumstaff.com/job-seekers",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://www.atriumstaff.com",
+    "ats": "sitemap",
+    "atsToken": "https://www.atriumstaff.com",
     "enabled": true
   },
   {
@@ -408,9 +408,9 @@
     "id": 46,
     "name": "The HT Group",
     "site": "https://www.thehtgroup.com",
-    "careersUrl": "https://www.thehtgroup.com/find-a-job/commercial-construction-jobs/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://www.thehtgroup.com",
+    "ats": "sitemap",
+    "atsToken": "https://www.thehtgroup.com",
     "enabled": true
   },
   {
@@ -606,9 +606,9 @@
     "id": 68,
     "name": "The Jacobson Group",
     "site": "https://www.jacobsononline.com",
-    "careersUrl": "https://careers.jacobsononline.com/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://careers.jacobsononline.com",
+    "ats": "sitemap",
+    "atsToken": "https://careers.jacobsononline.com",
     "enabled": true
   },
   {
