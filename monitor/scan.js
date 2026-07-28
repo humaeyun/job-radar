@@ -14,6 +14,7 @@ import fs from "node:fs/promises";
 import { ATS } from "./adapters/ats.js";
 import { haley } from "./adapters/haley.js";
 import { sitemap } from "./adapters/sitemap.js";
+import { avionte } from "./adapters/avionte.js";
 import { jsearch, scrape, aggregator, AGGREGATOR_QUERY_COUNT } from "./adapters/fallback.js";
 import { classify, jobKey, extractPay, extractEmployment, payLabel } from "./config.js";
 import { notifyTelegram } from "./notify.js";
@@ -42,6 +43,7 @@ async function fetchAgency(a) {
   try {
     if (a.ats in ATS) return await ATS[a.ats](a.name, a.atsToken);
     if (a.ats === "haley")   return await haley(a.name, a.atsToken || a.careersUrl);
+    if (a.ats === "avionte") return await avionte(a.name, a.atsToken);
     if (a.ats === "sitemap") return await sitemap(a.name, a.atsToken || a.careersUrl || a.site);
     if (a.ats === "jsearch") return await jsearch(a.name, null, { name: a.name });
     if (a.ats === "scrape")  return await scrape(a.name, a.careersUrl);

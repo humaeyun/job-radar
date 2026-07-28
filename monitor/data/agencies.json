@@ -21,9 +21,9 @@
     "id": 3,
     "name": "Dawson",
     "site": "https://www.dawsoncareers.com",
-    "careersUrl": "https://www.dawsoncareers.com",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://jobs.dawsoncareers.com/job-board",
+    "ats": "avionte",
+    "atsToken": "itXSJvsrcR4:OcipZyIypd4",
     "enabled": true
   },
   {
@@ -984,9 +984,9 @@
     "id": 110,
     "name": "Eastridge Workforce Solutions",
     "site": "https://www.eastridge.com",
-    "careersUrl": "https://www.eastridge.com/careers",
-    "ats": "jsearch",
-    "atsToken": "",
+    "careersUrl": "https://jobs.eastridge.com",
+    "ats": "avionte",
+    "atsToken": "tpFc-ORp_DE:DYOWkAweRec",
     "enabled": true
   },
   {
