@@ -895,8 +895,8 @@
     "name": "TERRA Staffing Group",
     "site": "https://www.terrastaffinggroup.com",
     "careersUrl": "https://verstela.com/job-seekers",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "greenhouse",
+    "atsToken": "verstela",
     "enabled": true
   },
   {
