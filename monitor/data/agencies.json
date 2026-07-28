@@ -13,8 +13,8 @@
     "name": "JobSource",
     "site": "https://www.jobsource.com",
     "careersUrl": "https://www.jobsource.com",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://jobsource.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -49,8 +49,8 @@
     "name": "CornerStone Staffing",
     "site": "https://www.cornerstonestaffing.com",
     "careersUrl": "https://www.cornerstonestaffing.com",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://cornerstonestaffing.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -58,8 +58,8 @@
     "name": "Scion Staffing",
     "site": "https://www.scionstaffing.com",
     "careersUrl": "https://www.scionstaffing.com",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://scionstaffing.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -76,8 +76,8 @@
     "name": "Allegiance Staffing",
     "site": "https://www.allegiancestaffing.com",
     "careersUrl": "https://www.allegiancestaffing.com",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://allegiancestaffing.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -94,8 +94,8 @@
     "name": "Zempleo",
     "site": "https://www.zempleo.com",
     "careersUrl": "https://www.zempleo.com",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://zempleo.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -148,8 +148,8 @@
     "name": "Spherion",
     "site": "https://www.spherion.com",
     "careersUrl": "https://www.spherion.com/job-seekers/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://spherion.com/jobs/rss",
     "enabled": true
   },
   {
@@ -229,8 +229,8 @@
     "name": "Noor Staffing Group",
     "site": "https://www.noorstaffing.com",
     "careersUrl": "https://www.noorstaffing.com/candidates/apply-for-job/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://noorstaffing.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -247,8 +247,8 @@
     "name": "Green Key Resources",
     "site": "https://www.greenkeyllc.com",
     "careersUrl": "https://greenkeyllc.com/jobs/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://greenkeyllc.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -265,8 +265,8 @@
     "name": "Tandym Group",
     "site": "https://www.tandymgroup.com",
     "careersUrl": "https://www.tandymgroup.com/careers/?_gl=1*oczpi0*_gcl_au*Mjk0NTQ5NTA4LjE3NTE5MjM0NDk.*_ga*MTUwMDIwMjI2MC4xNzUxOTIzNDQ5*_ga_350H3NX1TP*czE3NTczNjU0MTkkbzQ5JGcxJHQxNzU3MzY1NTA2JGo0MCRsMCRoMA..&_ga=2.126612237.1431459667.1757365419-1500202260.1751923449#/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://tandymgroup.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -283,8 +283,8 @@
     "name": "Mitchell Martin",
     "site": "https://www.mitchellmartin.com",
     "careersUrl": "https://www.mitchellmartin.com/careers/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://mitchellmartin.com/job/feed/",
     "enabled": true
   },
   {
@@ -310,8 +310,8 @@
     "name": "SNI Companies",
     "site": "https://www.snicompanies.com",
     "careersUrl": "https://www.snicompanies.com/jobs/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://snicompanies.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -328,8 +328,8 @@
     "name": "LaSalle Network",
     "site": "https://www.thelasallenetwork.com",
     "careersUrl": "https://www.thelasallenetwork.com/job-search/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://thelasallenetwork.com/jobs/feed/",
     "enabled": true
   },
   {
@@ -346,8 +346,8 @@
     "name": "The Larko Group",
     "site": "https://www.thelarkogroup.com",
     "careersUrl": "https://www.thelarkogroup.com/submit-direct-hire-job-order-form/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://thelarkogroup.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -355,8 +355,8 @@
     "name": "Swoon",
     "site": "https://www.swoonstaffing.com",
     "careersUrl": "https://www.swoonstaffing.com/jobs/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://swoonstaffing.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -364,8 +364,8 @@
     "name": "24 Seven Talent",
     "site": "https://www.24seventalent.com",
     "careersUrl": "https://www.24seventalent.com/jobs/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://24seventalent.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -499,8 +499,8 @@
     "name": "CRG",
     "site": "https://www.getcrg.com",
     "careersUrl": "http://jobs.getcrg.com/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://jobs.getcrg.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -571,8 +571,8 @@
     "name": "FlexProfessionals",
     "site": "https://www.flexprofessionalsllc.com",
     "careersUrl": "https://www.flexprofessionalsllc.com/job-seekers/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://flexprofessionalsllc.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -625,8 +625,8 @@
     "name": "Questpro",
     "site": "https://www.questpro.com",
     "careersUrl": "https://questpro.com/tech-it-professional-jobs/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://questpro.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -652,8 +652,8 @@
     "name": "Versique",
     "site": "https://www.versique.com",
     "careersUrl": "https://www.versique.com/jobs/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://versique.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -661,8 +661,8 @@
     "name": "Award Staffing",
     "site": "https://www.awardstaffing.com",
     "careersUrl": "https://www.awardstaffing.com/about/recruiting-careers/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://awardstaffing.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -760,8 +760,8 @@
     "name": "Acloché",
     "site": "https://www.acloche.com",
     "careersUrl": "https://www.acloche.com/jobs-now-hiring/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://acloche.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -805,8 +805,8 @@
     "name": "Masis Staffing Solutions",
     "site": "https://www.masisstaffing.com",
     "careersUrl": "https://masisstaffing.com/jobs",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://masisstaffing.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -886,8 +886,8 @@
     "name": "PACE Staffing Network",
     "site": "https://www.pacestaffing.com",
     "careersUrl": "https://pacestaffing.com/job-seekers/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://pacestaffing.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -994,8 +994,8 @@
     "name": "Barrington Staffing",
     "site": "https://www.barringtonstaffing.com",
     "careersUrl": "https://www.barringtonstaffing.com/jobs-thousand-oaks/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://barringtonstaffing.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -1003,8 +1003,8 @@
     "name": "TriCom Quest",
     "site": "https://www.tricomquest.com",
     "careersUrl": "https://www.tricomquest.com/contact-us/?select=Job%20Seeker",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://tricomquest.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -1012,8 +1012,8 @@
     "name": "Equivity",
     "site": "https://www.equivityva.com",
     "careersUrl": "https://equivityva.com/about/careers/",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://equivityva.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -1057,8 +1057,8 @@
     "name": "Virtual Assist USA",
     "site": "https://www.virtualassistusa.com",
     "careersUrl": "https://www.virtualassistusa.com",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://virtualassistusa.com/feed/?post_type=job",
     "enabled": true
   },
   {
@@ -1192,8 +1192,8 @@
     "name": "Aquent",
     "site": "https://www.aquent.com",
     "careersUrl": "https://aquent.com/privacy-policy/job-scams",
-    "ats": "jsearch",
-    "atsToken": "",
+    "ats": "rss",
+    "atsToken": "https://aquent.com/feed/?post_type=job",
     "enabled": true
   }
 ]
