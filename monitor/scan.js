@@ -18,6 +18,7 @@ import { avionte } from "./adapters/avionte.js";
 import { workable } from "./adapters/workable.js";
 import { rss } from "./adapters/rss.js";
 import { jsearch, scrape, aggregator, AGGREGATOR_QUERY_COUNT } from "./adapters/fallback.js";
+import { ziprecruiter, simplyhired, ZR_CENTS_PER_RESULT, SH_CENTS_PER_RESULT } from "./adapters/apify.js";
 import { classify, jobKey, extractPay, extractEmployment, payLabel } from "./config.js";
 import { notifyTelegram } from "./notify.js";
 
@@ -41,6 +42,14 @@ const AGGREGATOR_EVERY_HOURS = 2;
 // never be billed even if RapidAPI has no hard-limit toggle. Set safely under
 // the plan's 10,000/mo cap. The running count persists in seen.json.
 const MONTHLY_JSEARCH_CAP = 9500;
+
+// --- Apify per-board scrapers (SimplyHired + ZipRecruiter) — the two sources
+// JSearch can't surface as themselves. Dormant until APIFY_TOKEN is set.
+// Apify's Free plan grants $5/mo prepaid credit and hard-blocks when spent, so
+// nothing can be billed; we cap BELOW that to leave headroom and keep the proof
+// runs free. Spend (in cents) persists in seen.json like the JSearch budget.
+const APIFY_EVERY_HOURS = 6;              // draws the free credit; a few times/day
+const MONTHLY_APIFY_CAP_CENTS = 450;      // $4.50 — safely under the $5 free credit
 
 const readJSON = async (p, fallback) => { try { return JSON.parse(await fs.readFile(p, "utf8")); } catch { return fallback; } };
 
@@ -74,6 +83,7 @@ async function main() {
   const slot = Math.floor((now.getUTCHours() * 60 + now.getUTCMinutes()) / 30); // 30-min slot of day
   const everyNSlots = h => Math.max(1, Math.round(h * 2));
   const runAgg = manual || (slot % everyNSlots(AGGREGATOR_EVERY_HOURS) === 0);
+  const runApify = manual || (slot % everyNSlots(APIFY_EVERY_HOURS) === 0);
 
   // ---- monthly JSearch budget guard (never exceed the plan cap) ----
   const hasKey = !!process.env.RAPIDAPI_KEY;
@@ -81,6 +91,13 @@ async function main() {
   const budget = (seen.__budget && seen.__budget.month === month) ? seen.__budget.count : 0;
   let spent = budget;
   const doAgg = runAgg && hasKey && (spent + AGGREGATOR_QUERY_COUNT <= MONTHLY_JSEARCH_CAP);
+
+  // ---- monthly Apify budget guard (never exceed the free $5 credit) ----
+  const hasApify = !!process.env.APIFY_TOKEN;
+  const apifyBudget = (seen.__apify && seen.__apify.month === month) ? seen.__apify.cents : 0;
+  let apifyCents = apifyBudget;
+  const apifyRemaining = MONTHLY_APIFY_CAP_CENTS - apifyCents;
+  const doApify = runApify && hasApify && apifyRemaining > 0;
 
   // jsearch agencies have no free reader — the deep aggregator covers them now.
   const agencies = all.filter(a => a.ats !== "jsearch");
@@ -137,8 +154,28 @@ async function main() {
     spent += AGGREGATOR_QUERY_COUNT;
   }
 
+  // Apify per-board scrapers (SimplyHired + ZipRecruiter). Split the remaining
+  // monthly budget between them; size each run's result cap from its price so we
+  // stay inside the free $5 credit. Charge actual results returned.
+  if (doApify) {
+    const halfCents = apifyRemaining / 2;
+    const zrCap = Math.floor(halfCents / ZR_CENTS_PER_RESULT);
+    const shCap = Math.floor(halfCents / SH_CENTS_PER_RESULT);
+    try {
+      const zr = zrCap > 0 ? await ziprecruiter(zrCap) : [];
+      for (const job of zr) consider(job);
+      apifyCents += zr.length * ZR_CENTS_PER_RESULT;
+    } catch (e) { console.warn(`  ! ziprecruiter: ${e.message}`); }
+    try {
+      const sh = shCap > 0 ? await simplyhired(shCap) : [];
+      for (const job of sh) consider(job);
+      apifyCents += sh.length * SH_CENTS_PER_RESULT;
+    } catch (e) { console.warn(`  ! simplyhired: ${e.message}`); }
+  }
+
   // Persist the month's running JSearch spend so the cap survives across runs.
   seen.__budget = { month, count: spent };
+  seen.__apify = { month, cents: Math.round(apifyCents * 100) / 100 };
 
   // Newest first; keep the feed to the last 500 so the file stays small.
   const merged = [...fresh, ...feed].slice(0, 500);
@@ -148,7 +185,9 @@ async function main() {
 
   const parts = ["free"];
   if (doAgg) parts.push("job-boards");
-  const capNote = hasKey ? ` | JSearch used ${spent}/${MONTHLY_JSEARCH_CAP} this month` : "";
+  if (doApify) parts.push("simplyhired+ziprecruiter");
+  const capNote = (hasKey ? ` | JSearch used ${spent}/${MONTHLY_JSEARCH_CAP} this month` : "")
+    + (hasApify ? ` | Apify spent ${apifyCents.toFixed(1)}/${MONTHLY_APIFY_CAP_CENTS}¢ this month` : "");
   console.log(`Sweep done: ${fresh.length} new remote role(s) across ${agencies.length} agencies [${parts.join("+")}]${capNote}.`);
   if (fresh.length) await notifyTelegram(fresh);
 }
