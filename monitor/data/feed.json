@@ -1,5 +1,27 @@
 [
   {
+    "id": "c1bc1436",
+    "agency": "Momentum Solar",
+    "title": "Outbound Call Center Representative- SC",
+    "category": "Call Center",
+    "maybeHybrid": false,
+    "byod": true,
+    "byodTier": "confirmed",
+    "equipment": [
+      "RAM",
+      "CPU/processor"
+    ],
+    "pay": "$18–25/hr",
+    "payMin": 18,
+    "payMax": 25,
+    "employment": "",
+    "location": "Remote",
+    "source": "Lensa",
+    "url": "https://lensa.com/job-v1/momentum-solar/remote/outbound-call-center-representative/2953a2aed583da280085ffd9e6ec3aa2",
+    "postedAt": null,
+    "firstSeen": "2026-07-29T11:01:02.620Z"
+  },
+  {
     "id": "4dc3451c",
     "agency": "LaSalle Network",
     "title": "Senior Associate, Platform Support",
