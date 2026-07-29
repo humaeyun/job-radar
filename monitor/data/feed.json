@@ -1,5 +1,24 @@
 [
   {
+    "id": "8d1f2ded",
+    "agency": "RemX",
+    "title": "$16 Remote Medical Call Center Customer Service Representative",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "Careers page",
+    "url": "https://www.remx.com/jobs/detail/1293514/",
+    "postedAt": null,
+    "firstSeen": "2026-07-29T19:51:07.442Z"
+  },
+  {
     "id": "774ad2e7",
     "agency": "LaSalle Network",
     "title": "Senior Recruiter &#8211; Engineering &#038; Supply Chain",
@@ -9499,25 +9518,6 @@
     "location": "Remote",
     "source": "Remote Zest Jobs",
     "url": "https://remotezest.up.railway.app/job/remote-call-center-customer-service-representative-25hour-virtual-customer-support-specialist-at-arenaflex",
-    "postedAt": "2026-07-26T00:00:00.000Z",
-    "firstSeen": "2026-07-29T14:40:42.720Z"
-  },
-  {
-    "id": "5ad8d491",
-    "agency": "WORKOO.NET",
-    "title": "Customer Service Officer",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "Jobgether",
-    "url": "https://jobgether.com/offer/6a65e1be1b23f4f87b3b76b7-customer-service-officer",
     "postedAt": "2026-07-26T00:00:00.000Z",
     "firstSeen": "2026-07-29T14:40:42.720Z"
   }
