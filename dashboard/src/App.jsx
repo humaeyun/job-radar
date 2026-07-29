@@ -75,7 +75,7 @@ export default function App() {
   const [source, setSource] = useState("all");           // all | boards | direct | <specific>
   const [tier, setTier] = useState("confirmed");         // confirmed | likely | maybe | all  (PRIMARY)
   const [payFilter, setPayFilter] = useState("all");     // all | band ($10-18) | high (>$18) | none
-  const [fresh, setFresh] = useState("all");             // all | 7 | 30  (posted within N days)
+  const [fresh, setFresh] = useState("30");              // all | 7 | 30  (posted within N days; default hides stale)
   const [sortBy, setSortBy] = useState("relevance");     // relevance | newest
   const [showAlerts, setShowAlerts] = useState(false);
   const [ready, setReady] = useState(false);
