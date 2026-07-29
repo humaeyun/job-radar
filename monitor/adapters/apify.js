@@ -170,11 +170,12 @@ export async function simplyhired(maxItems = 120) {
 }
 
 // Indeed (misceres/indeed-scraper) takes position + location fields (no date
-// field), so we sweep one broad boolean query for remote roles and let the
-// dashboard's freshness filter drop anything stale. Indeed reports postedAt as
-// relative text ("3 days ago", "Just posted", "30+ days ago"); convert it to an
-// ISO date so freshness filtering + the card's age label work.
-const IN_QUERY = "(customer service) OR (data entry) OR (call center) OR (chat support) OR (medical records) OR collections";
+// field), so we sweep a few plain remote queries and let the dashboard's
+// freshness filter drop anything stale. Indeed reports postedAt as relative text
+// ("3 days ago", "Just posted", "30+ days ago"); convert it to an ISO date so
+// freshness filtering + the card's age label work. Indeed blocks datacenter IPs
+// hard, so the actor needs residential proxy (billed pay-as-you-go from credit).
+const IN_QUERIES = ["customer service", "data entry", "call center", "medical records"];
 
 const relToIso = (t) => {
   if (!t) return null;
@@ -207,13 +208,25 @@ const mapIndeed = (j) => ({
 });
 
 export async function indeed(maxItems = 120) {
-  const items = await runActor(IN_ACTOR, {
-    position: IN_QUERY,
-    location: "Remote",
-    country: "US",
-    maxItemsPerSearch: maxItems,
-    parseCompanyDetails: false,
-    saveOnlyUniqueItems: true,
-  });
-  return items.map(mapIndeed).filter(j => j.url && j.title);
+  const perQuery = Math.max(10, Math.floor(maxItems / IN_QUERIES.length));
+  const out = [];
+  const seen = new Set();
+  for (const q of IN_QUERIES) {
+    let items = [];
+    try {
+      items = await runActor(IN_ACTOR, {
+        position: q,
+        location: "remote",
+        country: "US",
+        maxItemsPerSearch: perQuery,
+        parseCompanyDetails: false,
+        saveOnlyUniqueItems: true,
+        proxyConfiguration: { useApifyProxy: true, apifyProxyGroups: ["RESIDENTIAL"] },
+      });
+    } catch (e) { console.warn(`  ! indeed "${q}": ${e.message}`); }
+    for (const j of items.map(mapIndeed)) {
+      if (j.url && j.title && !seen.has(j.url)) { seen.add(j.url); out.push(j); }
+    }
+  }
+  return out;
 }
