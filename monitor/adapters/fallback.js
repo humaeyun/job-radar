@@ -11,9 +11,10 @@ import * as cheerio from "cheerio";
 const JS_HOST = "jsearch.p.rapidapi.com";
 const jsHeaders = key => ({ "X-RapidAPI-Key": key, "X-RapidAPI-Host": JS_HOST });
 
-async function jsQuery(key, query) {
-  // JSearch v5: endpoint is /search-v2 and jobs live under data.jobs.
-  const url = `https://${JS_HOST}/search-v2?query=${encodeURIComponent(query)}&remote_jobs_only=true&num_pages=1`;
+async function jsQuery(key, query, { pages = 1, datePosted = "all" } = {}) {
+  // JSearch v5: endpoint is /search-v2, jobs under data.jobs. num_pages fetches
+  // 10 results per page (and bills per page). date_posted keeps results recent.
+  const url = `https://${JS_HOST}/search-v2?query=${encodeURIComponent(query)}&remote_jobs_only=true&num_pages=${pages}&date_posted=${datePosted}&country=us`;
   const r = await fetch(url, { headers: jsHeaders(key) });
   if (!r.ok) return [];
   const data = await r.json();
@@ -64,20 +65,33 @@ export async function jsearch(agency, _token, { name }) {
 // --- "Job board" feature: broad aggregator sweep NOT tied to any one agency.
 // Runs a few role-bucket queries; each result is attributed to its real employer
 // (from JSearch) with the source publisher (Indeed/ZipRecruiter/SimplyHired/...). ---
+const AGG_PAGES = 3;              // JSearch pages per query (10 results each)
+const AGG_DATE_POSTED = "week";   // recent only — no stale year-old postings
 const AGGREGATOR_QUERIES = [
-  "remote customer service OR customer support OR help desk OR chat support",
-  "remote call center OR data entry OR medical records OR claims OR member services",
+  // one focused query per role bucket pulls far more relevant hits than broad ORs
+  "remote customer service representative",
+  "remote call center agent",
+  "remote data entry clerk",
+  "remote chat support agent",
+  "remote medical records OR medical billing OR prior authorization",
+  "remote member services OR patient access OR claims processor",
   "remote sales representative OR appointment setter OR collections OR virtual assistant",
+  // BYOD-targeted: surface postings that spell out own-computer + specs
+  "remote customer service OR data entry own laptop OR bring your own device OR byod",
 ];
-// How many JSearch requests one aggregator run costs (for the monthly budget cap).
-export const AGGREGATOR_QUERY_COUNT = AGGREGATOR_QUERIES.length;
+// Budget cost of one aggregator run = queries * pages (JSearch bills per page).
+export const AGGREGATOR_QUERY_COUNT = AGGREGATOR_QUERIES.length * AGG_PAGES;
 
 export async function aggregator() {
   const key = process.env.RAPIDAPI_KEY;
   if (!key) return [];
+  const seen = new Set();
   const out = [];
   for (const q of AGGREGATOR_QUERIES) {
-    for (const j of await jsQuery(key, q)) {
+    for (const j of await jsQuery(key, q, { pages: AGG_PAGES, datePosted: AGG_DATE_POSTED })) {
+      const url = j.job_apply_link;
+      if (!url || seen.has(url)) continue;   // dedupe across queries/pages
+      seen.add(url);
       out.push(mapJob(j.employer_name || "Job Board", j));
     }
   }

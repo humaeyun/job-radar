@@ -57,6 +57,7 @@ const tierOf = (j) => j.byodTier || (
       : (EMP_MAYBE.has(j.employment) || (j.equipment && j.equipment.length)) ? "maybe"
         : "");
 const TIER_RANK = { confirmed: 3, likely: 2, maybe: 1, "": 0 };
+const daysSince = (iso) => iso ? (Date.now() - new Date(iso).getTime()) / 86400000 : null;
 // Group job-board publishers vs direct agency reads for the source filter.
 const DIRECT_SOURCES = new Set(["Haley", "Sitemap", "RSS", "Avionté", "Workable", "Greenhouse", "Lever", "Ashby", "SmartRecruiters", "Careers page"]);
 const isJobBoard = (src) => !DIRECT_SOURCES.has(src);
@@ -74,6 +75,7 @@ export default function App() {
   const [source, setSource] = useState("all");           // all | boards | direct | <specific>
   const [tier, setTier] = useState("confirmed");         // confirmed | likely | maybe | all  (PRIMARY)
   const [payFilter, setPayFilter] = useState("all");     // all | band ($10-18) | high (>$18) | none
+  const [fresh, setFresh] = useState("all");             // all | 7 | 30  (posted within N days)
   const [sortBy, setSortBy] = useState("relevance");     // relevance | newest
   const [showAlerts, setShowAlerts] = useState(false);
   const [ready, setReady] = useState(false);
@@ -146,13 +148,14 @@ export default function App() {
     if (payFilter === "band") list = list.filter(inBand);
     else if (payFilter === "high") list = list.filter(isHighPay);
     else if (payFilter === "none") list = list.filter(j => j.payMin == null);
+    if (fresh !== "all") { const d = +fresh; list = list.filter(j => { const ds = daysSince(j.postedAt); return ds == null || ds <= d; }); }
     if (q.trim()) {
       const s = q.toLowerCase();
       list = list.filter(j => (j.title + j.agency + j.category).toLowerCase().includes(s));
     }
     const byNew = (a, b) => new Date(b.firstSeen) - new Date(a.firstSeen);
     return [...list].sort(sortBy === "newest" ? byNew : (a, b) => (TIER_RANK[tierOf(b)] - TIER_RANK[tierOf(a)]) || byNew(a, b));
-  }, [tabBase, tier, activeCats, agency, source, payFilter, sortBy, q]);
+  }, [tabBase, tier, activeCats, agency, source, payFilter, fresh, sortBy, q]);
 
   const counts = {
     new: jobs.filter(j => newIds.includes(j.id) && !dismissed.includes(j.id)).length,
@@ -295,6 +298,15 @@ export default function App() {
                   background: on ? T.amberDim : "transparent", color: on ? T.amber : T.muted }}>{label}</button>
             );
           })}
+          <span style={{ width: 1, height: 15, background: T.border, margin: "0 3px" }} />
+          {[["all", "Any age"], ["7", "≤7 days"], ["30", "≤30 days"]].map(([k, label]) => {
+            const on = fresh === k;
+            return (
+              <button key={k} className="chip" onClick={() => setFresh(k)}
+                style={{ padding: "5px 11px", border: `1px solid ${on ? T.teal : T.border}`,
+                  background: on ? "rgba(62,214,176,.12)" : "transparent", color: on ? T.teal : T.muted }}>{label}</button>
+            );
+          })}
         </div>
 
         {/* ---- feed ---- */}
@@ -328,7 +340,8 @@ export default function App() {
                         <span style={{ fontFamily: MONO, fontSize: 11.5, color: T.muted, letterSpacing: ".02em" }}>
                           {j.agency}
                         </span>
-                        <span style={{ fontFamily: MONO, fontSize: 11, color: T.faint }}>· {timeAgo(j.firstSeen)}</span>
+                        <span style={{ fontFamily: MONO, fontSize: 11, color: daysSince(j.postedAt) > 30 ? T.red : T.faint }}>
+                          · {j.postedAt ? `posted ${timeAgo(j.postedAt)}` : `found ${timeAgo(j.firstSeen)}`}</span>
                       </div>
                       <a className="lnk" href={j.url} target="_blank" rel="noreferrer"
                         style={{ display: "block", marginTop: 3, fontSize: 15.5, fontWeight: 600, lineHeight: 1.3 }}>

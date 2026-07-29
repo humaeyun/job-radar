@@ -31,8 +31,11 @@ const FEED = "./data/feed.json";     // rolling list the dashboard renders
 //   - job-board aggregator: only 3 requests/run -> cheap -> run every sweep
 //   - 97 per-agency name searches: expensive     -> run ~once a day
 // Budget at these defaults ≈ 3*48*30 + 97*1*30 ≈ 7,230 requests/month (< 10k).
-const AGGREGATOR_EVERY_HOURS = 0.5;   // job boards: every 30-min sweep (near real-time)
-const PAID_AGENCY_EVERY_HOURS = 24;   // per-agency JSearch: ~1x/day
+// The deep job-board aggregator (many targeted queries × pages) is the only
+// paid work now — per-agency name searches were dropped as redundant + costly.
+// Every 2h with ~24 requests/run keeps monthly usage under the cap while pulling
+// hundreds of recent postings from Indeed/LinkedIn/ZipRecruiter/SimplyHired/etc.
+const AGGREGATOR_EVERY_HOURS = 2;
 
 // Hard monthly ceiling on JSearch requests, enforced in code so overage can
 // never be billed even if RapidAPI has no hard-limit toggle. Set safely under
@@ -65,26 +68,22 @@ async function main() {
   const now = new Date();
   const nowIso = now.toISOString();
 
-  // Free adapters run every sweep. The paid JSearch tier (per-agency queries +
-  // the job-board aggregator) runs only a couple times a day, or on a manual
-  // "Run workflow" click, so it stays within the API quota.
+  // Free adapters run every 30-min sweep. The paid job-board aggregator runs on
+  // its own slower cadence (or on a manual "Run workflow" click), within quota.
   const manual = process.env.GITHUB_EVENT_NAME === "workflow_dispatch";
   const slot = Math.floor((now.getUTCHours() * 60 + now.getUTCMinutes()) / 30); // 30-min slot of day
   const everyNSlots = h => Math.max(1, Math.round(h * 2));
-  const runAgencies = manual || (slot % everyNSlots(PAID_AGENCY_EVERY_HOURS) === 0);
-  const runAgg      = manual || (slot % everyNSlots(AGGREGATOR_EVERY_HOURS) === 0);
+  const runAgg = manual || (slot % everyNSlots(AGGREGATOR_EVERY_HOURS) === 0);
 
   // ---- monthly JSearch budget guard (never exceed the plan cap) ----
   const hasKey = !!process.env.RAPIDAPI_KEY;
   const month = nowIso.slice(0, 7); // YYYY-MM (UTC)
   const budget = (seen.__budget && seen.__budget.month === month) ? seen.__budget.count : 0;
   let spent = budget;
-  const jsearchCost = all.filter(a => a.ats === "jsearch").length; // 1 request per jsearch agency
-  // Only spend paid quota if there's a key AND this run fits under the cap.
-  const doAgencies = runAgencies && hasKey && (spent + jsearchCost <= MONTHLY_JSEARCH_CAP);
-  const doAgg      = runAgg      && hasKey && (spent + AGGREGATOR_QUERY_COUNT <= MONTHLY_JSEARCH_CAP);
+  const doAgg = runAgg && hasKey && (spent + AGGREGATOR_QUERY_COUNT <= MONTHLY_JSEARCH_CAP);
 
-  const agencies = doAgencies ? all : all.filter(a => a.ats !== "jsearch");
+  // jsearch agencies have no free reader — the deep aggregator covers them now.
+  const agencies = all.filter(a => a.ats !== "jsearch");
 
   const fresh = [];
   const consider = (job) => {
@@ -130,7 +129,6 @@ async function main() {
       for (const job of raw) consider(job);
     }
   }));
-  if (doAgencies) spent += jsearchCost;
 
   // Job-board aggregator (Indeed/ZipRecruiter/SimplyHired via JSearch).
   if (doAgg) {
@@ -149,7 +147,6 @@ async function main() {
   await fs.writeFile(FEED, JSON.stringify(merged, null, 2));
 
   const parts = ["free"];
-  if (doAgencies) parts.push("agencies");
   if (doAgg) parts.push("job-boards");
   const capNote = hasKey ? ` | JSearch used ${spent}/${MONTHLY_JSEARCH_CAP} this month` : "";
   console.log(`Sweep done: ${fresh.length} new remote role(s) across ${agencies.length} agencies [${parts.join("+")}]${capNote}.`);
