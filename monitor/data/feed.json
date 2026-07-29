@@ -1,5 +1,24 @@
 [
   {
+    "id": "774ad2e7",
+    "agency": "LaSalle Network",
+    "title": "Senior Recruiter &#8211; Engineering &#038; Supply Chain",
+    "category": "Customer Service",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/senior-recruiter-engineering-supply-chain-161452/",
+    "postedAt": "2026-05-12T21:58:04.000Z",
+    "firstSeen": "2026-07-29T19:00:58.544Z"
+  },
+  {
     "id": "a4bc7f96",
     "agency": "TERRA Staffing Group",
     "title": "Staffing Specialist (Bilingual)",
@@ -9500,25 +9519,6 @@
     "source": "Jobgether",
     "url": "https://jobgether.com/offer/6a65e1be1b23f4f87b3b76b7-customer-service-officer",
     "postedAt": "2026-07-26T00:00:00.000Z",
-    "firstSeen": "2026-07-29T14:40:42.720Z"
-  },
-  {
-    "id": "6ce7f0e9",
-    "agency": "remote zest jobs",
-    "title": "[PART_TIME Remote] Part time Customer Service Representative",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "maybe",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "Part-time",
-    "location": "Remote",
-    "source": "Remote Zest Jobs",
-    "url": "https://remotezest.up.railway.app/job/parttime-remote-part-time-customer-service-representative",
-    "postedAt": "2026-07-25T00:00:00.000Z",
     "firstSeen": "2026-07-29T14:40:42.720Z"
   }
 ]
