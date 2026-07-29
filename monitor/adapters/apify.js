@@ -43,7 +43,7 @@ const QUERIES = [
 ];
 export const APIFY_QUERY_COUNT = QUERIES.length;
 
-async function runActor(actorId, input, maxWaitSecs = 120) {
+async function runActor(actorId, input, maxWaitSecs = 300) {
   const token = process.env.APIFY_TOKEN;
   if (!token) return [];
   const url = `${API}/${actorId}/run-sync-get-dataset-items?token=${token}&timeout=${maxWaitSecs}`;
@@ -61,7 +61,10 @@ async function runActor(actorId, input, maxWaitSecs = 120) {
   // TEMP first-run diagnostics: dump one raw record so we can confirm exact
   // field paths (posted date, pay_period). Remove once the mapping is verified.
   if (process.env.APIFY_DEBUG && items[0]) {
-    console.log(`DEBUG ${actorId} raw[0]:`, JSON.stringify(items[0]).slice(0, 1500));
+    const r0 = items[0];
+    console.log(`DEBUG ${actorId} keys:`, Object.keys(r0).join(","));
+    console.log(`DEBUG ${actorId} job:`, JSON.stringify(r0.job).slice(0, 900));
+    console.log(`DEBUG ${actorId} compensation:`, JSON.stringify(r0.compensation).slice(0, 300));
   }
   return items;
 }
@@ -124,11 +127,17 @@ export async function ziprecruiter(maxResults = 200) {
   return items.map(mapZip).filter(j => j.url && j.title);
 }
 
-// SimplyHired takes search URLs, not query fields. Build one remote, last-30-day
-// search URL per role bucket. salaryInfo is free text -> pass it into description
-// so scan.js's extractPay picks it up; leave payMin/payMax null.
+// SimplyHired takes search URLs, not query fields. It's slower (a full page
+// scrape per URL) and pricier than ZR, and sweeping all 8 buckets overran the
+// sync wait, so use a few BROAD queries that still cover the role buckets.
+const SH_QUERIES = [
+  "customer service remote",
+  "call center remote",
+  "data entry remote",
+  "medical records remote",
+];
 const shUrl = (q) =>
-  `https://www.simplyhired.com/search?q=${encodeURIComponent(q + " remote")}&l=Remote&fdb=30`;
+  `https://www.simplyhired.com/search?q=${encodeURIComponent(q)}&l=Remote&fdb=30`;
 
 const mapSimply = (j) => {
   const bot = j.botUrl || "";
@@ -149,9 +158,9 @@ const mapSimply = (j) => {
   };
 };
 
-export async function simplyhired(maxItems = 200) {
+export async function simplyhired(maxItems = 120) {
   const items = await runActor(SH_ACTOR, {
-    searchUrls: QUERIES.map(shUrl),
+    searchUrls: SH_QUERIES.map(shUrl),
     maxItems,
   });
   return items.map(mapSimply).filter(j => j.url && j.title);
