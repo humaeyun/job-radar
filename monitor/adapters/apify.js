@@ -57,21 +57,15 @@ async function runActor(actorId, input, maxWaitSecs = 300) {
     throw new Error(`${actorId} -> ${r.status} ${body.slice(0, 300)}`);
   }
   const data = await r.json();
-  const items = Array.isArray(data) ? data : [];
-  // TEMP first-run diagnostics: dump one raw record so we can confirm exact
-  // field paths (posted date, pay_period). Remove once the mapping is verified.
-  if (process.env.APIFY_DEBUG && items[0]) {
-    const r0 = items[0];
-    console.log(`DEBUG ${actorId} keys:`, Object.keys(r0).join(","));
-    console.log(`DEBUG ${actorId} job:`, JSON.stringify(r0.job).slice(0, 900));
-    console.log(`DEBUG ${actorId} compensation:`, JSON.stringify(r0.compensation).slice(0, 300));
-  }
-  return items;
+  return Array.isArray(data) ? data : [];
 }
 
-// The ZipRecruiter actor nests fields under groups (entity/job/company/…), and a
-// summarizer couldn't pin every exact path, so read defensively: first present
-// value across the likely candidates. First live run should confirm the shape.
+// The ZipRecruiter actor nests fields under groups: entity{title,url},
+// company{company_name}, location{city,region}, compensation{salary_min,
+// pay_period,…}. Confirmed against live output; a couple of fallbacks stay for
+// safety. NOTE: these MCP-search records carry no post date (enrichment_status
+// "partial"), so postedAt is null — fine, we always scrape days:"30" so every
+// hit is <=30d, and the dashboard shows "found <firstSeen>" when postedAt is null.
 const get = (obj, path) => path.split(".").reduce((o, k) => (o == null ? o : o[k]), obj);
 const pick = (obj, ...paths) => { for (const p of paths) { const v = get(obj, p); if (v != null && v !== "") return v; } return null; };
 
