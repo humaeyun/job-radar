@@ -18,7 +18,7 @@ import { avionte } from "./adapters/avionte.js";
 import { workable } from "./adapters/workable.js";
 import { rss } from "./adapters/rss.js";
 import { jsearch, scrape, aggregator, AGGREGATOR_QUERY_COUNT } from "./adapters/fallback.js";
-import { ziprecruiter, simplyhired, ZR_CENTS_PER_RESULT, SH_CENTS_PER_RESULT } from "./adapters/apify.js";
+import { ziprecruiter, simplyhired, indeed, ZR_CENTS_PER_RESULT, SH_CENTS_PER_RESULT, IN_CENTS_PER_RESULT } from "./adapters/apify.js";
 import { classify, jobKey, extractPay, extractEmployment, payLabel } from "./config.js";
 import { notifyTelegram } from "./notify.js";
 
@@ -154,13 +154,14 @@ async function main() {
     spent += AGGREGATOR_QUERY_COUNT;
   }
 
-  // Apify per-board scrapers (SimplyHired + ZipRecruiter). Split the remaining
-  // monthly budget between them; size each run's result cap from its price so we
-  // stay inside the free $5 credit. Charge actual results returned.
+  // Apify per-board scrapers (SimplyHired + ZipRecruiter + Indeed). Split the
+  // remaining monthly budget across them; size each run's result cap from its
+  // price so we stay inside the free $5 credit. Charge actual results returned.
   if (doApify) {
-    const halfCents = apifyRemaining / 2;
-    const zrCap = Math.floor(halfCents / ZR_CENTS_PER_RESULT);
-    const shCap = Math.floor(halfCents / SH_CENTS_PER_RESULT);
+    const shareCents = apifyRemaining / 3;
+    const zrCap = Math.floor(shareCents / ZR_CENTS_PER_RESULT);
+    const shCap = Math.floor(shareCents / SH_CENTS_PER_RESULT);
+    const inCap = Math.floor(shareCents / IN_CENTS_PER_RESULT);
     try {
       const zr = zrCap > 0 ? await ziprecruiter(zrCap) : [];
       for (const job of zr) consider(job);
@@ -171,6 +172,11 @@ async function main() {
       for (const job of sh) consider(job);
       apifyCents += sh.length * SH_CENTS_PER_RESULT;
     } catch (e) { console.warn(`  ! simplyhired: ${e.message}`); }
+    try {
+      const inn = inCap > 0 ? await indeed(inCap) : [];
+      for (const job of inn) consider(job);
+      apifyCents += inn.length * IN_CENTS_PER_RESULT;
+    } catch (e) { console.warn(`  ! indeed: ${e.message}`); }
   }
 
   // Persist the month's running JSearch spend so the cap survives across runs.
@@ -185,7 +191,7 @@ async function main() {
 
   const parts = ["free"];
   if (doAgg) parts.push("job-boards");
-  if (doApify) parts.push("simplyhired+ziprecruiter");
+  if (doApify) parts.push("simplyhired+ziprecruiter+indeed");
   const capNote = (hasKey ? ` | JSearch used ${spent}/${MONTHLY_JSEARCH_CAP} this month` : "")
     + (hasApify ? ` | Apify spent ${apifyCents.toFixed(1)}/${MONTHLY_APIFY_CAP_CENTS}¢ this month` : "");
   console.log(`Sweep done: ${fresh.length} new remote role(s) across ${agencies.length} agencies [${parts.join("+")}]${capNote}.`);

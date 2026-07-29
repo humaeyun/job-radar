@@ -12,6 +12,7 @@
 // the free plan. That $5 is plenty to prove the feed:
 //   - ZipRecruiter (fatihtahta/ziprecruiter-scraper): $1.00 / 1,000 results
 //   - SimplyHired  (easyapi/simplyhired-job-scraper):  $4.99 / 1,000 results
+//   - Indeed       (misceres/indeed-scraper):          $3.00 / 1,000 results
 // Cost per result (cents) is exported below so scan.js can cap monthly spend the
 // same paranoid way it caps JSearch.
 //
@@ -25,10 +26,12 @@ const API = "https://api.apify.com/v2/acts";
 // Actor ids (the "/" in a store id becomes "~" in the REST path).
 export const ZR_ACTOR = "fatihtahta~ziprecruiter-scraper";
 export const SH_ACTOR = "easyapi~simplyhired-job-scraper";
+export const IN_ACTOR = "misceres~indeed-scraper";
 
 // Pay-per-result price, in cents, so scan.js can budget by real cost.
 export const ZR_CENTS_PER_RESULT = 0.1;    // $1.00 / 1000
 export const SH_CENTS_PER_RESULT = 0.499;  // $4.99 / 1000
+export const IN_CENTS_PER_RESULT = 0.3;    // $3.00 / 1000
 
 // The role buckets we sweep — same intent as the JSearch aggregator queries.
 const QUERIES = [
@@ -57,7 +60,13 @@ async function runActor(actorId, input, maxWaitSecs = 300) {
     throw new Error(`${actorId} -> ${r.status} ${body.slice(0, 300)}`);
   }
   const data = await r.json();
-  return Array.isArray(data) ? data : [];
+  const items = Array.isArray(data) ? data : [];
+  // TEMP: crash-safe first-run dump to confirm a new actor's field names.
+  if (process.env.APIFY_DEBUG && items[0]) {
+    console.log(`DEBUG ${actorId} keys:`, Object.keys(items[0]).join(","));
+    console.log(`DEBUG ${actorId} sample:`, JSON.stringify(items[0]).slice(0, 1200));
+  }
+  return items;
 }
 
 // The ZipRecruiter actor nests fields under groups: entity{title,url},
@@ -158,4 +167,53 @@ export async function simplyhired(maxItems = 120) {
     maxItems,
   });
   return items.map(mapSimply).filter(j => j.url && j.title);
+}
+
+// Indeed (misceres/indeed-scraper) takes position + location fields (no date
+// field), so we sweep one broad boolean query for remote roles and let the
+// dashboard's freshness filter drop anything stale. Indeed reports postedAt as
+// relative text ("3 days ago", "Just posted", "30+ days ago"); convert it to an
+// ISO date so freshness filtering + the card's age label work.
+const IN_QUERY = "(customer service) OR (data entry) OR (call center) OR (chat support) OR (medical records) OR collections";
+
+const relToIso = (t) => {
+  if (!t) return null;
+  const s = String(t).toLowerCase();
+  if (/just posted|today|posted today/.test(s)) return new Date().toISOString();
+  const m = s.match(/(\d+)\+?\s*(day|hour|week|month)/);
+  if (!m) return null;
+  const n = +m[1];
+  const d = new Date();
+  const unit = m[2];
+  if (unit === "hour") d.setHours(d.getHours() - n);
+  else if (unit === "day") d.setDate(d.getDate() - n);
+  else if (unit === "week") d.setDate(d.getDate() - n * 7);
+  else if (unit === "month") d.setMonth(d.getMonth() - n);
+  return d.toISOString();
+};
+
+const mapIndeed = (j) => ({
+  agency: j.company || "Indeed",
+  title: j.positionName || j.title,
+  location: j.location || "Remote",
+  // salary is free text ("$15 - $18 an hour") -> fold into description so
+  // scan.js's extractPay picks it up; leave payMin/payMax null.
+  description: [j.description, j.salary].filter(Boolean).join(" — ").slice(0, 4000),
+  url: j.url || j.externalApplyLink,
+  postedAt: relToIso(j.postedAt),
+  source: "Indeed",
+  payMin: null,
+  payMax: null,
+});
+
+export async function indeed(maxItems = 120) {
+  const items = await runActor(IN_ACTOR, {
+    position: IN_QUERY,
+    location: "Remote",
+    country: "US",
+    maxItemsPerSearch: maxItems,
+    parseCompanyDetails: false,
+    saveOnlyUniqueItems: true,
+  });
+  return items.map(mapIndeed).filter(j => j.url && j.title);
 }
