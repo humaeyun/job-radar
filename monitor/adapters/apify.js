@@ -52,9 +52,18 @@ async function runActor(actorId, input, maxWaitSecs = 120) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(input),
   });
-  if (!r.ok) throw new Error(`${actorId} -> ${r.status}`);
+  if (!r.ok) {
+    const body = await r.text().catch(() => "");
+    throw new Error(`${actorId} -> ${r.status} ${body.slice(0, 300)}`);
+  }
   const data = await r.json();
-  return Array.isArray(data) ? data : [];
+  const items = Array.isArray(data) ? data : [];
+  // TEMP first-run diagnostics: dump one raw record so we can confirm exact
+  // field paths (posted date, pay_period). Remove once the mapping is verified.
+  if (process.env.APIFY_DEBUG && items[0]) {
+    console.log(`DEBUG ${actorId} raw[0]:`, JSON.stringify(items[0]).slice(0, 1500));
+  }
+  return items;
 }
 
 // The ZipRecruiter actor nests fields under groups (entity/job/company/…), and a
@@ -72,18 +81,34 @@ const zrLocation = (j) => {
 
 const zrUrl = (j) => pick(j, "entity.url", "application.application_url", "job.url", "url");
 
-const mapZip = (j) => ({
-  agency: pick(j, "company.company_name", "company.name", "employer_name", "company") || "ZipRecruiter",
-  title: pick(j, "entity.title", "job.job_title", "job.title", "title"),
-  location: zrLocation(j),
-  description: String(pick(j, "job.description", "content.descriptions.text", "description") || "").slice(0, 4000),
-  url: zrUrl(j),
-  postedAt: pick(j, "job.posted_at", "posted_at", "datePosted") || null,
-  source: "ZipRecruiter",
-  // structured hourly pay when present (scan.js falls back to text parsing)
-  payMin: pick(j, "compensation.salary_min", "salary_min"),
-  payMax: pick(j, "compensation.salary_max", "salary_max"),
-});
+// compensation.salary_min/max are in units of pay_period ("Hour"/"Year"/…), so
+// normalize to an hourly number the way the JSearch adapter does.
+const toHourly = (v, per) => {
+  if (v == null) return null;
+  switch (String(per || "").toUpperCase()) {
+    case "HOUR": return v;
+    case "WEEK": return v / 40;
+    case "MONTH": return (v * 12) / 2080;
+    case "YEAR": return v / 2080;
+    default: return v > 200 ? v / 2080 : v; // no period: infer annual if it's a big number
+  }
+};
+
+const mapZip = (j) => {
+  const per = pick(j, "compensation.pay_period", "pay_period", "compensation.salary_period");
+  return {
+    agency: pick(j, "company.company_name", "company.name", "employer_name", "company") || "ZipRecruiter",
+    title: pick(j, "entity.title", "job.job_title", "job.title", "title"),
+    location: zrLocation(j),
+    description: String(pick(j, "job.description", "content.descriptions.text", "description") || "").slice(0, 4000),
+    url: zrUrl(j),
+    postedAt: pick(j, "job.posted_at", "job.rolling_posted_at", "entity.posted_at", "posted_at", "datePosted") || null,
+    source: "ZipRecruiter",
+    // structured hourly pay when present (scan.js falls back to text parsing)
+    payMin: toHourly(pick(j, "compensation.salary_min", "salary_min"), per),
+    payMax: toHourly(pick(j, "compensation.salary_max", "salary_max"), per),
+  };
+};
 
 // ZipRecruiter: one run, all role queries, remote-only, last 30 days. `limit` is
 // per-query, so cap it to keep the run inside the monthly budget scan.js passes.
