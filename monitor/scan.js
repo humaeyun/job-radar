@@ -76,9 +76,12 @@ const ADZUNA_EVERY_HOURS = 8;             // ~3x/day
 const MONTHLY_ADZUNA_CAP = 900;           // stay under the free 1,000/mo
 
 // --- Jooble (free official API, covers ZipRecruiter + Indeed, labels source).
-// Free tier is generous; throttle + budget conservatively like Adzuna.
-const JOOBLE_EVERY_HOURS = 8;             // ~3x/day
-const MONTHLY_JOOBLE_CAP = 900;
+// Jooble's welcome letter states a default limit of 500 requests (time unit
+// unspecified), so cap MONTHLY well under 500 to be safe whatever it means. At
+// 8 queries/run, twice a day = 16/day ≈ 450/mo. Ask Jooble to raise the limit
+// (reply to their email) if we want more, then bump these.
+const JOOBLE_EVERY_HOURS = 12;            // 2x/day
+const MONTHLY_JOOBLE_CAP = 450;           // safely under the 500 default
 
 const readJSON = async (p, fallback) => { try { return JSON.parse(await fs.readFile(p, "utf8")); } catch { return fallback; } };
 
