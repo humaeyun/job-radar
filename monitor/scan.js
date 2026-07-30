@@ -19,6 +19,7 @@ import { workable } from "./adapters/workable.js";
 import { rss } from "./adapters/rss.js";
 import { jsearch, scrape, aggregator, AGGREGATOR_QUERY_COUNT } from "./adapters/fallback.js";
 import { ziprecruiter, simplyhired, indeed, ZR_CENTS_PER_RESULT, SH_CENTS_PER_RESULT, IN_CENTS_PER_RESULT } from "./adapters/apify.js";
+import { adzuna, ADZUNA_CALLS_PER_RUN } from "./adapters/adzuna.js";
 import { classify, jobKey, extractPay, extractEmployment, payLabel } from "./config.js";
 import { notifyTelegram } from "./notify.js";
 
@@ -68,6 +69,11 @@ const IN_MAX_PER_RUN = 60;
 // to enable once the upgrade is live and we've verified the actor runs.
 const INDEED_ENABLED = !!process.env.APIFY_INDEED;
 
+// --- Adzuna (free official job-search API). No cost/proxy — just a monthly
+// call cap. Free tier ~1,000 calls/mo; run a few times/day well under it.
+const ADZUNA_EVERY_HOURS = 8;             // ~3x/day
+const MONTHLY_ADZUNA_CAP = 900;           // stay under the free 1,000/mo
+
 const readJSON = async (p, fallback) => { try { return JSON.parse(await fs.readFile(p, "utf8")); } catch { return fallback; } };
 
 async function fetchAgency(a) {
@@ -101,6 +107,7 @@ async function main() {
   const everyNSlots = h => Math.max(1, Math.round(h * 2));
   const runAgg = manual || (slot % everyNSlots(AGGREGATOR_EVERY_HOURS) === 0);
   const runApify = manual || (slot % everyNSlots(APIFY_EVERY_HOURS) === 0);
+  const runAdzuna = manual || (slot % everyNSlots(ADZUNA_EVERY_HOURS) === 0);
 
   // ---- monthly JSearch budget guard (never exceed the plan cap) ----
   const hasKey = !!process.env.RAPIDAPI_KEY;
@@ -115,6 +122,12 @@ async function main() {
   let apifyCents = apifyBudget;
   const apifyRemaining = MONTHLY_APIFY_CAP_CENTS - apifyCents;
   const doApify = runApify && hasApify && apifyRemaining > 0;
+
+  // ---- monthly Adzuna call budget guard (never exceed the free tier) ----
+  const hasAdzuna = !!(process.env.ADZUNA_APP_ID && process.env.ADZUNA_APP_KEY);
+  const adzunaBudget = (seen.__adzuna && seen.__adzuna.month === month) ? seen.__adzuna.count : 0;
+  let adzunaCalls = adzunaBudget;
+  const doAdzuna = runAdzuna && hasAdzuna && (adzunaCalls + ADZUNA_CALLS_PER_RUN <= MONTHLY_ADZUNA_CAP);
 
   // jsearch agencies have no free reader — the deep aggregator covers them now.
   const agencies = all.filter(a => a.ats !== "jsearch");
@@ -200,9 +213,18 @@ async function main() {
     }
   }
 
+  // Adzuna (free official API). Broad remote sweep; counts calls against the
+  // monthly free-tier cap.
+  if (doAdzuna) {
+    try { for (const job of await adzuna()) consider(job); }
+    catch (e) { console.warn(`  ! adzuna: ${e.message}`); }
+    adzunaCalls += ADZUNA_CALLS_PER_RUN;
+  }
+
   // Persist the month's running JSearch spend so the cap survives across runs.
   seen.__budget = { month, count: spent };
   seen.__apify = { month, cents: Math.round(apifyCents * 100) / 100 };
+  seen.__adzuna = { month, count: adzunaCalls };
 
   // Newest first; keep the feed to the last 500 so the file stays small.
   const merged = [...fresh, ...feed].slice(0, 500);
@@ -213,8 +235,10 @@ async function main() {
   const parts = ["free"];
   if (doAgg) parts.push("job-boards");
   if (doApify) parts.push(INDEED_ENABLED ? "simplyhired+ziprecruiter+indeed" : "simplyhired+ziprecruiter");
+  if (doAdzuna) parts.push("adzuna");
   const capNote = (hasKey ? ` | JSearch used ${spent}/${MONTHLY_JSEARCH_CAP} this month` : "")
-    + (hasApify ? ` | Apify spent ${apifyCents.toFixed(1)}/${MONTHLY_APIFY_CAP_CENTS}¢ this month` : "");
+    + (hasApify ? ` | Apify spent ${apifyCents.toFixed(1)}/${MONTHLY_APIFY_CAP_CENTS}¢ this month` : "")
+    + (hasAdzuna ? ` | Adzuna used ${adzunaCalls}/${MONTHLY_ADZUNA_CAP} calls this month` : "");
   console.log(`Sweep done: ${fresh.length} new remote role(s) across ${agencies.length} agencies [${parts.join("+")}]${capNote}.`);
   if (fresh.length) await notifyTelegram(fresh);
 }
