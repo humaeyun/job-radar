@@ -46,6 +46,13 @@ const AGGREGATOR_EVERY_HOURS = 2;
 // the plan's 10,000/mo cap. The running count persists in seen.json.
 const MONTHLY_JSEARCH_CAP = 9500;
 
+// JSearch (paid RapidAPI) is RETIRED: the free Adzuna + Jooble aggregators cover
+// the same job-board ground, and a feed audit showed JSearch contributed 0
+// unique jobs (all deduped against the free sources). Subscription cancelled
+// 2026-07-30. Off here so nothing calls it — no failing requests when the plan
+// lapses at month-end, and sweeps run a touch faster. Code kept, just dormant.
+const JSEARCH_ENABLED = false;
+
 // --- Apify per-board scrapers (SimplyHired + ZipRecruiter) — the two sources
 // JSearch can't surface as themselves. Dormant until APIFY_TOKEN is set.
 // Apify's Free plan grants $5/mo prepaid credit and hard-blocks when spent, so
@@ -140,7 +147,7 @@ async function main() {
   const month = nowIso.slice(0, 7); // YYYY-MM (UTC)
   const budget = (seen.__budget && seen.__budget.month === month) ? seen.__budget.count : 0;
   let spent = budget;
-  const doAgg = runAgg && hasKey && (spent + AGGREGATOR_QUERY_COUNT <= MONTHLY_JSEARCH_CAP);
+  const doAgg = JSEARCH_ENABLED && runAgg && hasKey && (spent + AGGREGATOR_QUERY_COUNT <= MONTHLY_JSEARCH_CAP);
 
   // ---- monthly Apify budget guard (never exceed the free $5 credit) ----
   const hasApify = !!process.env.APIFY_TOKEN;
@@ -331,7 +338,7 @@ async function main() {
   if (doApify) parts.push(INDEED_ENABLED ? "simplyhired+ziprecruiter+indeed" : "simplyhired+ziprecruiter");
   if (doAdzuna) parts.push("adzuna");
   if (doJooble) parts.push("jooble");
-  const capNote = (hasKey ? ` | JSearch used ${spent}/${MONTHLY_JSEARCH_CAP} this month` : "")
+  const capNote = (JSEARCH_ENABLED && hasKey ? ` | JSearch used ${spent}/${MONTHLY_JSEARCH_CAP} this month` : "")
     + (hasApify ? ` | Apify spent ${apifyCents.toFixed(1)}/${MONTHLY_APIFY_CAP_CENTS}¢ this month` : "")
     + (hasAdzuna ? ` | Adzuna used ${adzunaCalls}/${MONTHLY_ADZUNA_CAP} calls this month` : "")
     + (hasJooble ? ` | Jooble used ${joobleCalls}/${MONTHLY_JOOBLE_CAP} calls this month` : "");
