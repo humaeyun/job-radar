@@ -276,9 +276,14 @@ async function main() {
   // capped batch of candidate jobs (fresh first, then the existing feed backlog)
   // and re-run the spec detector on the real text. Mark enriched so we never
   // re-fetch the same job; process the backlog a batch at a time across sweeps.
+  // Jooble's JD pages are behind Cloudflare — a raw fetch gets a 403 "Just a
+  // moment" challenge from ANY IP, so this only works from a real browser
+  // (Playwright) on a residential machine. OFF by default; the home-machine
+  // enrichment runner sets ENRICH_JD=1.
+  const ENRICH_ENABLED = !!process.env.ENRICH_JD;
   const ENRICH_CAP = 30;
   const needsEnrich = (j) => !j.enriched && j.byodTier !== "confirmed" && isEnrichable(j.url);
-  const enrichPool = [...fresh.filter(needsEnrich), ...feed.filter(needsEnrich)].slice(0, ENRICH_CAP);
+  const enrichPool = ENRICH_ENABLED ? [...fresh.filter(needsEnrich), ...feed.filter(needsEnrich)].slice(0, ENRICH_CAP) : [];
   if (enrichPool.length) {
     const jds = await fetchJDs(enrichPool.map(j => j.url));
     let fetched = 0, upgraded = 0;
