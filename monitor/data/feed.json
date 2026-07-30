@@ -1,5 +1,24 @@
 [
   {
+    "id": "83e844ee",
+    "agency": "LaSalle Network",
+    "title": "Senior Data Engineering Manager",
+    "category": "Medical Records",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/senior-data-engineering-manager-161644/",
+    "postedAt": "2026-06-23T18:29:56.000Z",
+    "firstSeen": "2026-07-30T01:53:00.478Z"
+  },
+  {
     "id": "8d1f360c",
     "agency": "RemX",
     "title": "$16 Remote Medical Call Center Customer Service Representative",
@@ -9498,25 +9517,6 @@
     "source": "Remote Zest Jobs",
     "url": "https://remotezest.up.railway.app/job/immediate-hiring-arenaflex-remote-customer-service-representative-5",
     "postedAt": "2026-07-27T00:00:00.000Z",
-    "firstSeen": "2026-07-29T14:40:42.720Z"
-  },
-  {
-    "id": "a09c9a60",
-    "agency": "remote zest jobs",
-    "title": "**Part-Time Remote Customer Service Representative – Transforming Lives through Compassionate Care**",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "maybe",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "Part-time",
-    "location": "Remote",
-    "source": "Remote Zest Jobs",
-    "url": "https://remotezest.up.railway.app/job/part-time-remote-customer-service-representative-transforming-lives-through-compassionate-care",
-    "postedAt": "2026-07-26T00:00:00.000Z",
     "firstSeen": "2026-07-29T14:40:42.720Z"
   }
 ]
