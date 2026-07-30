@@ -1,0 +1,53 @@
+name: Deploy dashboard
+
+# Builds the Vite dashboard and publishes it to GitHub Pages. The dashboard
+# fetches the feed at runtime from the raw feed.json URL (VITE_FEED_URL), so it
+# shows live data on every reload WITHOUT redeploying — no need to rebuild when
+# the feed updates. Only rebuild when the dashboard code or this workflow changes.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "dashboard/**"
+      - ".github/workflows/deploy.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: dashboard
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm ci || npm install
+      - name: Build
+        env:
+          VITE_BASE: /job-radar/
+          VITE_FEED_URL: https://raw.githubusercontent.com/humaeyun/job-radar/main/monitor/data/feed.json
+        run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
