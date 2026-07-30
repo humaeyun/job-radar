@@ -229,19 +229,30 @@ async function main() {
     }
   }
 
-  // Adzuna (free official API). Broad remote sweep; counts calls against the
-  // monthly free-tier cap.
+  // Free aggregator APIs (Adzuna + Jooble), PACKAGED together. Both pull the
+  // same Indeed-syndicated pool via different affiliate feeds, so the same job
+  // arrives under two different URLs — the URL-based jobKey wouldn't catch that.
+  // Merge both, then de-dupe by employer+title+location (URL-agnostic) so each
+  // real job lands once. Adzuna runs first + wins collisions (cleaner data:
+  // structured pay, no reposter-title noise); Jooble only adds what's unique.
+  const aggregatorJobs = [];
   if (doAdzuna) {
-    try { for (const job of await adzuna()) consider(job); }
+    try { aggregatorJobs.push(...await adzuna()); }
     catch (e) { console.warn(`  ! adzuna: ${e.message}`); }
     adzunaCalls += ADZUNA_CALLS_PER_RUN;
   }
-
-  // Jooble (free official API; covers ZipRecruiter + Indeed, labels source).
   if (doJooble) {
-    try { for (const job of await jooble()) consider(job); }
+    try { aggregatorJobs.push(...await jooble()); }
     catch (e) { console.warn(`  ! jooble: ${e.message}`); }
     joobleCalls += JOOBLE_CALLS_PER_RUN;
+  }
+  const aggSeen = new Set();
+  const normKey = (j) => `${j.agency}|${j.title}|${j.location}`.toLowerCase().replace(/\s+/g, " ").trim();
+  for (const job of aggregatorJobs) {
+    const k = normKey(job);
+    if (aggSeen.has(k)) continue;   // same job already taken from the other API
+    aggSeen.add(k);
+    consider(job);
   }
 
   // Persist the month's running JSearch spend so the cap survives across runs.
