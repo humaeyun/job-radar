@@ -20,6 +20,7 @@ import { rss } from "./adapters/rss.js";
 import { jsearch, scrape, aggregator, AGGREGATOR_QUERY_COUNT } from "./adapters/fallback.js";
 import { ziprecruiter, simplyhired, indeed, ZR_CENTS_PER_RESULT, SH_CENTS_PER_RESULT, IN_CENTS_PER_RESULT } from "./adapters/apify.js";
 import { adzuna, ADZUNA_CALLS_PER_RUN } from "./adapters/adzuna.js";
+import { jooble, JOOBLE_CALLS_PER_RUN } from "./adapters/jooble.js";
 import { classify, jobKey, extractPay, extractEmployment, payLabel } from "./config.js";
 import { notifyTelegram } from "./notify.js";
 
@@ -74,6 +75,11 @@ const INDEED_ENABLED = !!process.env.APIFY_INDEED;
 const ADZUNA_EVERY_HOURS = 8;             // ~3x/day
 const MONTHLY_ADZUNA_CAP = 900;           // stay under the free 1,000/mo
 
+// --- Jooble (free official API, covers ZipRecruiter + Indeed, labels source).
+// Free tier is generous; throttle + budget conservatively like Adzuna.
+const JOOBLE_EVERY_HOURS = 8;             // ~3x/day
+const MONTHLY_JOOBLE_CAP = 900;
+
 const readJSON = async (p, fallback) => { try { return JSON.parse(await fs.readFile(p, "utf8")); } catch { return fallback; } };
 
 async function fetchAgency(a) {
@@ -108,6 +114,7 @@ async function main() {
   const runAgg = manual || (slot % everyNSlots(AGGREGATOR_EVERY_HOURS) === 0);
   const runApify = manual || (slot % everyNSlots(APIFY_EVERY_HOURS) === 0);
   const runAdzuna = manual || (slot % everyNSlots(ADZUNA_EVERY_HOURS) === 0);
+  const runJooble = manual || (slot % everyNSlots(JOOBLE_EVERY_HOURS) === 0);
 
   // ---- monthly JSearch budget guard (never exceed the plan cap) ----
   const hasKey = !!process.env.RAPIDAPI_KEY;
@@ -128,6 +135,12 @@ async function main() {
   const adzunaBudget = (seen.__adzuna && seen.__adzuna.month === month) ? seen.__adzuna.count : 0;
   let adzunaCalls = adzunaBudget;
   const doAdzuna = runAdzuna && hasAdzuna && (adzunaCalls + ADZUNA_CALLS_PER_RUN <= MONTHLY_ADZUNA_CAP);
+
+  // ---- monthly Jooble call budget guard ----
+  const hasJooble = !!process.env.JOOBLE_API_KEY;
+  const joobleBudget = (seen.__jooble && seen.__jooble.month === month) ? seen.__jooble.count : 0;
+  let joobleCalls = joobleBudget;
+  const doJooble = runJooble && hasJooble && (joobleCalls + JOOBLE_CALLS_PER_RUN <= MONTHLY_JOOBLE_CAP);
 
   // jsearch agencies have no free reader — the deep aggregator covers them now.
   const agencies = all.filter(a => a.ats !== "jsearch");
@@ -221,10 +234,18 @@ async function main() {
     adzunaCalls += ADZUNA_CALLS_PER_RUN;
   }
 
+  // Jooble (free official API; covers ZipRecruiter + Indeed, labels source).
+  if (doJooble) {
+    try { for (const job of await jooble()) consider(job); }
+    catch (e) { console.warn(`  ! jooble: ${e.message}`); }
+    joobleCalls += JOOBLE_CALLS_PER_RUN;
+  }
+
   // Persist the month's running JSearch spend so the cap survives across runs.
   seen.__budget = { month, count: spent };
   seen.__apify = { month, cents: Math.round(apifyCents * 100) / 100 };
   seen.__adzuna = { month, count: adzunaCalls };
+  seen.__jooble = { month, count: joobleCalls };
 
   // Newest first; keep the feed to the last 500 so the file stays small.
   const merged = [...fresh, ...feed].slice(0, 500);
@@ -236,9 +257,11 @@ async function main() {
   if (doAgg) parts.push("job-boards");
   if (doApify) parts.push(INDEED_ENABLED ? "simplyhired+ziprecruiter+indeed" : "simplyhired+ziprecruiter");
   if (doAdzuna) parts.push("adzuna");
+  if (doJooble) parts.push("jooble");
   const capNote = (hasKey ? ` | JSearch used ${spent}/${MONTHLY_JSEARCH_CAP} this month` : "")
     + (hasApify ? ` | Apify spent ${apifyCents.toFixed(1)}/${MONTHLY_APIFY_CAP_CENTS}¢ this month` : "")
-    + (hasAdzuna ? ` | Adzuna used ${adzunaCalls}/${MONTHLY_ADZUNA_CAP} calls this month` : "");
+    + (hasAdzuna ? ` | Adzuna used ${adzunaCalls}/${MONTHLY_ADZUNA_CAP} calls this month` : "")
+    + (hasJooble ? ` | Jooble used ${joobleCalls}/${MONTHLY_JOOBLE_CAP} calls this month` : "");
   console.log(`Sweep done: ${fresh.length} new remote role(s) across ${agencies.length} agencies [${parts.join("+")}]${capNote}.`);
   if (fresh.length) await notifyTelegram(fresh);
 }
