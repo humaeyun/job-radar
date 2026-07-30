@@ -91,6 +91,15 @@ const readJSON = async (p, fallback) => { try { return JSON.parse(await fs.readF
 // display-layer dedup on employer+title only (location dropped on purpose).
 const feedDedupKey = (j) => `${j.agency}|${j.title}`.toLowerCase().replace(/\s+/g, " ").trim();
 
+// Staffing-agency career-page reads (the project's core), vs job-board
+// aggregators. Mirrors the dashboard's DIRECT_SOURCES. Agency-direct jobs are a
+// trickle (1-3/sweep) that the ~250/sweep aggregator flood would evict from a
+// flat feed cap, so we reserve them a guaranteed slice below.
+const DIRECT_SOURCES = new Set(["Greenhouse", "Lever", "Ashby", "SmartRecruiters", "RSS", "Sitemap", "Haley", "Avionté", "Workable", "Careers page"]);
+const isDirect = (j) => DIRECT_SOURCES.has(j.source);
+const FEED_CAP = 600;        // total feed size
+const DIRECT_RESERVE = 250;  // slots agency-direct jobs can't be evicted from
+
 async function fetchAgency(a) {
   try {
     if (a.ats in ATS) return await ATS[a.ats](a.name, a.atsToken);
@@ -268,16 +277,21 @@ async function main() {
 
   // Newest first, then collapse duplicate roles (employer+title) that slipped in
   // under different URLs across sources/sweeps. Fresh is prepended so the newest
-  // copy wins. Keep the last 500 so the file stays small.
+  // copy wins.
   const feedSeen = new Set();
-  const merged = [];
+  const deduped = [];
   for (const j of [...fresh, ...feed]) {
     const k = feedDedupKey(j);
     if (feedSeen.has(k)) continue;
     feedSeen.add(k);
-    merged.push(j);
-    if (merged.length >= 500) break;
+    deduped.push(j);
   }
+  // Reserve a guaranteed slice for agency-direct jobs so the aggregator flood
+  // can't evict them: keep the newest DIRECT_RESERVE direct jobs, then fill the
+  // rest of FEED_CAP with the newest board jobs. Preserve newest-first order.
+  const directKeep = new Set(deduped.filter(isDirect).slice(0, DIRECT_RESERVE));
+  const boardKeep = new Set(deduped.filter(j => !isDirect(j)).slice(0, FEED_CAP - directKeep.size));
+  const merged = deduped.filter(j => directKeep.has(j) || boardKeep.has(j));
 
   await fs.writeFile(SEEN, JSON.stringify(seen, null, 0));
   await fs.writeFile(FEED, JSON.stringify(merged, null, 2));
