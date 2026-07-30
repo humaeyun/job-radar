@@ -48,15 +48,24 @@ const MONTHLY_JSEARCH_CAP = 9500;
 // Apify's Free plan grants $5/mo prepaid credit and hard-blocks when spent, so
 // nothing can be billed; we cap BELOW that to leave headroom and keep the proof
 // runs free. Spend (in cents) persists in seen.json like the JSearch budget.
-// NOTE: Apify bills COMPUTE per run (not just per result), so the $5/mo free
-// credit is spent mainly by how OFTEN we run, not how many jobs we pull. Running
-// every 6h burned the month's credit in a day of testing. Once/day keeps ZR+SH
-// comfortably inside the free $5. (The cents cap below tracks only per-result
-// charges — Apify's own hard limit is the real backstop, so nothing can bill.)
-const APIFY_EVERY_HOURS = 24;             // once/day — sustainable on the free $5
-const MONTHLY_APIFY_CAP_CENTS = 450;      // per-result ceiling; Apify hard-stops at $5
-// Indeed needs paid residential proxy ($8/GB) + its actor is flaky, so it's OFF
-// by default. Set APIFY_INDEED=1 (a secret) to enable it once willing to spend.
+// Tuned for a PAID Apify plan (Starter ~$39/mo incl. $39 usage). Twice-daily
+// ZR+SH pulls ~$27/mo in per-result charges — comfortably inside $39 with room
+// for Indeed. On the free $5 tier this would drain the credit in days; drop
+// APIFY_EVERY_HOURS to 72 (every 3 days) + halve the per-run caps to stay free.
+// IMPORTANT: also set an Apify-side monthly usage hard limit (Settings→Billing)
+// as the real backstop — MONTHLY_APIFY_CAP_CENTS only counts per-result charges,
+// not compute/proxy, so it under-counts true spend.
+const APIFY_EVERY_HOURS = 12;             // twice a day
+const MONTHLY_APIFY_CAP_CENTS = 3000;     // ~$30 of per-result charges/mo
+// Per-RUN result ceilings so a single early-month run can't spend the whole
+// monthly budget at once (the budget-share sizing below would otherwise pull
+// thousands of results in one go while apifyRemaining is still large).
+const ZR_MAX_PER_RUN = 150;
+const SH_MAX_PER_RUN = 60;
+const IN_MAX_PER_RUN = 60;
+// Indeed needs paid residential proxy ($8/GB) and its actor is still unproven
+// (never a clean success), so it's OFF by default. Set APIFY_INDEED=1 (a secret)
+// to enable once the upgrade is live and we've verified the actor runs.
 const INDEED_ENABLED = !!process.env.APIFY_INDEED;
 
 const readJSON = async (p, fallback) => { try { return JSON.parse(await fs.readFile(p, "utf8")); } catch { return fallback; } };
@@ -166,9 +175,11 @@ async function main() {
   // remaining monthly budget across them; size each run's result cap from its
   // price so we stay inside the free $5 credit. Charge actual results returned.
   if (doApify) {
+    // Size each run by the cheaper of (a) an even slice of the remaining monthly
+    // budget and (b) a fixed per-run ceiling, so no single run can overspend.
     const shareCents = apifyRemaining / (INDEED_ENABLED ? 3 : 2);
-    const zrCap = Math.floor(shareCents / ZR_CENTS_PER_RESULT);
-    const shCap = Math.floor(shareCents / SH_CENTS_PER_RESULT);
+    const zrCap = Math.min(ZR_MAX_PER_RUN, Math.floor(shareCents / ZR_CENTS_PER_RESULT));
+    const shCap = Math.min(SH_MAX_PER_RUN, Math.floor(shareCents / SH_CENTS_PER_RESULT));
     try {
       const zr = zrCap > 0 ? await ziprecruiter(zrCap) : [];
       for (const job of zr) consider(job);
@@ -180,7 +191,7 @@ async function main() {
       apifyCents += sh.length * SH_CENTS_PER_RESULT;
     } catch (e) { console.warn(`  ! simplyhired: ${e.message}`); }
     if (INDEED_ENABLED) {
-      const inCap = Math.floor(shareCents / IN_CENTS_PER_RESULT);
+      const inCap = Math.min(IN_MAX_PER_RUN, Math.floor(shareCents / IN_CENTS_PER_RESULT));
       try {
         const inn = inCap > 0 ? await indeed(inCap) : [];
         for (const job of inn) consider(job);
