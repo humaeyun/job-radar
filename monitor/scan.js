@@ -85,6 +85,12 @@ const MONTHLY_JOOBLE_CAP = 450;           // safely under the 500 default
 
 const readJSON = async (p, fallback) => { try { return JSON.parse(await fs.readFile(p, "utf8")); } catch { return fallback; } };
 
+// Collapse the same role that arrives under different URLs: multi-state remote
+// repostings (same employer+title, different state) and cross-sweep re-fetches.
+// The seen.json/jobKey dedup is URL-based so it can't catch these — this is a
+// display-layer dedup on employer+title only (location dropped on purpose).
+const feedDedupKey = (j) => `${j.agency}|${j.title}`.toLowerCase().replace(/\s+/g, " ").trim();
+
 async function fetchAgency(a) {
   try {
     if (a.ats in ATS) return await ATS[a.ats](a.name, a.atsToken);
@@ -247,10 +253,9 @@ async function main() {
     joobleCalls += JOOBLE_CALLS_PER_RUN;
   }
   const aggSeen = new Set();
-  const normKey = (j) => `${j.agency}|${j.title}|${j.location}`.toLowerCase().replace(/\s+/g, " ").trim();
   for (const job of aggregatorJobs) {
-    const k = normKey(job);
-    if (aggSeen.has(k)) continue;   // same job already taken from the other API
+    const k = feedDedupKey(job);
+    if (aggSeen.has(k)) continue;   // same job already taken (other API or other state)
     aggSeen.add(k);
     consider(job);
   }
@@ -261,8 +266,18 @@ async function main() {
   seen.__adzuna = { month, count: adzunaCalls };
   seen.__jooble = { month, count: joobleCalls };
 
-  // Newest first; keep the feed to the last 500 so the file stays small.
-  const merged = [...fresh, ...feed].slice(0, 500);
+  // Newest first, then collapse duplicate roles (employer+title) that slipped in
+  // under different URLs across sources/sweeps. Fresh is prepended so the newest
+  // copy wins. Keep the last 500 so the file stays small.
+  const feedSeen = new Set();
+  const merged = [];
+  for (const j of [...fresh, ...feed]) {
+    const k = feedDedupKey(j);
+    if (feedSeen.has(k)) continue;
+    feedSeen.add(k);
+    merged.push(j);
+    if (merged.length >= 500) break;
+  }
 
   await fs.writeFile(SEEN, JSON.stringify(seen, null, 0));
   await fs.writeFile(FEED, JSON.stringify(merged, null, 2));
