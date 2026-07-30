@@ -12,7 +12,7 @@
 // the free plan. That $5 is plenty to prove the feed:
 //   - ZipRecruiter (fatihtahta/ziprecruiter-scraper): $1.00 / 1,000 results
 //   - SimplyHired  (easyapi/simplyhired-job-scraper):  $4.99 / 1,000 results
-//   - Indeed       (misceres/indeed-scraper):          $3.00 / 1,000 results
+//   - Indeed       (misceres/indeed-scraper):          $6.00 / 1,000 results
 // Cost per result (cents) is exported below so scan.js can cap monthly spend the
 // same paranoid way it caps JSearch.
 //
@@ -31,7 +31,7 @@ export const IN_ACTOR = "misceres~indeed-scraper";
 // Pay-per-result price, in cents, so scan.js can budget by real cost.
 export const ZR_CENTS_PER_RESULT = 0.1;    // $1.00 / 1000
 export const SH_CENTS_PER_RESULT = 0.499;  // $4.99 / 1000
-export const IN_CENTS_PER_RESULT = 0.3;    // $3.00 / 1000
+export const IN_CENTS_PER_RESULT = 0.6;    // $6.00 / 1000
 
 // The role buckets we sweep — same intent as the JSearch aggregator queries.
 const QUERIES = [
@@ -60,13 +60,7 @@ async function runActor(actorId, input, maxWaitSecs = 300) {
     throw new Error(`${actorId} -> ${r.status} ${body.slice(0, 300)}`);
   }
   const data = await r.json();
-  const items = Array.isArray(data) ? data : [];
-  // TEMP: crash-safe first-run dump to confirm a new actor's field names.
-  if (process.env.APIFY_DEBUG && items[0]) {
-    console.log(`DEBUG ${actorId} keys:`, Object.keys(items[0]).join(","));
-    console.log(`DEBUG ${actorId} sample:`, JSON.stringify(items[0]).slice(0, 1200));
-  }
-  return items;
+  return Array.isArray(data) ? data : [];
 }
 
 // The ZipRecruiter actor nests fields under groups: entity{title,url},

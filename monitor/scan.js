@@ -48,8 +48,16 @@ const MONTHLY_JSEARCH_CAP = 9500;
 // Apify's Free plan grants $5/mo prepaid credit and hard-blocks when spent, so
 // nothing can be billed; we cap BELOW that to leave headroom and keep the proof
 // runs free. Spend (in cents) persists in seen.json like the JSearch budget.
-const APIFY_EVERY_HOURS = 6;              // draws the free credit; a few times/day
-const MONTHLY_APIFY_CAP_CENTS = 450;      // $4.50 — safely under the $5 free credit
+// NOTE: Apify bills COMPUTE per run (not just per result), so the $5/mo free
+// credit is spent mainly by how OFTEN we run, not how many jobs we pull. Running
+// every 6h burned the month's credit in a day of testing. Once/day keeps ZR+SH
+// comfortably inside the free $5. (The cents cap below tracks only per-result
+// charges — Apify's own hard limit is the real backstop, so nothing can bill.)
+const APIFY_EVERY_HOURS = 24;             // once/day — sustainable on the free $5
+const MONTHLY_APIFY_CAP_CENTS = 450;      // per-result ceiling; Apify hard-stops at $5
+// Indeed needs paid residential proxy ($8/GB) + its actor is flaky, so it's OFF
+// by default. Set APIFY_INDEED=1 (a secret) to enable it once willing to spend.
+const INDEED_ENABLED = !!process.env.APIFY_INDEED;
 
 const readJSON = async (p, fallback) => { try { return JSON.parse(await fs.readFile(p, "utf8")); } catch { return fallback; } };
 
@@ -158,10 +166,9 @@ async function main() {
   // remaining monthly budget across them; size each run's result cap from its
   // price so we stay inside the free $5 credit. Charge actual results returned.
   if (doApify) {
-    const shareCents = apifyRemaining / 3;
+    const shareCents = apifyRemaining / (INDEED_ENABLED ? 3 : 2);
     const zrCap = Math.floor(shareCents / ZR_CENTS_PER_RESULT);
     const shCap = Math.floor(shareCents / SH_CENTS_PER_RESULT);
-    const inCap = Math.floor(shareCents / IN_CENTS_PER_RESULT);
     try {
       const zr = zrCap > 0 ? await ziprecruiter(zrCap) : [];
       for (const job of zr) consider(job);
@@ -172,11 +179,14 @@ async function main() {
       for (const job of sh) consider(job);
       apifyCents += sh.length * SH_CENTS_PER_RESULT;
     } catch (e) { console.warn(`  ! simplyhired: ${e.message}`); }
-    try {
-      const inn = inCap > 0 ? await indeed(inCap) : [];
-      for (const job of inn) consider(job);
-      apifyCents += inn.length * IN_CENTS_PER_RESULT;
-    } catch (e) { console.warn(`  ! indeed: ${e.message}`); }
+    if (INDEED_ENABLED) {
+      const inCap = Math.floor(shareCents / IN_CENTS_PER_RESULT);
+      try {
+        const inn = inCap > 0 ? await indeed(inCap) : [];
+        for (const job of inn) consider(job);
+        apifyCents += inn.length * IN_CENTS_PER_RESULT;
+      } catch (e) { console.warn(`  ! indeed: ${e.message}`); }
+    }
   }
 
   // Persist the month's running JSearch spend so the cap survives across runs.
@@ -191,7 +201,7 @@ async function main() {
 
   const parts = ["free"];
   if (doAgg) parts.push("job-boards");
-  if (doApify) parts.push("simplyhired+ziprecruiter+indeed");
+  if (doApify) parts.push(INDEED_ENABLED ? "simplyhired+ziprecruiter+indeed" : "simplyhired+ziprecruiter");
   const capNote = (hasKey ? ` | JSearch used ${spent}/${MONTHLY_JSEARCH_CAP} this month` : "")
     + (hasApify ? ` | Apify spent ${apifyCents.toFixed(1)}/${MONTHLY_APIFY_CAP_CENTS}¢ this month` : "");
   console.log(`Sweep done: ${fresh.length} new remote role(s) across ${agencies.length} agencies [${parts.join("+")}]${capNote}.`);
