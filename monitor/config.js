@@ -68,7 +68,7 @@ const PROVIDED_HINTS = [
 //    and the company doesn't say it provides the gear.
 //  - equipment: matched spec + peripheral labels (for display).
 //  - softBYOD: a "bring your own" signal without full specs (a "likely" hint).
-function detectEquipment(hay) {
+export function detectEquipment(hay) {
   const specs = SPEC_RULES.filter(([, re]) => re.test(hay)).map(([l]) => l);
   const peripherals = PERIPHERAL_RULES.filter(([, re]) => re.test(hay)).map(([l]) => l);
   const provided = PROVIDED_HINTS.some(re => re.test(hay));

@@ -21,7 +21,8 @@ import { jsearch, scrape, aggregator, AGGREGATOR_QUERY_COUNT } from "./adapters/
 import { ziprecruiter, simplyhired, indeed, ZR_CENTS_PER_RESULT, SH_CENTS_PER_RESULT, IN_CENTS_PER_RESULT } from "./adapters/apify.js";
 import { adzuna, ADZUNA_CALLS_PER_RUN } from "./adapters/adzuna.js";
 import { jooble, JOOBLE_CALLS_PER_RUN } from "./adapters/jooble.js";
-import { classify, jobKey, extractPay, extractEmployment, payLabel } from "./config.js";
+import { fetchJDs, isEnrichable } from "./adapters/enrich.js";
+import { classify, jobKey, extractPay, extractEmployment, payLabel, detectEquipment } from "./config.js";
 import { notifyTelegram } from "./notify.js";
 
 const AGENCIES = "./data/agencies.json";
@@ -267,6 +268,30 @@ async function main() {
     if (aggSeen.has(k)) continue;   // same job already taken (other API or other state)
     aggSeen.add(k);
     consider(job);
+  }
+
+  // ---- BYOD enrichment ----
+  // Aggregators give a snippet, not the full posting, so the "own Windows laptop"
+  // specs stay invisible and Confirmed BYOD never fires. Fetch full JDs for a
+  // capped batch of candidate jobs (fresh first, then the existing feed backlog)
+  // and re-run the spec detector on the real text. Mark enriched so we never
+  // re-fetch the same job; process the backlog a batch at a time across sweeps.
+  const ENRICH_CAP = 30;
+  const needsEnrich = (j) => !j.enriched && j.byodTier !== "confirmed" && isEnrichable(j.url);
+  const enrichPool = [...fresh.filter(needsEnrich), ...feed.filter(needsEnrich)].slice(0, ENRICH_CAP);
+  if (enrichPool.length) {
+    const jds = await fetchJDs(enrichPool.map(j => j.url));
+    let fetched = 0, upgraded = 0;
+    for (const j of enrichPool) {
+      j.enriched = true;                    // don't retry, whatever the outcome
+      const jd = jds.get(j.url);
+      if (!jd) continue;
+      fetched++;
+      const { byod, equipment } = detectEquipment(jd.toLowerCase());
+      if (byod) { j.byod = true; j.byodTier = "confirmed"; j.equipment = equipment; upgraded++; }
+      else if (equipment.length && !j.byodTier) { j.byodTier = "maybe"; j.equipment = equipment; }
+    }
+    console.log(`  BYOD enrich: fetched ${fetched}/${enrichPool.length} full JDs, ${upgraded} -> Confirmed BYOD`);
   }
 
   // Persist the month's running JSearch spend so the cap survives across runs.
