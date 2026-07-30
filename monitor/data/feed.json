@@ -1,5 +1,24 @@
 [
   {
+    "id": "e4a5f700",
+    "agency": "LaSalle Network",
+    "title": "Lead AI Engineer",
+    "category": "Medical Records",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/lead-ai-engineer-161964/",
+    "postedAt": "2026-07-01T20:54:46.000Z",
+    "firstSeen": "2026-07-30T10:16:26.938Z"
+  },
+  {
     "id": "bff48b35",
     "agency": "Thrivas",
     "title": "Sales Representative (Remote Work From Home)",
@@ -9495,25 +9514,6 @@
     "source": "Remote Zest Jobs",
     "url": "https://remotezest.up.railway.app/job/part-time-remote-customer-service-representative-21",
     "postedAt": "2026-07-27T00:00:00.000Z",
-    "firstSeen": "2026-07-29T14:40:42.720Z"
-  },
-  {
-    "id": "13532ab3",
-    "agency": "remote next",
-    "title": "reputed company Bilingual Customer Service Representative – La reputed company Level 7-1 (English & Spanish Only)",
-    "category": "Customer Service",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "Remote Jobs USA",
-    "url": "https://main.d3mhslpmrpo4el.amplifyapp.com/job/2244821",
-    "postedAt": "2026-07-24T00:00:00.000Z",
     "firstSeen": "2026-07-29T14:40:42.720Z"
   }
 ]
