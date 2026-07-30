@@ -1,5 +1,24 @@
 [
   {
+    "id": "d9ee4078",
+    "agency": "LaSalle Network",
+    "title": "Quality Assurance Specialist",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "$32–36/hr",
+    "payMin": 32,
+    "payMax": 36,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/quality-assurance-specialist-162033/",
+    "postedAt": "2026-07-30T13:49:04.000Z",
+    "firstSeen": "2026-07-30T14:40:00.358Z"
+  },
+  {
     "id": "e595d7d1",
     "agency": "LaSalle Network",
     "title": "Recruiter",
@@ -9491,25 +9510,6 @@
     "source": "JobLeads",
     "url": "https://www.jobleads.com/us/job/remote-call-center-agent-customer-care-sales-hawaii--united-states--eec2cf4afaa3fff7d57bc26430cebb2be",
     "postedAt": "2026-07-25T00:00:00.000Z",
-    "firstSeen": "2026-07-29T14:40:42.720Z"
-  },
-  {
-    "id": "778b959a",
-    "agency": "remote zest jobs",
-    "title": "Remote - Customer Service Representative - Full-time / Part-time",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "maybe",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "Part-time",
-    "location": "Remote",
-    "source": "Remote Zest Jobs",
-    "url": "https://remotezest.up.railway.app/job/remote-customer-service-representative-full-time-part-time",
-    "postedAt": "2026-07-26T00:00:00.000Z",
     "firstSeen": "2026-07-29T14:40:42.720Z"
   }
 ]
