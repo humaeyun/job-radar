@@ -1,5 +1,24 @@
 [
   {
+    "id": "8d1fdc35",
+    "agency": "RemX",
+    "title": "$16 Remote Medical Call Center Customer Service Representative",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "Careers page",
+    "url": "https://www.remx.com/jobs/detail/1293693/",
+    "postedAt": null,
+    "firstSeen": "2026-07-31T20:17:04.038Z"
+  },
+  {
     "id": "cb077aab",
     "agency": "CRG",
     "title": "Leave of Absence Coordinator | ADA Support",
@@ -5836,25 +5855,6 @@
     "url": "https://www.thelasallenetwork.com/jobs/senior-data-engineering-manager-161644/",
     "postedAt": "2026-06-23T18:29:56.000Z",
     "firstSeen": "2026-07-30T01:53:00.478Z"
-  },
-  {
-    "id": "8d1f360c",
-    "agency": "RemX",
-    "title": "$16 Remote Medical Call Center Customer Service Representative",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "Careers page",
-    "url": "https://www.remx.com/jobs/detail/1293531/",
-    "postedAt": null,
-    "firstSeen": "2026-07-29T22:54:36.739Z"
   },
   {
     "id": "774ad2e7",
