@@ -1,5 +1,24 @@
 [
   {
+    "id": "534e1c96",
+    "agency": "LaSalle Network",
+    "title": "AP Specialist",
+    "category": "Customer Service",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$24–29/hr",
+    "payMin": 24,
+    "payMax": 29,
+    "employment": "Contract",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/ap-specialist-162128/",
+    "postedAt": "2026-07-20T18:44:03.000Z",
+    "firstSeen": "2026-08-04T10:30:01.113Z"
+  },
+  {
     "id": "5750f66d",
     "agency": "Spherion",
     "title": "Bilingual Spanish/English work-from-home Inbound support",
@@ -9407,25 +9426,6 @@
     "source": "appcast.io",
     "url": "https://jooble.org/jdp/-8924131997975581198",
     "postedAt": "2026-07-27T00:00:00.0000000",
-    "firstSeen": "2026-07-30T16:37:22.298Z"
-  },
-  {
-    "id": "6ad417bd",
-    "agency": "Ghanapose",
-    "title": "Virtual Assistant - Somewhere (Remote)",
-    "category": "Sales",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "New York, NY",
-    "source": "appcast.io",
-    "url": "https://jooble.org/jdp/-7262107734772133076",
-    "postedAt": "2026-07-30T00:00:00.0000000",
     "firstSeen": "2026-07-30T16:37:22.298Z"
   },
   {
