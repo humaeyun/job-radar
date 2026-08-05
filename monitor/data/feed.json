@@ -1,5 +1,24 @@
 [
   {
+    "id": "e37e9102",
+    "agency": "RemX",
+    "title": "Remote, Call Center Customer Support",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "Careers page",
+    "url": "https://www.remx.com/jobs/detail/1293855/",
+    "postedAt": null,
+    "firstSeen": "2026-08-04T23:58:32.575Z"
+  },
+  {
     "id": "56163b62",
     "agency": "Green Key Resources",
     "title": "Truss Designer",
@@ -9407,25 +9426,6 @@
     "source": "Lensa.com",
     "url": "https://jooble.org/jdp/-584850704534522113",
     "postedAt": "2026-07-28T00:00:00.0000000",
-    "firstSeen": "2026-07-30T16:37:22.298Z"
-  },
-  {
-    "id": "f7506555",
-    "agency": "Randstad",
-    "title": "Denial Prevention Specialist",
-    "category": "Sales",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Weatherford, TX",
-    "source": "Lensa.com",
-    "url": "https://jooble.org/jdp/1112673357127818512",
-    "postedAt": "2026-07-27T17:55:34.0030000",
     "firstSeen": "2026-07-30T16:37:22.298Z"
   },
   {
