@@ -1,5 +1,24 @@
 [
   {
+    "id": "a005f27",
+    "agency": "LaSalle Network",
+    "title": "Operational Integrity and Excellence Leader",
+    "category": "Medical Records",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/operational-integrity-and-excellence-leader-161781/",
+    "postedAt": "2026-06-12T21:06:21.000Z",
+    "firstSeen": "2026-08-07T15:47:49.686Z"
+  },
+  {
     "id": "9da26de6",
     "agency": "Green Key Resources",
     "title": "Wire Operations Specialist",
@@ -9273,25 +9292,6 @@
     "source": "Adzuna",
     "url": "https://www.adzuna.com/land/ad/5822674412?se=nMaVW4CN8RG8DqYT68M2aw&utm_medium=api&utm_source=336a6462&v=6638012DDD581C149AED9D0FC1686F0A8A1B3943",
     "postedAt": "2026-07-31T16:14:19Z",
-    "firstSeen": "2026-08-01T08:08:10.562Z"
-  },
-  {
-    "id": "d601f72d",
-    "agency": "Kelly Services",
-    "title": "Bilingual Spanish Remote Interpreters - Texas",
-    "category": "Call Center",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "$15/hr",
-    "payMin": 15,
-    "payMax": 15,
-    "employment": "Contract",
-    "location": "Dearborn Heights, Wayne County",
-    "source": "Adzuna",
-    "url": "https://www.adzuna.com/land/ad/5822673648?se=nMaVW4CN8RG8DqYT68M2aw&utm_medium=api&utm_source=336a6462&v=DD69DA8C9F55B2DA18F7190784BD9BA82EFE4CA1",
-    "postedAt": "2026-07-31T16:13:41Z",
     "firstSeen": "2026-08-01T08:08:10.562Z"
   },
   {
