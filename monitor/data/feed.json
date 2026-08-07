@@ -1,5 +1,24 @@
 [
   {
+    "id": "5fece60d",
+    "agency": "TERRA Staffing Group",
+    "title": "Staffing Specialist",
+    "category": "Customer Service",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "$24.83–29.25/hr",
+    "payMin": 24.83,
+    "payMax": 29.25,
+    "employment": "",
+    "location": "Aurora, Colorado, United States",
+    "source": "Greenhouse",
+    "url": "https://job-boards.greenhouse.io/verstela/jobs/5383355008",
+    "postedAt": "2026-08-07T16:51:48-04:00",
+    "firstSeen": "2026-08-07T21:31:43.405Z"
+  },
+  {
     "id": "c54b10e0",
     "agency": "Aston Carter",
     "title": "Remote HR Call Agent",
@@ -10764,25 +10783,6 @@
     "source": "Greenhouse",
     "url": "https://job-boards.greenhouse.io/verstela/jobs/5373117008",
     "postedAt": "2026-07-28T14:54:37-04:00",
-    "firstSeen": "2026-07-28T23:17:16.333Z"
-  },
-  {
-    "id": "d930e28e",
-    "agency": "TERRA Staffing Group",
-    "title": "Staffing Specialist",
-    "category": "Customer Service",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "$20–26/hr",
-    "payMin": 20,
-    "payMax": 26,
-    "employment": "",
-    "location": "Berwyn, Illinois, United States",
-    "source": "Greenhouse",
-    "url": "https://job-boards.greenhouse.io/verstela/jobs/5364573008",
-    "postedAt": "2026-07-23T10:36:44-04:00",
     "firstSeen": "2026-07-28T23:17:16.333Z"
   },
   {
