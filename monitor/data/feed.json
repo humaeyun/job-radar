@@ -1,5 +1,24 @@
 [
   {
+    "id": "c41da874",
+    "agency": "Green Key Resources",
+    "title": "Intake Specialist",
+    "category": "Medical Records",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "Contract",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://greenkeyllc.com/job/239936/intake-specialist-18",
+    "postedAt": "2026-08-07T13:39:57.000Z",
+    "firstSeen": "2026-08-07T13:47:19.987Z"
+  },
+  {
     "id": "3a02067",
     "agency": "EasyLlama",
     "title": "Customer Success Manager",
@@ -9273,25 +9292,6 @@
     "source": "Adzuna",
     "url": "https://www.adzuna.com/land/ad/5822665183?se=nMaVW4CN8RG8DqYT68M2aw&utm_medium=api&utm_source=336a6462&v=13F71C6A5667C4E5F37911BCD23C5A76FC4D21D0",
     "postedAt": "2026-07-31T16:05:20Z",
-    "firstSeen": "2026-08-01T08:08:10.562Z"
-  },
-  {
-    "id": "3ba8dc8e",
-    "agency": "Conduent State Healthcare, LLC",
-    "title": "Call Center Representative – Medicaid Member Support",
-    "category": "Call Center",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "US",
-    "source": "Adzuna",
-    "url": "https://www.adzuna.com/details/5822651726?utm_medium=api&utm_source=336a6462",
-    "postedAt": "2026-07-31T15:53:48Z",
     "firstSeen": "2026-08-01T08:08:10.562Z"
   },
   {
