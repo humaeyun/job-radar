@@ -1,5 +1,24 @@
 [
   {
+    "id": "77b73afa",
+    "agency": "Aston Carter",
+    "title": "Client Support Representative (REMOTE-UTAH)",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "Contract",
+    "location": "Salt Lake City, Utah",
+    "source": "Sitemap",
+    "url": "https://careers.astoncarter.com/us/en/job/JP-006209041/Client-Support-Representative-REMOTE-UTAH",
+    "postedAt": null,
+    "firstSeen": "2026-08-07T23:05:45.667Z"
+  },
+  {
     "id": "5fece60d",
     "agency": "TERRA Staffing Group",
     "title": "Staffing Specialist",
@@ -9294,25 +9313,6 @@
     "source": "Adzuna",
     "url": "https://www.adzuna.com/land/ad/5823328017?se=nMaVW4CN8RG8DqYT68M2aw&utm_medium=api&utm_source=336a6462&v=83B47E7A1F3CD09F9818DA01885F77DC53134BE7",
     "postedAt": "2026-08-01T01:07:29Z",
-    "firstSeen": "2026-08-01T08:08:10.562Z"
-  },
-  {
-    "id": "d6de1369",
-    "agency": "EchoStar",
-    "title": "Call Center Sales Rep - Remote",
-    "category": "Call Center",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "$15/hr",
-    "payMin": 15,
-    "payMax": 15,
-    "employment": "",
-    "location": "Baton Rouge, East Baton Rouge Parish",
-    "source": "Adzuna",
-    "url": "https://www.adzuna.com/land/ad/5823326510?se=nMaVW4CN8RG8DqYT68M2aw&utm_medium=api&utm_source=336a6462&v=A9008E06F21D071284CC57D3733A0D08A8820DD8",
-    "postedAt": "2026-08-01T01:07:07Z",
     "firstSeen": "2026-08-01T08:08:10.562Z"
   },
   {
