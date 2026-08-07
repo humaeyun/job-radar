@@ -1,5 +1,24 @@
 [
   {
+    "id": "a8d17fe1",
+    "agency": "Aston Carter",
+    "title": "Client Support Representative (REMOTE-TEXAS)",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "Contract",
+    "location": "Houston, Texas",
+    "source": "Sitemap",
+    "url": "https://careers.astoncarter.com/us/en/job/JP-006207620/Client-Support-Representative-REMOTE-TEXAS",
+    "postedAt": null,
+    "firstSeen": "2026-08-07T17:42:16.225Z"
+  },
+  {
     "id": "cd6594b4",
     "agency": "Green Key Resources",
     "title": "Help Desk Specialist",
@@ -9275,25 +9294,6 @@
     "source": "Adzuna",
     "url": "https://www.adzuna.com/details/5823149773?utm_medium=api&utm_source=336a6462",
     "postedAt": "2026-07-31T21:55:01Z",
-    "firstSeen": "2026-08-01T08:08:10.562Z"
-  },
-  {
-    "id": "7ccc74af",
-    "agency": "CVS Health",
-    "title": "Call Center Service Advocate I - Remote",
-    "category": "Call Center",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "US",
-    "source": "Adzuna",
-    "url": "https://www.adzuna.com/land/ad/5823142608?se=nMaVW4CN8RG8DqYT68M2aw&utm_medium=api&utm_source=336a6462&v=2E31C4875E0493CA8BBAAB59E4ACE4E778CE3D97",
-    "postedAt": "2026-07-31T21:46:26Z",
     "firstSeen": "2026-08-01T08:08:10.562Z"
   },
   {
