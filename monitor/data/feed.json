@@ -1,5 +1,24 @@
 [
   {
+    "id": "234c840c",
+    "agency": "Green Key Resources",
+    "title": "Community Health Worker",
+    "category": "Medical Records",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://greenkeyllc.com/job/240192/community-health-worker-2",
+    "postedAt": "2026-08-09T11:00:58.000Z",
+    "firstSeen": "2026-08-09T11:00:52.734Z"
+  },
+  {
     "id": "e49afc3b",
     "agency": "HMG Careers",
     "title": "Remote Customer Service and Sales",
@@ -9123,25 +9142,6 @@
     "source": "Lensa.com",
     "url": "https://jooble.org/jdp/-1896375953473959891",
     "postedAt": "2026-08-02T00:00:00.0000000",
-    "firstSeen": "2026-08-03T12:15:08.741Z"
-  },
-  {
-    "id": "fa84ccf9",
-    "agency": "MCI Careers",
-    "title": "Inbound Sales Representative",
-    "category": "Call Center",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Killeen, TX",
-    "source": "Lensa.com",
-    "url": "https://jooble.org/jdp/-7572237356956454683",
-    "postedAt": "2026-07-28T11:47:34.1800000",
     "firstSeen": "2026-08-03T12:15:08.741Z"
   },
   {
