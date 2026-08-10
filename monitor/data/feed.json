@@ -1,5 +1,24 @@
 [
   {
+    "id": "80665786",
+    "agency": "LaSalle Network",
+    "title": "Customer Service Representative",
+    "category": "Customer Service",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$20–22/hr",
+    "payMin": 20,
+    "payMax": 22,
+    "employment": "Temp-to-hire",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/customer-service-representative-162415/",
+    "postedAt": "2026-08-10T21:15:49.000Z",
+    "firstSeen": "2026-08-10T22:28:58.024Z"
+  },
+  {
     "id": "8a72dffe",
     "agency": "Barrington Staffing",
     "title": "Client Onboarding Specialist-Administrative $27.00 &#8211; $30.00 hourly Woodland Hills, CA",
@@ -8346,25 +8365,6 @@
     "source": "Lensa.com",
     "url": "https://jooble.org/jdp/-4724585245416350736",
     "postedAt": "2026-08-04T00:00:00.0000000",
-    "firstSeen": "2026-08-07T12:06:12.722Z"
-  },
-  {
-    "id": "bf13dd7b",
-    "agency": "Market My Market",
-    "title": "Billing Specialist",
-    "category": "Sales",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Houston, TX",
-    "source": "Lensa.com",
-    "url": "https://jooble.org/jdp/8698284355302657768",
-    "postedAt": "2026-08-02T18:17:22.6600000",
     "firstSeen": "2026-08-07T12:06:12.722Z"
   },
   {
