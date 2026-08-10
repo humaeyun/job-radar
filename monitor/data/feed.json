@@ -1,6 +1,25 @@
 [
   {
-    "id": "7e5269a1",
+    "id": "712164a0",
+    "agency": "Green Key Resources",
+    "title": "Territory Sales Manager",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://greenkeyllc.com/job/240271/territory-sales-manager-13",
+    "postedAt": "2026-08-10T00:30:30.000Z",
+    "firstSeen": "2026-08-10T01:09:27.181Z"
+  },
+  {
+    "id": "d2dbf680",
     "agency": "Green Key Resources",
     "title": "Area Sales Director",
     "category": "Sales",
@@ -14,28 +33,9 @@
     "employment": "",
     "location": "Remote",
     "source": "RSS",
-    "url": "https://greenkeyllc.com/job/240259/area-sales-director",
-    "postedAt": "2026-08-09T23:32:47.000Z",
-    "firstSeen": "2026-08-09T23:33:19.823Z"
-  },
-  {
-    "id": "cf598b1f",
-    "agency": "Green Key Resources",
-    "title": "Territory Sales Manager",
-    "category": "Sales",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://greenkeyllc.com/job/240255/territory-sales-manager-10",
-    "postedAt": "2026-08-09T23:21:20.000Z",
-    "firstSeen": "2026-08-09T23:33:19.823Z"
+    "url": "https://greenkeyllc.com/job/240266/area-sales-director-4",
+    "postedAt": "2026-08-09T23:57:33.000Z",
+    "firstSeen": "2026-08-10T01:09:27.181Z"
   },
   {
     "id": "ae265f25",
