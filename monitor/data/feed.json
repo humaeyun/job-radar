@@ -1,5 +1,24 @@
 [
   {
+    "id": "f039f437",
+    "agency": "RemX",
+    "title": "Remote Seasonal Call Center Supervisor $23/hr *Mississippi*",
+    "category": "Call Center",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "maybe",
+    "equipment": [],
+    "pay": "$23/hr",
+    "payMin": 23,
+    "payMax": 23,
+    "employment": "Seasonal",
+    "location": "Remote",
+    "source": "Careers page",
+    "url": "https://www.remx.com/jobs/detail/1294240/",
+    "postedAt": null,
+    "firstSeen": "2026-08-10T20:33:38.128Z"
+  },
+  {
     "id": "388b7bc8",
     "agency": "RemX",
     "title": "$23/Hr. Remote Call Center Supervisor (FLORIDA RESIDENTS)",
@@ -8327,25 +8346,6 @@
     "source": "Lensa.com",
     "url": "https://jooble.org/jdp/8698284355302657768",
     "postedAt": "2026-08-02T18:17:22.6600000",
-    "firstSeen": "2026-08-07T12:06:12.722Z"
-  },
-  {
-    "id": "28014ea4",
-    "agency": "The Ohio State University",
-    "title": "Remote Patient Billing & Collections Specialist",
-    "category": "Sales",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Columbus, OH",
-    "source": "Lensa.com",
-    "url": "https://jooble.org/jdp/140992559620246695",
-    "postedAt": "2026-08-03T12:32:05.1730000",
     "firstSeen": "2026-08-07T12:06:12.722Z"
   },
   {
