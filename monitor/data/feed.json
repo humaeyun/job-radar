@@ -1,5 +1,24 @@
 [
   {
+    "id": "9fc7a974",
+    "agency": "LaSalle Network",
+    "title": "Contract Recruiter",
+    "category": "Chat Support",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$40/hr",
+    "payMin": 40,
+    "payMax": 40,
+    "employment": "Contract",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/contract-recruiter-162205/",
+    "postedAt": "2026-07-22T21:45:34.000Z",
+    "firstSeen": "2026-08-10T09:55:28.592Z"
+  },
+  {
     "id": "883da79f",
     "agency": "Tailored Management",
     "title": "Customer Service Associate",
@@ -8950,25 +8969,6 @@
     "source": "Lensa.com",
     "url": "https://jooble.org/jdp/2889207661495959566",
     "postedAt": "2026-07-31T00:00:00.0000000",
-    "firstSeen": "2026-08-04T12:27:00.326Z"
-  },
-  {
-    "id": "7e180bd7",
-    "agency": "Burjline Builders",
-    "title": "Remote Chat & Email Support Representative",
-    "category": "Chat Support",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "$20–30/hr",
-    "payMin": 20,
-    "payMax": 30,
-    "employment": "",
-    "location": "United States",
-    "source": "Lensa.com",
-    "url": "https://jooble.org/jdp/1724363014964952300",
-    "postedAt": "2026-08-03T00:00:00.0000000",
     "firstSeen": "2026-08-04T12:27:00.326Z"
   },
   {
