@@ -1,5 +1,24 @@
 [
   {
+    "id": "8810493e",
+    "agency": "Green Key Resources",
+    "title": "Area Sales Director",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://greenkeyllc.com/job/240540/area-sales-director-7",
+    "postedAt": "2026-08-11T14:53:17.000Z",
+    "firstSeen": "2026-08-11T15:53:37.199Z"
+  },
+  {
     "id": "e4abfa2e",
     "agency": "Green Key Resources",
     "title": "Manager, It Service Desk And End User Services",
@@ -6596,25 +6615,6 @@
     "source": "RSS",
     "url": "https://greenkeyllc.com/job/240271/territory-sales-manager-13",
     "postedAt": "2026-08-10T00:30:30.000Z",
-    "firstSeen": "2026-08-10T01:09:27.181Z"
-  },
-  {
-    "id": "d2dbf680",
-    "agency": "Green Key Resources",
-    "title": "Area Sales Director",
-    "category": "Sales",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://greenkeyllc.com/job/240266/area-sales-director-4",
-    "postedAt": "2026-08-09T23:57:33.000Z",
     "firstSeen": "2026-08-10T01:09:27.181Z"
   },
   {
