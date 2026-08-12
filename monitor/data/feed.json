@@ -1,5 +1,24 @@
 [
   {
+    "id": "adaa38fd",
+    "agency": "LaSalle Network",
+    "title": "Member Services Representative",
+    "category": "Customer Service",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$20/hr",
+    "payMin": 20,
+    "payMax": 20,
+    "employment": "Temporary",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/member-services-representative-162249/",
+    "postedAt": "2026-07-26T22:26:19.000Z",
+    "firstSeen": "2026-08-12T06:51:54.257Z"
+  },
+  {
     "id": "2ca24346",
     "agency": "24 Seven Talent",
     "title": "Sales Auditor",
@@ -8040,25 +8059,6 @@
     "source": "Adzuna",
     "url": "https://www.adzuna.com/details/5833071485?utm_medium=api&utm_source=336a6462",
     "postedAt": "2026-08-08T02:39:39Z",
-    "firstSeen": "2026-08-08T16:23:24.235Z"
-  },
-  {
-    "id": "51215382",
-    "agency": "Adzuna",
-    "title": "Care Coordinator Non Clinical",
-    "category": "Call Center",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Doolie, Iredell County",
-    "source": "Adzuna",
-    "url": "https://www.adzuna.com/details/5833556673?utm_medium=api&utm_source=336a6462",
-    "postedAt": "2026-08-08T10:36:53Z",
     "firstSeen": "2026-08-08T16:23:24.235Z"
   },
   {
