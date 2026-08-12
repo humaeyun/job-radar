@@ -1,5 +1,24 @@
 [
   {
+    "id": "806546a1",
+    "agency": "LaSalle Network",
+    "title": "Customer Service Representative",
+    "category": "Customer Service",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "$22/hr",
+    "payMin": 22,
+    "payMax": 22,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/customer-service-representative-162230/",
+    "postedAt": "2026-07-26T22:29:58.000Z",
+    "firstSeen": "2026-08-12T10:54:12.215Z"
+  },
+  {
     "id": "3fe5a83d",
     "agency": "Morphius Corp",
     "title": "Customer Service Remote Work (California Residents Only)",
@@ -3665,25 +3684,6 @@
     "url": "https://www.adzuna.com/details/5835827864?utm_medium=api&utm_source=336a6462",
     "postedAt": "2026-08-10T13:21:48Z",
     "firstSeen": "2026-08-11T08:05:33.907Z"
-  },
-  {
-    "id": "80665786",
-    "agency": "LaSalle Network",
-    "title": "Customer Service Representative",
-    "category": "Customer Service",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "$20–22/hr",
-    "payMin": 20,
-    "payMax": 22,
-    "employment": "Temp-to-hire",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://www.thelasallenetwork.com/jobs/customer-service-representative-162415/",
-    "postedAt": "2026-08-10T21:15:49.000Z",
-    "firstSeen": "2026-08-10T22:28:58.024Z"
   },
   {
     "id": "8a72dffe",
