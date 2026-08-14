@@ -1,5 +1,24 @@
 [
   {
+    "id": "dfd6b44b",
+    "agency": "Aston Carter",
+    "title": "REMOTE HR Call Center Agent",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Boston, Massachusetts",
+    "source": "Sitemap",
+    "url": "https://careers.astoncarter.com/us/en/job/JP-006222047/REMOTE-HR-Call-Center-Agent",
+    "postedAt": null,
+    "firstSeen": "2026-08-14T23:44:36.112Z"
+  },
+  {
     "id": "51e523fa",
     "agency": "RemX",
     "title": "Licensed Healthcare Insurance Agents – Remote – Direct Hire – Inbound call cent",
@@ -7907,25 +7926,6 @@
     "source": "cpa.oneredcent.com",
     "url": "https://jooble.org/jdp/-1959054968440776761",
     "postedAt": "2026-08-08T07:09:34.3170000",
-    "firstSeen": "2026-08-10T12:06:21.540Z"
-  },
-  {
-    "id": "29ca128c",
-    "agency": "Easy Recruiter",
-    "title": "Remote Customer Service Representative",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Illinois",
-    "source": "us.jobiqo.com",
-    "url": "https://jooble.org/jdp/-8024752669384467963",
-    "postedAt": "2026-07-26T00:00:00.0000000",
     "firstSeen": "2026-08-10T12:06:21.540Z"
   },
   {
