@@ -1,5 +1,24 @@
 [
   {
+    "id": "5b55102c",
+    "agency": "PrideStaff",
+    "title": "Remote Call Center Representative",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$19–19.5/hr",
+    "payMin": 19,
+    "payMax": 19.5,
+    "employment": "Temp-to-hire",
+    "location": "Dallas, TEXAS",
+    "source": "Sitemap",
+    "url": "https://jobs.pridestaff.com/job/587211/Remote-Call-Center-Representative",
+    "postedAt": null,
+    "firstSeen": "2026-08-15T00:48:48.826Z"
+  },
+  {
     "id": "dfd6b44b",
     "agency": "Aston Carter",
     "title": "REMOTE HR Call Center Agent",
@@ -7907,25 +7926,6 @@
     "source": "us.jobiqo.com",
     "url": "https://jooble.org/jdp/9135604541958755015",
     "postedAt": "2026-08-01T20:08:15.5000000",
-    "firstSeen": "2026-08-10T12:06:21.540Z"
-  },
-  {
-    "id": "2c2f88e6",
-    "agency": "AT&T",
-    "title": "Bilingual Spanish Call Center Sales Representative (English/Spanish)",
-    "category": "Call Center",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "$20.18/hr",
-    "payMin": 20.18,
-    "payMax": 20.18,
-    "employment": "",
-    "location": "Miami, FL",
-    "source": "cpa.oneredcent.com",
-    "url": "https://jooble.org/jdp/-1959054968440776761",
-    "postedAt": "2026-08-08T07:09:34.3170000",
     "firstSeen": "2026-08-10T12:06:21.540Z"
   },
   {
