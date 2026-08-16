@@ -1,5 +1,24 @@
 [
   {
+    "id": "ac4ef6d9",
+    "agency": "Green Key Resources",
+    "title": "Billing Specialist",
+    "category": "Sales",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "Contract",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://greenkeyllc.com/job/241523/billing-specialist",
+    "postedAt": "2026-08-16T11:01:03.000Z",
+    "firstSeen": "2026-08-16T11:13:30.091Z"
+  },
+  {
     "id": "13dc1086",
     "agency": "Aisles & Abroad",
     "title": "Customer Service Representative – Hotel Reservations (Remote)",
@@ -8287,25 +8306,6 @@
     "source": "RSS",
     "url": "https://greenkeyllc.com/job/239961/help-desk-specialist-6",
     "postedAt": "2026-08-07T16:26:23.000Z",
-    "firstSeen": "2026-08-07T16:44:31.953Z"
-  },
-  {
-    "id": "71edc77a",
-    "agency": "Green Key Resources",
-    "title": "Billing Specialist",
-    "category": "Sales",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://greenkeyllc.com/job/239960/billing-specialist-35",
-    "postedAt": "2026-08-07T16:12:06.000Z",
     "firstSeen": "2026-08-07T16:44:31.953Z"
   },
   {
