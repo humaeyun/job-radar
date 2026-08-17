@@ -1,5 +1,24 @@
 [
   {
+    "id": "5c2cf520",
+    "agency": "LaSalle Network",
+    "title": "Customer Support Specialist",
+    "category": "Customer Service",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$20–23/hr",
+    "payMin": 20,
+    "payMax": 23,
+    "employment": "Contract",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/customer-support-specialist-162435/",
+    "postedAt": "2026-08-17T13:45:57.000Z",
+    "firstSeen": "2026-08-17T14:31:13.232Z"
+  },
+  {
     "id": "b7c7f345",
     "agency": "Green Key Resources",
     "title": "Call Center Representative",
@@ -7164,25 +7183,6 @@
     "source": "Lensa.com",
     "url": "https://jooble.org/jdp/102750971395794421",
     "postedAt": "2026-08-13T00:00:00.0000000",
-    "firstSeen": "2026-08-15T12:21:41.156Z"
-  },
-  {
-    "id": "49c7a5a0",
-    "agency": "Fountain",
-    "title": "Enterprise Customer Success Manager",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "San Francisco, CA",
-    "source": "us.experteer.com",
-    "url": "https://jooble.org/jdp/-2635733646653835323",
-    "postedAt": "2026-08-12T00:00:00.0000000",
     "firstSeen": "2026-08-15T12:21:41.156Z"
   },
   {
