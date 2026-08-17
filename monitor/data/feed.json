@@ -1,5 +1,24 @@
 [
   {
+    "id": "62490f9e",
+    "agency": "Thrivas",
+    "title": "Part Time Data Entry Clerk (Remote) – Thrivas",
+    "category": "Data Entry",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "maybe",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "Part-time",
+    "location": "Remote",
+    "source": "Sitemap",
+    "url": "https://www.thrivas.com/job/part-time-data-entry-clerk-remote-65/",
+    "postedAt": null,
+    "firstSeen": "2026-08-17T04:10:11.355Z"
+  },
+  {
     "id": "e54f91a8",
     "agency": "A-Line Staffing Solutions",
     "title": "Inbound Benefit Enrollment Call Center Customer Service Representative",
@@ -7124,25 +7143,6 @@
     "source": "appcast.io",
     "url": "https://jooble.org/jdp/-8576213236500030627",
     "postedAt": "2026-08-10T00:00:00.0000000",
-    "firstSeen": "2026-08-15T12:21:41.156Z"
-  },
-  {
-    "id": "aed4674d",
-    "agency": "Blue Cross Blue Shield of Minnesota",
-    "title": "Member Service Agent",
-    "category": "Member Services",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Eagan, MN",
-    "source": "Lensa.com",
-    "url": "https://jooble.org/jdp/5015586267492204161",
-    "postedAt": "2026-08-13T00:00:00.0000000",
     "firstSeen": "2026-08-15T12:21:41.156Z"
   },
   {
