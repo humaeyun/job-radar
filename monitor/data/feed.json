@@ -1,5 +1,24 @@
 [
   {
+    "id": "6876b6a6",
+    "agency": "Green Key Resources",
+    "title": "Hospitality Manager",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://greenkeyllc.com/job/241639/hospitality-manager-2",
+    "postedAt": "2026-08-17T11:00:41.000Z",
+    "firstSeen": "2026-08-17T11:18:40.885Z"
+  },
+  {
     "id": "713bd3a4",
     "agency": "Thrivas",
     "title": "Remote Data Entry Clerk (Help Desk Support)",
@@ -7143,25 +7162,6 @@
     "source": "appcast.io",
     "url": "https://jooble.org/jdp/-439254480901661863",
     "postedAt": "2026-08-11T00:00:00.0000000",
-    "firstSeen": "2026-08-15T12:21:41.156Z"
-  },
-  {
-    "id": "2d3bc6d5",
-    "agency": "America First Credit Union",
-    "title": "Job Member Service Representative (Contact Center)",
-    "category": "Call Center",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "$16–18/hr",
-    "payMin": 16,
-    "payMax": 18,
-    "employment": "",
-    "location": "Roy, UT",
-    "source": "appcast.io",
-    "url": "https://jooble.org/jdp/-8576213236500030627",
-    "postedAt": "2026-08-10T00:00:00.0000000",
     "firstSeen": "2026-08-15T12:21:41.156Z"
   },
   {
