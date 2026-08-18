@@ -1,5 +1,24 @@
 [
   {
+    "id": "6020ac64",
+    "agency": "Aston Carter",
+    "title": "Remote HR Call Agent - Evening Shift (11am-8PM)",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Phoenix, Arizona",
+    "source": "Sitemap",
+    "url": "https://careers.astoncarter.com/us/en/job/JP-006227980/Remote-HR-Call-Agent-Evening-Shift-11am-8PM",
+    "postedAt": null,
+    "firstSeen": "2026-08-18T02:11:40.055Z"
+  },
+  {
     "id": "f489943d",
     "agency": "LaSalle Network",
     "title": "Staff Accountant",
@@ -7200,25 +7219,6 @@
     "source": "Adzuna",
     "url": "https://www.adzuna.com/land/ad/5842984000?se=xgVgdEuZ8RG1IOj3rYGjGw&utm_medium=api&utm_source=336a6462&v=3897E8DFA24863C8265A72EB5C5A679E8BF464E5",
     "postedAt": "2026-08-15T06:18:35Z",
-    "firstSeen": "2026-08-16T08:19:44.296Z"
-  },
-  {
-    "id": "693135e6",
-    "agency": "ManpowerGroup",
-    "title": "Remote Call Center Representative",
-    "category": "Call Center",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "$13/hr",
-    "payMin": 13,
-    "payMax": 13,
-    "employment": "Part-time",
-    "location": "Laredo, Webb County",
-    "source": "Adzuna",
-    "url": "https://www.adzuna.com/details/5842554774?utm_medium=api&utm_source=336a6462",
-    "postedAt": "2026-08-14T22:01:47Z",
     "firstSeen": "2026-08-16T08:19:44.296Z"
   },
   {
