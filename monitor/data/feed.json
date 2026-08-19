@@ -1,5 +1,24 @@
 [
   {
+    "id": "c2c9d10",
+    "agency": "Green Key Resources",
+    "title": "Patient Recruitment Specialist",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "Contract",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://greenkeyllc.com/job/242142/patient-recruitment-specialist",
+    "postedAt": "2026-08-19T18:41:46.000Z",
+    "firstSeen": "2026-08-19T19:01:01.661Z"
+  },
+  {
     "id": "cb673aa8",
     "agency": "A-Line Staffing Solutions",
     "title": "Benefit Enrollment Call Center Customer Service Representative",
@@ -7226,25 +7245,6 @@
     "source": "Adzuna",
     "url": "https://www.adzuna.com/details/5844199459?utm_medium=api&utm_source=336a6462",
     "postedAt": "2026-08-16T08:13:12Z",
-    "firstSeen": "2026-08-16T16:15:56.981Z"
-  },
-  {
-    "id": "69d56b48",
-    "agency": "Aisles & Abroad",
-    "title": "Fully Remote | Customer Service – Vacation Planner",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "$21.63–33.65/hr",
-    "payMin": 21.634615384615383,
-    "payMax": 33.65384615384615,
-    "employment": "",
-    "location": "New York City, New York",
-    "source": "Adzuna",
-    "url": "https://www.adzuna.com/details/5844190331?utm_medium=api&utm_source=336a6462",
-    "postedAt": "2026-08-16T07:20:20Z",
     "firstSeen": "2026-08-16T16:15:56.981Z"
   },
   {
