@@ -1,5 +1,24 @@
 [
   {
+    "id": "9a51a1",
+    "agency": "Aston Carter",
+    "title": "Outside Field Sales Representative-Remote",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Springfield, Illinois",
+    "source": "Sitemap",
+    "url": "https://careers.astoncarter.com/us/en/job/JP-006234171/Outside-Field-Sales-Representative-Remote",
+    "postedAt": null,
+    "firstSeen": "2026-08-20T16:32:42.686Z"
+  },
+  {
     "id": "ef0ef1a4",
     "agency": "Dahl Consulting",
     "title": "Licensed Remote ACA Enrollment Coordinator EST",
@@ -11411,25 +11430,6 @@
     "location": "SACRAMENTO, CA",
     "source": "Sitemap",
     "url": "https://jobs.volt.com/job/remote-inbound-insurance-representatives-in-sacramento-ca-7111663",
-    "postedAt": null,
-    "firstSeen": "2026-07-28T23:17:16.333Z"
-  },
-  {
-    "id": "b17847c9",
-    "agency": "Aston Carter",
-    "title": "Field Sales Representative-ADE, (Remote)",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Salt Lake City, Utah",
-    "source": "Sitemap",
-    "url": "https://careers.astoncarter.com/us/en/job/JP-006184967/Field-Sales-Representative-ADE-Remote",
     "postedAt": null,
     "firstSeen": "2026-07-28T23:17:16.333Z"
   }
