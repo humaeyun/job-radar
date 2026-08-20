@@ -1,5 +1,24 @@
 [
   {
+    "id": "6f702e2f",
+    "agency": "Green Key Resources",
+    "title": "Medical Records Audit Coordinator",
+    "category": "Medical Records",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "Contract",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://greenkeyllc.com/job/242537/medical-records-audit-coordinator-5",
+    "postedAt": "2026-08-20T18:32:22.000Z",
+    "firstSeen": "2026-08-20T19:10:03.363Z"
+  },
+  {
     "id": "564083fb",
     "agency": "LaSalle Network",
     "title": "Dispatcher",
@@ -11404,30 +11423,6 @@
     "location": "Ontario",
     "source": "Sitemap",
     "url": "https://jobs.medixteam.com/jobs/255104/customer-service-representative-remote-ontario",
-    "postedAt": null,
-    "firstSeen": "2026-07-28T23:17:16.333Z"
-  },
-  {
-    "id": "5b8489fa",
-    "agency": "Medix",
-    "title": "Remote Call Center Representative",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [
-      "USB headset",
-      "Webcam",
-      "Dual monitors",
-      "Wired internet"
-    ],
-    "pay": "$16.8/hr",
-    "payMin": 16.8,
-    "payMax": 16.8,
-    "employment": "Temp-to-hire",
-    "location": "Pearland",
-    "source": "Sitemap",
-    "url": "https://jobs.medixteam.com/jobs/254564/remote-call-center-representative-pearland",
     "postedAt": null,
     "firstSeen": "2026-07-28T23:17:16.333Z"
   }
