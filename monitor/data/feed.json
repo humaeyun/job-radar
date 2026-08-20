@@ -1,5 +1,24 @@
 [
   {
+    "id": "d85cf77e",
+    "agency": "Aston Carter",
+    "title": "us en JP Client Support Representative REMOTE Indiana",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "Sitemap",
+    "url": "https://careers.astoncarter.com/us/en/job/JP-006207970/Client-Support-Representative-REMOTE-Indiana",
+    "postedAt": null,
+    "firstSeen": "2026-08-20T09:06:04.847Z"
+  },
+  {
     "id": "a208948d",
     "agency": "EchoStar",
     "title": "Remote Bilingual Customer Service Rep",
@@ -11411,25 +11430,6 @@
     "location": "Portland, Oregon",
     "source": "Sitemap",
     "url": "https://careers.astoncarter.com/us/en/job/JP-006175498/Inside-Sales-Remote",
-    "postedAt": null,
-    "firstSeen": "2026-07-28T23:17:16.333Z"
-  },
-  {
-    "id": "ef7a9795",
-    "agency": "Aston Carter",
-    "title": "ADE - Field Sales Representative-Remote",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "$26–27/hr",
-    "payMin": 26,
-    "payMax": 27,
-    "employment": "Contract",
-    "location": "Morganton, North Carolina",
-    "source": "Sitemap",
-    "url": "https://careers.astoncarter.com/us/en/job/JP-006178906/ADE-Field-Sales-Representative-Remote",
     "postedAt": null,
     "firstSeen": "2026-07-28T23:17:16.333Z"
   }
