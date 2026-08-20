@@ -1,5 +1,24 @@
 [
   {
+    "id": "602e5635",
+    "agency": "Green Key Resources",
+    "title": "Human Resources Administrative Assistant",
+    "category": "Medical Records",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://greenkeyllc.com/job/242506/human-resources-administrative-assistant",
+    "postedAt": "2026-08-20T17:23:23.000Z",
+    "firstSeen": "2026-08-20T17:54:33.427Z"
+  },
+  {
     "id": "9a51a1",
     "agency": "Aston Carter",
     "title": "Outside Field Sales Representative-Remote",
@@ -11409,27 +11428,6 @@
     "location": "Spokane",
     "source": "Sitemap",
     "url": "https://jobs.medixteam.com/jobs/256449/member-service-representative-remote-must-be-local-to-spokane-wa-spokane",
-    "postedAt": null,
-    "firstSeen": "2026-07-28T23:17:16.333Z"
-  },
-  {
-    "id": "7db30e7e",
-    "agency": "Volt",
-    "title": "Remote Inbound Insurance Representatives",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [
-      "Wired internet"
-    ],
-    "pay": "$17/hr",
-    "payMin": 17,
-    "payMax": 17,
-    "employment": "",
-    "location": "SACRAMENTO, CA",
-    "source": "Sitemap",
-    "url": "https://jobs.volt.com/job/remote-inbound-insurance-representatives-in-sacramento-ca-7111663",
     "postedAt": null,
     "firstSeen": "2026-07-28T23:17:16.333Z"
   }
