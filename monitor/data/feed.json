@@ -1,5 +1,24 @@
 [
   {
+    "id": "31032e41",
+    "agency": "LaSalle Network",
+    "title": "HR Administrative Coordinator",
+    "category": "Data Entry",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$23–26/hr",
+    "payMin": 23,
+    "payMax": 26,
+    "employment": "Contract",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/hr-administrative-coordinator-162504/",
+    "postedAt": "2026-08-20T14:47:26.000Z",
+    "firstSeen": "2026-08-20T15:04:50.009Z"
+  },
+  {
     "id": "d85cf77e",
     "agency": "Aston Carter",
     "title": "us en JP Client Support Representative REMOTE Indiana",
@@ -11411,25 +11430,6 @@
     "location": "Bellevue, Washington",
     "source": "Sitemap",
     "url": "https://careers.astoncarter.com/us/en/job/JP-006176373/Inside-Sales-Weekly-Pay-90K-100-Remote",
-    "postedAt": null,
-    "firstSeen": "2026-07-28T23:17:16.333Z"
-  },
-  {
-    "id": "a854d24b",
-    "agency": "Aston Carter",
-    "title": "Inside Sales -Remote",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "$31/hr",
-    "payMin": 31,
-    "payMax": 31,
-    "employment": "Contract",
-    "location": "Portland, Oregon",
-    "source": "Sitemap",
-    "url": "https://careers.astoncarter.com/us/en/job/JP-006175498/Inside-Sales-Remote",
     "postedAt": null,
     "firstSeen": "2026-07-28T23:17:16.333Z"
   }
