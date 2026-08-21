@@ -1,5 +1,24 @@
 [
   {
+    "id": "3cd993c8",
+    "agency": "Green Key Resources",
+    "title": "Pharmacist",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "Contract",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://greenkeyllc.com/job/242648/pharmacist-2",
+    "postedAt": "2026-08-21T13:19:17.000Z",
+    "firstSeen": "2026-08-21T13:38:58.848Z"
+  },
+  {
     "id": "eed0bb6b",
     "agency": "Thrivas",
     "title": "Part Time Data Entry Clerk (Remote)",
@@ -11401,28 +11420,6 @@
     "location": "Lewiston",
     "source": "Sitemap",
     "url": "https://jobs.medixteam.com/jobs/254628/virtual-assistant-lewiston",
-    "postedAt": null,
-    "firstSeen": "2026-07-28T23:17:16.333Z"
-  },
-  {
-    "id": "fa063f4a",
-    "agency": "Medix",
-    "title": "Remote Service Representative",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "maybe",
-    "equipment": [
-      "USB headset",
-      "Dual monitors"
-    ],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "Seasonal",
-    "location": "Dubuque",
-    "source": "Sitemap",
-    "url": "https://jobs.medixteam.com/jobs/253890/remote-service-representative-dubuque",
     "postedAt": null,
     "firstSeen": "2026-07-28T23:17:16.333Z"
   }
