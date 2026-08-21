@@ -1,5 +1,24 @@
 [
   {
+    "id": "8d41316a",
+    "agency": "RemX",
+    "title": "$16 Remote Medical Call Center Customer Service Representative",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "Careers page",
+    "url": "https://www.remx.com/jobs/detail/1295122/",
+    "postedAt": null,
+    "firstSeen": "2026-08-21T19:05:50.040Z"
+  },
+  {
     "id": "6637dcdf",
     "agency": "RemX",
     "title": "Remote, Customer Service Representative",
@@ -1729,25 +1748,6 @@
     "url": "https://www.thrivas.com/job/sales-representative-remote-work-from-home-65/",
     "postedAt": null,
     "firstSeen": "2026-08-20T05:02:25.420Z"
-  },
-  {
-    "id": "8d338053",
-    "agency": "RemX",
-    "title": "$16 Remote Medical Call Center Customer Service Representative",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "Careers page",
-    "url": "https://www.remx.com/jobs/detail/1294933/",
-    "postedAt": null,
-    "firstSeen": "2026-08-19T23:16:11.560Z"
   },
   {
     "id": "b9e020ce",
