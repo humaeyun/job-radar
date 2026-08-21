@@ -1,5 +1,24 @@
 [
   {
+    "id": "89eccae9",
+    "agency": "24 Seven Talent",
+    "title": "Account Manager (Retail Media)",
+    "category": "Customer Service",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.24seventalent.com/job/account-manager-retail-media-514424/",
+    "postedAt": "2026-08-20T22:17:43.000Z",
+    "firstSeen": "2026-08-21T21:46:41.039Z"
+  },
+  {
     "id": "4f4fb3ea",
     "agency": "RemX",
     "title": "$16 Remote Customer Service Reps- Hiring Now!",
@@ -11400,25 +11419,6 @@
     "source": "RSS",
     "url": "https://www.virtualassistusa.com/blog/how-to-use-ai-to-prepare-your-business-for-a-virtual-assistant/",
     "postedAt": "2026-06-18T18:38:20.000Z",
-    "firstSeen": "2026-07-28T23:17:16.333Z"
-  },
-  {
-    "id": "99979b17",
-    "agency": "Virtual Assist USA",
-    "title": "How to Maximize Efficiency with a Virtual Assistant",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://www.virtualassistusa.com/blog/maximize-efficiency-with-a-virtual-assistant/",
-    "postedAt": "2026-05-26T17:42:21.000Z",
     "firstSeen": "2026-07-28T23:17:16.333Z"
   }
 ]
