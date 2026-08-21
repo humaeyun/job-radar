@@ -1,5 +1,24 @@
 [
   {
+    "id": "9fe79526",
+    "agency": "TERRA Staffing Group",
+    "title": "Staffing Specialist (Bilingual)",
+    "category": "Customer Service",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "$20–24/hr",
+    "payMin": 20,
+    "payMax": 24,
+    "employment": "",
+    "location": "Greenwood, Indiana, United States",
+    "source": "Greenhouse",
+    "url": "https://job-boards.greenhouse.io/verstela/jobs/5398699008",
+    "postedAt": "2026-08-21T18:28:29-04:00",
+    "firstSeen": "2026-08-21T22:48:00.473Z"
+  },
+  {
     "id": "89eccae9",
     "agency": "24 Seven Talent",
     "title": "Account Manager (Retail Media)",
@@ -10273,25 +10292,6 @@
     "url": "https://www.thelasallenetwork.com/jobs/senior-recruiter-engineering-supply-chain-161452/",
     "postedAt": "2026-05-12T21:58:04.000Z",
     "firstSeen": "2026-07-29T19:00:58.544Z"
-  },
-  {
-    "id": "a4bc7f96",
-    "agency": "TERRA Staffing Group",
-    "title": "Staffing Specialist (Bilingual)",
-    "category": "Customer Service",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "$20–26/hr",
-    "payMin": 20,
-    "payMax": 26,
-    "employment": "",
-    "location": "Berwyn, Illinois, United States",
-    "source": "Greenhouse",
-    "url": "https://job-boards.greenhouse.io/verstela/jobs/5364573008",
-    "postedAt": "2026-07-29T14:39:52-04:00",
-    "firstSeen": "2026-07-29T18:53:34.226Z"
   },
   {
     "id": "9e25cb40",
