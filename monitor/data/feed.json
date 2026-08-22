@@ -1,5 +1,24 @@
 [
   {
+    "id": "6d1489b",
+    "agency": "Aston Carter",
+    "title": "Healthcare Customer Service Representative - REMOTE",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "Contract",
+    "location": "Orlando, Florida",
+    "source": "Sitemap",
+    "url": "https://careers.astoncarter.com/us/en/job/JP-006239044/Healthcare-Customer-Service-Representative-REMOTE",
+    "postedAt": null,
+    "firstSeen": "2026-08-22T00:48:37.848Z"
+  },
+  {
     "id": "aae6facb",
     "agency": "Aston Carter",
     "title": "Healthcare Customer Service Representative - REMOTE in Orlando, Florida, USA | Office & Clerical at Aston Carter",
@@ -11400,25 +11419,6 @@
     "source": "Workable",
     "url": "https://apply.workable.com/j/5272AB8715",
     "postedAt": "2026-07-14",
-    "firstSeen": "2026-07-28T23:17:16.333Z"
-  },
-  {
-    "id": "9ca283fa",
-    "agency": "Virtual Assist USA",
-    "title": "How to Set Up HubSpot CRM With a Virtual Assistant",
-    "category": "Sales",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://www.virtualassistusa.com/blog/how-to-set-up-hubspot-crm-with-a-virtual-assistant/",
-    "postedAt": "2026-07-11T01:18:21.000Z",
     "firstSeen": "2026-07-28T23:17:16.333Z"
   }
 ]
