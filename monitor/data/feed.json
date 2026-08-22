@@ -1,5 +1,24 @@
 [
   {
+    "id": "5a94aa95",
+    "agency": "Green Key Resources",
+    "title": "Outside Sales Representative",
+    "category": "Sales",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://greenkeyllc.com/job/242808/outside-sales-representative",
+    "postedAt": "2026-08-22T11:00:20.000Z",
+    "firstSeen": "2026-08-22T11:14:01.062Z"
+  },
+  {
     "id": "e000a898",
     "agency": "Aston Carter",
     "title": "us en JP Client Support Representative REMOTE TEXAS",
@@ -11400,25 +11419,6 @@
     "source": "RSS",
     "url": "https://equivityva.com/behind-on-billing/",
     "postedAt": "2026-02-23T18:12:11.000Z",
-    "firstSeen": "2026-07-28T23:17:16.333Z"
-  },
-  {
-    "id": "7074a8a3",
-    "agency": "Equivity",
-    "title": "Hidden Billing Errors That Quietly Drain Firm Revenue",
-    "category": "Sales",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://equivityva.com/fix-law-firm-billing-errors/",
-    "postedAt": "2026-02-16T16:17:49.000Z",
     "firstSeen": "2026-07-28T23:17:16.333Z"
   }
 ]
