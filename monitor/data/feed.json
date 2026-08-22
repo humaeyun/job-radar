@@ -1,5 +1,24 @@
 [
   {
+    "id": "95716a4",
+    "agency": "RemX",
+    "title": "$16/hr. REMOTE Medical Call Center Representative ***IRVING, TX***",
+    "category": "Call Center",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$16/hr",
+    "payMin": 16,
+    "payMax": 16,
+    "employment": "",
+    "location": "Remote",
+    "source": "Careers page",
+    "url": "https://www.remx.com/jobs/detail/1295161/",
+    "postedAt": null,
+    "firstSeen": "2026-08-22T18:18:31.502Z"
+  },
+  {
     "id": "ff22fd61",
     "agency": "RemX",
     "title": "$16/hr. REMOTE Medical Call Center Representative",
@@ -11402,25 +11421,6 @@
     "source": "RSS",
     "url": "https://www.tricomquest.com/2019/03/19/dessert-anyone/",
     "postedAt": "2019-03-20T02:50:45.000Z",
-    "firstSeen": "2026-07-28T23:17:16.333Z"
-  },
-  {
-    "id": "f51393ad",
-    "agency": "Equivity",
-    "title": "AI vs. Virtual Assistants: What Law Firms Need to Know",
-    "category": "Data Entry",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "Contract",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://equivityva.com/ai-vs-virtual-assistants-law-firms/",
-    "postedAt": "2026-05-14T15:53:40.000Z",
     "firstSeen": "2026-07-28T23:17:16.333Z"
   }
 ]
