@@ -1,5 +1,24 @@
 [
   {
+    "id": "65c5cf9f",
+    "agency": "RemX",
+    "title": "Hiring Now: $16/Hr. Remote Call Center Customer Service Reps | Must Reside Near Irving, TX",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$16/hr",
+    "payMin": 16,
+    "payMax": 16,
+    "employment": "",
+    "location": "Remote",
+    "source": "Careers page",
+    "url": "https://www.remx.com/jobs/detail/1295174/",
+    "postedAt": null,
+    "firstSeen": "2026-08-24T18:31:38.525Z"
+  },
+  {
     "id": "b13b09ab",
     "agency": "RemX",
     "title": "Remote Call Center Agent – Must live near Irving, TX",
@@ -11396,30 +11415,6 @@
     "location": "remote Kentucky",
     "source": "Haley",
     "url": "https://careers.dahlconsulting.com/jb/IT-Application-Support-Specialist-Maternity-Coverage-Jobs-in-remote-Kentucky/14168003",
-    "postedAt": null,
-    "firstSeen": "2026-07-28T23:17:16.333Z"
-  },
-  {
-    "id": "e531f014",
-    "agency": "PrideStaff",
-    "title": "Call Center & Data Entry - Remote (Oregon Residents only)",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [
-      "Windows 10/11",
-      "Storage/SSD",
-      "CPU/processor",
-      "Dual monitors"
-    ],
-    "pay": "$18/hr",
-    "payMin": 18,
-    "payMax": 18,
-    "employment": "",
-    "location": "Beaverton, OREGON",
-    "source": "Sitemap",
-    "url": "https://jobs.pridestaff.com/job/585114/Call-Center-Data-Entry-Remote-Oregon-Residents-only",
     "postedAt": null,
     "firstSeen": "2026-07-28T23:17:16.333Z"
   }
