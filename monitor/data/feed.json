@@ -1,5 +1,24 @@
 [
   {
+    "id": "2cedf75b",
+    "agency": "RemX",
+    "title": "Medical Customer Service Rep Remote $16HR",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$16/hr",
+    "payMin": 16,
+    "payMax": 16,
+    "employment": "",
+    "location": "Remote",
+    "source": "Careers page",
+    "url": "https://www.remx.com/jobs/detail/1295210/",
+    "postedAt": null,
+    "firstSeen": "2026-08-24T19:22:50.420Z"
+  },
+  {
     "id": "65c5cf9f",
     "agency": "RemX",
     "title": "Hiring Now: $16/Hr. Remote Call Center Customer Service Reps | Must Reside Near Irving, TX",
@@ -11397,25 +11416,6 @@
     "source": "RSS",
     "url": "https://questpro.com/5-skills-insurance-companies-are-actually-hiring-for-in-2025/",
     "postedAt": "2025-05-28T23:45:24.000Z",
-    "firstSeen": "2026-07-28T23:17:16.333Z"
-  },
-  {
-    "id": "dd288cea",
-    "agency": "Dahl Consulting",
-    "title": "IT Application Support Specialist Maternity Coverage",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "remote Kentucky",
-    "source": "Haley",
-    "url": "https://careers.dahlconsulting.com/jb/IT-Application-Support-Specialist-Maternity-Coverage-Jobs-in-remote-Kentucky/14168003",
-    "postedAt": null,
     "firstSeen": "2026-07-28T23:17:16.333Z"
   }
 ]
