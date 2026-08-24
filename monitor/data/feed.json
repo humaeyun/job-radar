@@ -1,5 +1,24 @@
 [
   {
+    "id": "998e6df8",
+    "agency": "RemX",
+    "title": "Remote Medical Insurance Verification Specialist $19/hr *MISSISSIPPI*",
+    "category": "Medical Records",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "$19/hr",
+    "payMin": 19,
+    "payMax": 19,
+    "employment": "",
+    "location": "Remote",
+    "source": "Careers page",
+    "url": "https://www.remx.com/jobs/detail/1295245/",
+    "postedAt": null,
+    "firstSeen": "2026-08-24T22:17:51.501Z"
+  },
+  {
     "id": "d5dad51e",
     "agency": "LaSalle Network",
     "title": "Inpatient Facility Coder",
@@ -11397,25 +11416,6 @@
     "source": "Sitemap",
     "url": "https://careers.jacobsononline.com/job/head-of-claims-claims-work-at-home-39551/97e3e93b-65c3-11f1-a639-02420a6c7775",
     "postedAt": null,
-    "firstSeen": "2026-07-28T23:17:16.333Z"
-  },
-  {
-    "id": "44f0b433",
-    "agency": "Questpro",
-    "title": "Current Trends Shaping the P&#038;C Market",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://questpro.com/current-trends-shaping-the-pc-market/",
-    "postedAt": "2026-01-09T07:05:42.000Z",
     "firstSeen": "2026-07-28T23:17:16.333Z"
   }
 ]
