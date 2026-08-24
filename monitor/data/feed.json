@@ -1,5 +1,24 @@
 [
   {
+    "id": "5eeaee06",
+    "agency": "RemX",
+    "title": "$16 Remote Call Center Customer Service Reps",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "Careers page",
+    "url": "https://www.remx.com/jobs/detail/1295250/",
+    "postedAt": null,
+    "firstSeen": "2026-08-24T22:50:55.016Z"
+  },
+  {
     "id": "998e6df8",
     "agency": "RemX",
     "title": "Remote Medical Insurance Verification Specialist $19/hr *MISSISSIPPI*",
@@ -11396,25 +11415,6 @@
     "location": "Remote",
     "source": "Sitemap",
     "url": "https://careers.jacobsononline.com/job/medicare-advantage-sales-agent-sales-work-at-home-39571/93ef5db6-7948-11f1-94b7-02420a6c7775",
-    "postedAt": null,
-    "firstSeen": "2026-07-28T23:17:16.333Z"
-  },
-  {
-    "id": "bcfa1c45",
-    "agency": "The Jacobson Group",
-    "title": "Head of Claims",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "Sitemap",
-    "url": "https://careers.jacobsononline.com/job/head-of-claims-claims-work-at-home-39551/97e3e93b-65c3-11f1-a639-02420a6c7775",
     "postedAt": null,
     "firstSeen": "2026-07-28T23:17:16.333Z"
   }
