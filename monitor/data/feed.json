@@ -1,5 +1,24 @@
 [
   {
+    "id": "b13b09ab",
+    "agency": "RemX",
+    "title": "Remote Call Center Agent – Must live near Irving, TX",
+    "category": "Call Center",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "Careers page",
+    "url": "https://www.remx.com/jobs/detail/1295174/",
+    "postedAt": null,
+    "firstSeen": "2026-08-24T17:55:52.534Z"
+  },
+  {
     "id": "e5532d2a",
     "agency": "RemX",
     "title": "REMOTE Call Center Representative | $16/Hr. Weekly Pay | Arlington, TX Area Only",
@@ -11401,25 +11420,6 @@
     "location": "Beaverton, OREGON",
     "source": "Sitemap",
     "url": "https://jobs.pridestaff.com/job/585114/Call-Center-Data-Entry-Remote-Oregon-Residents-only",
-    "postedAt": null,
-    "firstSeen": "2026-07-28T23:17:16.333Z"
-  },
-  {
-    "id": "8ea9b40",
-    "agency": "Wahve",
-    "title": "Commercial Lines Customer Service Rep CSR REMOTE",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Sacramento California",
-    "source": "Haley",
-    "url": "https://jobs.wahve.com/jb/Commercial-Lines-Customer-Service-Rep-CSR-REMOTE-Jobs-in-Sacramento-California/14185043",
     "postedAt": null,
     "firstSeen": "2026-07-28T23:17:16.333Z"
   }
