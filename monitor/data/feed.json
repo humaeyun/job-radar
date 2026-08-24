@@ -1,5 +1,24 @@
 [
   {
+    "id": "d05e3f24",
+    "agency": "Green Key Resources",
+    "title": "Coder",
+    "category": "Medical Records",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "Contract",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://greenkeyllc.com/job/243037/coder",
+    "postedAt": "2026-08-24T11:00:31.000Z",
+    "firstSeen": "2026-08-24T11:19:51.644Z"
+  },
+  {
     "id": "19e667f5",
     "agency": "Schafer Manufacturing Co",
     "title": "Customer Service Representative (Remote)",
@@ -11402,25 +11421,6 @@
     "source": "RSS",
     "url": "https://www.barringtonstaffing.com/2026/06/30/admin-assistant-experienced-24-00-25-00-hourly-strong-excel-outlook-northridge-ca/",
     "postedAt": "2026-06-30T09:01:06.000Z",
-    "firstSeen": "2026-07-28T23:17:16.333Z"
-  },
-  {
-    "id": "1100addc",
-    "agency": "TriCom Quest",
-    "title": "Dessert, Anyone?",
-    "category": "Call Center",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://www.tricomquest.com/2019/03/19/dessert-anyone/",
-    "postedAt": "2019-03-20T02:50:45.000Z",
     "firstSeen": "2026-07-28T23:17:16.333Z"
   }
 ]
