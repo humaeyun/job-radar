@@ -1,5 +1,24 @@
 [
   {
+    "id": "d5dad51e",
+    "agency": "LaSalle Network",
+    "title": "Inpatient Facility Coder",
+    "category": "Medical Records",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$34–38/hr",
+    "payMin": 34,
+    "payMax": 38,
+    "employment": "Temp-to-hire",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/inpatient-facility-coder-162455/",
+    "postedAt": "2026-08-24T19:56:31.000Z",
+    "firstSeen": "2026-08-24T20:21:10.432Z"
+  },
+  {
     "id": "2cedf75b",
     "agency": "RemX",
     "title": "Medical Customer Service Rep Remote $16HR",
@@ -11397,25 +11416,6 @@
     "source": "RSS",
     "url": "https://questpro.com/current-trends-shaping-the-pc-market/",
     "postedAt": "2026-01-09T07:05:42.000Z",
-    "firstSeen": "2026-07-28T23:17:16.333Z"
-  },
-  {
-    "id": "21b72f18",
-    "agency": "Questpro",
-    "title": "5 Skills Insurance Companies Are Actually Hiring For in 2025",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://questpro.com/5-skills-insurance-companies-are-actually-hiring-for-in-2025/",
-    "postedAt": "2025-05-28T23:45:24.000Z",
     "firstSeen": "2026-07-28T23:17:16.333Z"
   }
 ]
