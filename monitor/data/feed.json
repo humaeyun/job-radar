@@ -1,5 +1,24 @@
 [
   {
+    "id": "1a30b4b2",
+    "agency": "CornerStone Staffing",
+    "title": "Why You're Not Hearing Back: Honest Reasons And How To Fix Them",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.cornerstonestaffing.com/2026/08/25/why-youre-not-hearing-back-from-jobs/",
+    "postedAt": "2026-08-25T09:00:00.000Z",
+    "firstSeen": "2026-08-25T09:27:31.984Z"
+  },
+  {
     "id": "2d9847d7",
     "agency": "24 Seven Talent",
     "title": "Merchandise Sales Associates (Albuqurque)",
@@ -11395,25 +11414,6 @@
     "source": "RSS",
     "url": "https://jobs.getcrg.com/jobs/?post_type=job/13939",
     "postedAt": "2025-08-06T15:01:43.000Z",
-    "firstSeen": "2026-07-28T23:17:16.333Z"
-  },
-  {
-    "id": "4bec889d",
-    "agency": "CRG",
-    "title": "Remote Network Server Support",
-    "category": "Call Center",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "Contract",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://jobs.getcrg.com/jobs/?post_type=job/11663",
-    "postedAt": "2025-06-13T18:25:18.000Z",
     "firstSeen": "2026-07-28T23:17:16.333Z"
   }
 ]
