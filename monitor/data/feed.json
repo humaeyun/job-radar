@@ -1,5 +1,24 @@
 [
   {
+    "id": "bfa05429",
+    "agency": "Medix",
+    "title": "Customer Service Representative (Remote)",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "Temporary",
+    "location": "Minneapolis",
+    "source": "Sitemap",
+    "url": "https://jobs.medixteam.com/jobs/248150/customer-service-representative-remote-minneapolis",
+    "postedAt": null,
+    "firstSeen": "2026-08-25T20:53:32.141Z"
+  },
+  {
     "id": "783da4",
     "agency": "Barrington Staffing",
     "title": "Client Onboarding Specialist-Administrative $27.00 &#8211; $30.00 hourly Woodland Hills, CA",
@@ -11391,25 +11410,6 @@
     "source": "RSS",
     "url": "https://jobs.getcrg.com/jobs/?post_type=job/16483",
     "postedAt": "2026-06-09T14:04:51.000Z",
-    "firstSeen": "2026-07-28T23:17:16.333Z"
-  },
-  {
-    "id": "925bcda6",
-    "agency": "CRG",
-    "title": "IT Help Desk For Night Support",
-    "category": "Customer Service",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "Contract",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://jobs.getcrg.com/jobs/?post_type=job/13939",
-    "postedAt": "2025-08-06T15:01:43.000Z",
     "firstSeen": "2026-07-28T23:17:16.333Z"
   }
 ]
