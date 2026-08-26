@@ -1,5 +1,24 @@
 [
   {
+    "id": "5ee47c81",
+    "agency": "24 Seven Talent",
+    "title": "Wholesale Account Manager Midwest-Footwear",
+    "category": "Sales",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "maybe",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "Seasonal",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.24seventalent.com/job/wholesale-account-manager-midwest-footwear-514551/",
+    "postedAt": "2026-08-25T18:09:40.000Z",
+    "firstSeen": "2026-08-26T14:36:58.878Z"
+  },
+  {
     "id": "ec6a0431",
     "agency": "Aston Carter",
     "title": "us en JP REMOTE HR Customer Service Representative",
@@ -11391,25 +11410,6 @@
     "source": "RSS",
     "url": "https://jobs.getcrg.com/jobs/?post_type=job/14859",
     "postedAt": "2026-07-10T14:11:41.000Z",
-    "firstSeen": "2026-07-28T23:17:16.333Z"
-  },
-  {
-    "id": "a15f166b",
-    "agency": "CRG",
-    "title": "Finance Director, Shared Services",
-    "category": "Sales",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://jobs.getcrg.com/jobs/?post_type=job/16272",
-    "postedAt": "2026-07-09T17:52:38.000Z",
     "firstSeen": "2026-07-28T23:17:16.333Z"
   }
 ]
