@@ -1,5 +1,24 @@
 [
   {
+    "id": "43106f6e",
+    "agency": "Aston Carter",
+    "title": "REMOTE Benefits Representative",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Houston, Texas",
+    "source": "Sitemap",
+    "url": "https://careers.astoncarter.com/us/en/job/JP-006245724/REMOTE-Benefits-Representative",
+    "postedAt": null,
+    "firstSeen": "2026-08-26T03:31:18.976Z"
+  },
+  {
     "id": "d58b4fea",
     "agency": "Virtual Assist USA",
     "title": "Best U.S.-Based Virtual Assistant Companies (2026)",
@@ -16,25 +35,6 @@
     "source": "RSS",
     "url": "https://www.virtualassistusa.com/blog/best-u-s-based-virtual-assistant-companies-2026/",
     "postedAt": "2026-08-26T00:26:16.000Z",
-    "firstSeen": "2026-08-26T00:51:47.878Z"
-  },
-  {
-    "id": "55e357aa",
-    "agency": "Aston Carter",
-    "title": "REMOTE Benefits Representative",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Houston, Texas",
-    "source": "Sitemap",
-    "url": "https://careers.astoncarter.com/us/en/job/JP-006245702/REMOTE-Benefits-Representative",
-    "postedAt": null,
     "firstSeen": "2026-08-26T00:51:47.878Z"
   },
   {
