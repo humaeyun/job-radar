@@ -1,5 +1,24 @@
 [
   {
+    "id": "ec6a0431",
+    "agency": "Aston Carter",
+    "title": "us en JP REMOTE HR Customer Service Representative",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "Sitemap",
+    "url": "https://careers.astoncarter.com/us/en/job/JP-006215019/REMOTE-HR-Customer-Service-Representative",
+    "postedAt": null,
+    "firstSeen": "2026-08-26T08:34:20.392Z"
+  },
+  {
     "id": "3277f55d",
     "agency": "Thrivas",
     "title": "Remote Customer Service Representative (Financial Services)",
@@ -9010,25 +9029,6 @@
     "source": "RSS",
     "url": "https://www.24seventalent.com/job/jr-account-manager-creative-project-coordinator-packaging-513938/",
     "postedAt": "2026-08-10T19:42:36.000Z",
-    "firstSeen": "2026-08-11T17:52:06.881Z"
-  },
-  {
-    "id": "de85d5e9",
-    "agency": "Aston Carter",
-    "title": "us en JP REMOTE HR Customer Service Representative",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "Sitemap",
-    "url": "https://careers.astoncarter.com/us/en/job/JP-006213130/REMOTE-HR-Customer-Service-Representative",
-    "postedAt": null,
     "firstSeen": "2026-08-11T17:52:06.881Z"
   },
   {
