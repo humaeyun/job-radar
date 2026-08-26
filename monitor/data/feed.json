@@ -1,5 +1,24 @@
 [
   {
+    "id": "3277f55d",
+    "agency": "Thrivas",
+    "title": "Remote Customer Service Representative (Financial Services)",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Fort Lauderdale, FL · Remote",
+    "source": "Sitemap",
+    "url": "https://www.thrivas.com/job/remote-customer-service-representative-financial-services-64/",
+    "postedAt": null,
+    "firstSeen": "2026-08-26T04:32:22.071Z"
+  },
+  {
     "id": "43106f6e",
     "agency": "Aston Carter",
     "title": "REMOTE Benefits Representative",
@@ -10422,25 +10441,6 @@
     "source": "RSS",
     "url": "https://www.thelasallenetwork.com/jobs/call-center-representative-160982/",
     "postedAt": "2026-03-31T14:41:25.000Z",
-    "firstSeen": "2026-08-03T04:58:58.749Z"
-  },
-  {
-    "id": "3277f53c",
-    "agency": "Thrivas",
-    "title": "Remote Customer Service Representative (Financial Services)",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Fort Myers, FL · Remote",
-    "source": "Sitemap",
-    "url": "https://www.thrivas.com/job/remote-customer-service-representative-financial-services-63/",
-    "postedAt": null,
     "firstSeen": "2026-08-03T04:58:58.749Z"
   },
   {
