@@ -1,5 +1,24 @@
 [
   {
+    "id": "8af391c0",
+    "agency": "Aston Carter",
+    "title": "us en JP REMOTE HR Call Center Agent",
+    "category": "Call Center",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "Sitemap",
+    "url": "https://careers.astoncarter.com/us/en/job/JP-006222047/REMOTE-HR-Call-Center-Agent",
+    "postedAt": null,
+    "firstSeen": "2026-08-29T11:15:41.597Z"
+  },
+  {
     "id": "83da7534",
     "agency": "Thrivas",
     "title": "Part Time Remote Customer Service Rep",
@@ -11390,25 +11409,6 @@
     "location": "Remote",
     "source": "Careers page",
     "url": "https://www.remx.com/jobs/detail/1293473/",
-    "postedAt": null,
-    "firstSeen": "2026-07-29T16:16:11.478Z"
-  },
-  {
-    "id": "397739fc",
-    "agency": "Medix",
-    "title": "Licensed Insurance Agent",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "remote",
-    "source": "Sitemap",
-    "url": "https://jobs.medixteam.com/jobs/256474/licensed-insurance-agent-remote",
     "postedAt": null,
     "firstSeen": "2026-07-29T16:16:11.478Z"
   }
