@@ -1,5 +1,24 @@
 [
   {
+    "id": "41577ee0",
+    "agency": "Medix",
+    "title": "Virtual Assistant",
+    "category": "Call Center",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Lewiston",
+    "source": "Sitemap",
+    "url": "https://jobs.medixteam.com/jobs/257871/virtual-assistant-lewiston",
+    "postedAt": null,
+    "firstSeen": "2026-09-01T15:51:43.034Z"
+  },
+  {
     "id": "2835c74c",
     "agency": "Thrivas",
     "title": "Medical Billing Specialist (Remote)",
@@ -11396,24 +11415,5 @@
     "url": "https://greenkeyllc.com/job/238495/patient-recruiter-2",
     "postedAt": "2026-07-30T16:27:22.000Z",
     "firstSeen": "2026-07-30T16:37:22.298Z"
-  },
-  {
-    "id": "cc491f44",
-    "agency": "LaSalle Network",
-    "title": "Senior Business Development Manager",
-    "category": "Call Center",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "Temporary",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://www.thelasallenetwork.com/jobs/senior-business-development-manager-162276/",
-    "postedAt": "2026-07-30T15:30:00.000Z",
-    "firstSeen": "2026-07-30T16:21:42.161Z"
   }
 ]
