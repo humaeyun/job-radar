@@ -1,5 +1,24 @@
 [
   {
+    "id": "2aea8e22",
+    "agency": "LaSalle Network",
+    "title": "Repricing Coordinator",
+    "category": "Data Entry",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$16–18/hr",
+    "payMin": 16,
+    "payMax": 18,
+    "employment": "Temporary",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/repricing-coordinator-162733/",
+    "postedAt": "2026-09-03T20:53:34.000Z",
+    "firstSeen": "2026-09-03T22:30:36.193Z"
+  },
+  {
     "id": "9e983901",
     "agency": "Green Key Resources",
     "title": "Program Coordinator, Training",
@@ -11394,24 +11413,5 @@
     "url": "http://jobs.doherty.com/jb/French-Bilingual-Remote-Customer-Service-Rep-Jobs-in-Waite-Park-Minnesota/14194979",
     "postedAt": null,
     "firstSeen": "2026-08-03T19:03:18.274Z"
-  },
-  {
-    "id": "140d0915",
-    "agency": "Green Key Resources",
-    "title": "Virtual Back Office Call Center Representative",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://greenkeyllc.com/job/239136/virtual-back-office-call-center-representative-4",
-    "postedAt": "2026-08-03T16:42:47.000Z",
-    "firstSeen": "2026-08-03T17:23:33.575Z"
   }
 ]
