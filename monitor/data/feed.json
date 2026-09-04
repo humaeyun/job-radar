@@ -1,5 +1,24 @@
 [
   {
+    "id": "a8b32984",
+    "agency": "The Jacobson Group",
+    "title": "Claims Administrator",
+    "category": "Data Entry",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "Sitemap",
+    "url": "https://careers.jacobsononline.com/job/claims-administrator-claims-work-at-home-39794/eefbd5c2-a869-11f1-8336-024201c20d84",
+    "postedAt": null,
+    "firstSeen": "2026-09-04T21:59:24.317Z"
+  },
+  {
     "id": "48fad76",
     "agency": "RemX",
     "title": "$16/Hr. Remote Outbound Call Center Agent (Must live near Houston or Dallas)",
@@ -11396,24 +11415,5 @@
     "url": "https://careers.dahlconsulting.com/jb/Inside-Sales-Specialist-Licensed-Jobs-in-Remote-Minnesota/14195857",
     "postedAt": null,
     "firstSeen": "2026-08-03T23:33:18.106Z"
-  },
-  {
-    "id": "e438f821",
-    "agency": "RemX",
-    "title": "$16/hr Remote Medical Customer Service Representative",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "$16/hr",
-    "payMin": 16,
-    "payMax": 16,
-    "employment": "",
-    "location": "Remote",
-    "source": "Careers page",
-    "url": "https://www.remx.com/jobs/detail/1293792/",
-    "postedAt": null,
-    "firstSeen": "2026-08-03T22:00:51.547Z"
   }
 ]
