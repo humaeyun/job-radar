@@ -1,5 +1,24 @@
 [
   {
+    "id": "9c4402e1",
+    "agency": "Green Key Resources",
+    "title": "Customer Onboarding Lead",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://greenkeyllc.com/job/245808/customer-onboarding-lead-2",
+    "postedAt": "2026-09-07T11:00:29.000Z",
+    "firstSeen": "2026-09-07T11:13:10.222Z"
+  },
+  {
     "id": "84b0e972",
     "agency": "RemX",
     "title": "REMOTE $16/hr. Medical Records Outbound Specialist ***Dallas, TX***",
@@ -11396,24 +11415,5 @@
     "url": "https://www.remx.com/jobs/detail/1293855/",
     "postedAt": null,
     "firstSeen": "2026-08-04T18:25:20.070Z"
-  },
-  {
-    "id": "d29b9b11",
-    "agency": "PrideStaff",
-    "title": "REMOTE Customer Support/Operations Manager - PART-TIME",
-    "category": "Chat Support",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "maybe",
-    "equipment": [],
-    "pay": "$30–35/hr",
-    "payMin": 30,
-    "payMax": 35,
-    "employment": "Seasonal",
-    "location": "Wantagh, NEW YORK",
-    "source": "Sitemap",
-    "url": "https://jobs.pridestaff.com/job/586266/REMOTE-Customer-Support-Operations-Manager-PART-TIME",
-    "postedAt": null,
-    "firstSeen": "2026-08-04T16:56:30.077Z"
   }
 ]
