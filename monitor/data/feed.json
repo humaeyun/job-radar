@@ -1,5 +1,24 @@
 [
   {
+    "id": "84b0e972",
+    "agency": "RemX",
+    "title": "REMOTE $16/hr. Medical Records Outbound Specialist ***Dallas, TX***",
+    "category": "Medical Records",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$16/hr",
+    "payMin": 16,
+    "payMax": 16,
+    "employment": "",
+    "location": "Remote",
+    "source": "Careers page",
+    "url": "https://www.remx.com/jobs/detail/1296176/",
+    "postedAt": null,
+    "firstSeen": "2026-09-07T05:31:59.682Z"
+  },
+  {
     "id": "61b1ef06",
     "agency": "RemX",
     "title": "Remote Medical Records Outbound Agents $16/hr *Houston, TX*",
@@ -11396,24 +11415,5 @@
     "url": "https://jobs.pridestaff.com/job/586266/REMOTE-Customer-Support-Operations-Manager-PART-TIME",
     "postedAt": null,
     "firstSeen": "2026-08-04T16:56:30.077Z"
-  },
-  {
-    "id": "bb53ea20",
-    "agency": "PrideStaff",
-    "title": "REMOTE Customer Support/Operations Manager - PART-TIME job in Wantagh, NEW YORK, US | Management jobs at PrideStaff",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "maybe",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "Part-time",
-    "location": "Remote",
-    "source": "Sitemap",
-    "url": "https://jobs.pridestaff.com/job/586266/REMOTE-Customer-Support-Operations-Manager-PART-TIME",
-    "postedAt": null,
-    "firstSeen": "2026-08-04T14:59:47.818Z"
   }
 ]
