@@ -1,5 +1,24 @@
 [
   {
+    "id": "49e13849",
+    "agency": "Green Key Resources",
+    "title": "Controller",
+    "category": "Sales",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://greenkeyllc.com/job/245818/controller-10",
+    "postedAt": "2026-09-07T13:27:25.000Z",
+    "firstSeen": "2026-09-07T16:34:20.626Z"
+  },
+  {
     "id": "9c4402e1",
     "agency": "Green Key Resources",
     "title": "Customer Onboarding Lead",
@@ -11396,24 +11415,5 @@
     "url": "https://www.thelasallenetwork.com/jobs/webinar-manager-on24-162334/",
     "postedAt": "2026-08-04T18:51:52.000Z",
     "firstSeen": "2026-08-04T20:07:37.076Z"
-  },
-  {
-    "id": "e67b493",
-    "agency": "RemX",
-    "title": "Remote, Health Care Call Center Customer Support",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "Careers page",
-    "url": "https://www.remx.com/jobs/detail/1293855/",
-    "postedAt": null,
-    "firstSeen": "2026-08-04T18:25:20.070Z"
   }
 ]
