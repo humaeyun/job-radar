@@ -1,5 +1,24 @@
 [
   {
+    "id": "365054ce",
+    "agency": "Aston Carter",
+    "title": "us en JP Client Support Representative Fully Remote",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "Sitemap",
+    "url": "https://careers.astoncarter.com/us/en/job/JP-006240289/Client-Support-Representative-Fully-Remote",
+    "postedAt": null,
+    "firstSeen": "2026-09-08T10:22:22.030Z"
+  },
+  {
     "id": "bff48b77",
     "agency": "Thrivas",
     "title": "Sales Representative (Remote Work From Home)",
@@ -11395,25 +11414,6 @@
     "source": "Careers page",
     "url": "https://www.remx.com/jobs/detail/1293873/",
     "postedAt": null,
-    "firstSeen": "2026-08-04T20:07:37.076Z"
-  },
-  {
-    "id": "d6858556",
-    "agency": "LaSalle Network",
-    "title": "Webinar Manager, ON24",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "$30–40/hr",
-    "payMin": 30,
-    "payMax": 40,
-    "employment": "Contract",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://www.thelasallenetwork.com/jobs/webinar-manager-on24-162334/",
-    "postedAt": "2026-08-04T18:51:52.000Z",
     "firstSeen": "2026-08-04T20:07:37.076Z"
   }
 ]
