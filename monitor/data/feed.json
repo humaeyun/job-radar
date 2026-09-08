@@ -1,5 +1,24 @@
 [
   {
+    "id": "775e9970",
+    "agency": "LaSalle Network",
+    "title": "Senior Recruiter &#8211; Engineering &#038; Supply Chain",
+    "category": "Customer Service",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/senior-recruiter-engineering-supply-chain-162775/",
+    "postedAt": "2026-09-08T21:10:04.000Z",
+    "firstSeen": "2026-09-08T23:29:21.503Z"
+  },
+  {
     "id": "63a13ab3",
     "agency": "RemX",
     "title": "Remote Outbound Call Center Agent- $16/hr. Dallas, TX",
@@ -11394,24 +11413,5 @@
     "url": "https://www.thrivas.com/job/remote-customer-service-representative-cosmetics-company-64/",
     "postedAt": null,
     "firstSeen": "2026-08-05T02:37:48.488Z"
-  },
-  {
-    "id": "e37e9102",
-    "agency": "RemX",
-    "title": "Remote, Call Center Customer Support",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "Careers page",
-    "url": "https://www.remx.com/jobs/detail/1293855/",
-    "postedAt": null,
-    "firstSeen": "2026-08-04T23:58:32.575Z"
   }
 ]
