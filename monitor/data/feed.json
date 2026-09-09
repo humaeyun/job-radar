@@ -1,5 +1,24 @@
 [
   {
+    "id": "e86de2d0",
+    "agency": "LaSalle Network",
+    "title": "HR Admin Coodinator",
+    "category": "Data Entry",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$23–26/hr",
+    "payMin": 23,
+    "payMax": 26,
+    "employment": "Contract",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/hr-admin-coodinator-162774/",
+    "postedAt": "2026-09-09T00:10:01.000Z",
+    "firstSeen": "2026-09-09T01:24:27.972Z"
+  },
+  {
     "id": "775e9970",
     "agency": "LaSalle Network",
     "title": "Senior Recruiter &#8211; Engineering &#038; Supply Chain",
@@ -11392,25 +11411,6 @@
     "location": "Remote",
     "source": "Sitemap",
     "url": "https://www.thrivas.com/job/remote-data-entry-clerk-help-desk-support-63/",
-    "postedAt": null,
-    "firstSeen": "2026-08-05T02:37:48.488Z"
-  },
-  {
-    "id": "2fe64b06",
-    "agency": "Thrivas",
-    "title": "remote customer service representative cosmetics company 64",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "Sitemap",
-    "url": "https://www.thrivas.com/job/remote-customer-service-representative-cosmetics-company-64/",
     "postedAt": null,
     "firstSeen": "2026-08-05T02:37:48.488Z"
   }
