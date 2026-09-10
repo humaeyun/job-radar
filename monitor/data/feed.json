@@ -1,5 +1,24 @@
 [
   {
+    "id": "9d50f444",
+    "agency": "Thrivas",
+    "title": "Remote Customer Service Representative",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Orlando, FL · Remote",
+    "source": "Sitemap",
+    "url": "https://www.thrivas.com/job/remote-customer-service-representative-68/",
+    "postedAt": null,
+    "firstSeen": "2026-09-10T07:26:13.360Z"
+  },
+  {
     "id": "c56b14ba",
     "agency": "24 Seven Talent",
     "title": "CRM Implementation Onboarding Specialist",
@@ -9675,25 +9694,6 @@
     "url": "https://greenkeyllc.com/job/242142/patient-recruitment-specialist",
     "postedAt": "2026-08-19T18:41:46.000Z",
     "firstSeen": "2026-08-19T19:01:01.661Z"
-  },
-  {
-    "id": "9d50f423",
-    "agency": "Thrivas",
-    "title": "Remote Customer Service Representative",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Daytona Beach, FL · Remote",
-    "source": "Sitemap",
-    "url": "https://www.thrivas.com/job/remote-customer-service-representative-67/",
-    "postedAt": null,
-    "firstSeen": "2026-08-19T05:00:44.859Z"
   },
   {
     "id": "ed566a94",
