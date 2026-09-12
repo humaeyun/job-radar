@@ -1,5 +1,24 @@
 [
   {
+    "id": "ed5ba26a",
+    "agency": "RemX",
+    "title": "Remote Customer Service Representitives needed / $16.00 per hour",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$16/hr",
+    "payMin": 16,
+    "payMax": 16,
+    "employment": "",
+    "location": "Remote",
+    "source": "Careers page",
+    "url": "https://www.remx.com/jobs/detail/1296590/",
+    "postedAt": null,
+    "firstSeen": "2026-09-12T17:35:12.980Z"
+  },
+  {
     "id": "b3b036c8",
     "agency": "CRG",
     "title": "LOA Coordinator | Bilingual",
@@ -11387,25 +11406,6 @@
     "source": "RSS",
     "url": "https://www.24seventalent.com/job/data-entry-513764/",
     "postedAt": "2026-08-05T19:18:25.000Z",
-    "firstSeen": "2026-08-05T20:04:31.091Z"
-  },
-  {
-    "id": "e59bfde9",
-    "agency": "Insurance Relief",
-    "title": "Property & Casualty Claims Advocate - Remote - California job in Los Gatos, CALIFORNIA, US | Account Management / Customer Service jobs at Insurance Relief",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "Sitemap",
-    "url": "https://jobs.insurance-relief.com/job/586388/Property-Casualty-Claims-Advocate-Remote-California",
-    "postedAt": null,
     "firstSeen": "2026-08-05T20:04:31.091Z"
   }
 ]
