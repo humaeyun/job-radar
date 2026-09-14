@@ -1,5 +1,24 @@
 [
   {
+    "id": "83a9df8d",
+    "agency": "RemX",
+    "title": "Remote Insurance Sales Representative | Work From Anywhere in the U.S.",
+    "category": "Sales",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "Careers page",
+    "url": "https://www.remx.com/jobs/detail/1296681/",
+    "postedAt": null,
+    "firstSeen": "2026-09-14T22:53:08.732Z"
+  },
+  {
     "id": "1cff7155",
     "agency": "RemX",
     "title": "$17 Remote Medical Insurance Verification Specialists",
@@ -11389,25 +11408,6 @@
     "source": "RSS",
     "url": "https://greenkeyllc.com/job/239961/help-desk-specialist-6",
     "postedAt": "2026-08-07T16:26:23.000Z",
-    "firstSeen": "2026-08-07T16:44:31.953Z"
-  },
-  {
-    "id": "8fb3ce4",
-    "agency": "Corps Team",
-    "title": "Customer Service Representative Remote",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "Haley",
-    "url": "https://jobs.corpsteam.com/jb/Customer-Service-Representative-Remote-Jobs-in-/14202693",
-    "postedAt": null,
     "firstSeen": "2026-08-07T16:44:31.953Z"
   }
 ]
