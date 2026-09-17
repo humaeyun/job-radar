@@ -1,5 +1,24 @@
 [
   {
+    "id": "d6f96763",
+    "agency": "CRG",
+    "title": "Talent Specialist | Part-Time | REMOTE",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$20/hr",
+    "payMin": 20,
+    "payMax": 20,
+    "employment": "Contract",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://jobs.getcrg.com/jobs/?post_type=job/16730",
+    "postedAt": "2026-09-17T20:36:40.000Z",
+    "firstSeen": "2026-09-17T22:18:55.488Z"
+  },
+  {
     "id": "fa067ac1",
     "agency": "Green Key Resources",
     "title": "Sales Manager",
@@ -11390,24 +11409,5 @@
     "url": "https://www.remx.com/jobs/detail/1294229/",
     "postedAt": null,
     "firstSeen": "2026-08-10T19:50:06.115Z"
-  },
-  {
-    "id": "3e50d49f",
-    "agency": "Dahl Consulting",
-    "title": "Licensed Voluntary Benefits Enrollment Advisor Remote",
-    "category": "Member Services",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote West Virginia",
-    "source": "Haley",
-    "url": "https://careers.dahlconsulting.com/jb/Licensed-Voluntary-Benefits-Enrollment-Advisor-Remote-Jobs-in-Remote-West-Virginia/14205689",
-    "postedAt": null,
-    "firstSeen": "2026-08-10T16:45:05.448Z"
   }
 ]
