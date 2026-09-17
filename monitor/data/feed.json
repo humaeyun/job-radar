@@ -1,5 +1,24 @@
 [
   {
+    "id": "b1a631fc",
+    "agency": "Medix",
+    "title": "Patient Account Specialist",
+    "category": "Medical Records",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "Temporary",
+    "location": "Remote",
+    "source": "Sitemap",
+    "url": "https://jobs.medixteam.com/jobs/257220/patient-account-specialist-remote",
+    "postedAt": null,
+    "firstSeen": "2026-09-17T15:07:43.397Z"
+  },
+  {
     "id": "70c39e82",
     "agency": "The Jacobson Group",
     "title": "Senior Claims Analyst",
@@ -11390,24 +11409,5 @@
     "url": "https://www.thelasallenetwork.com/jobs/contract-recruiter-162205/",
     "postedAt": "2026-07-22T21:45:34.000Z",
     "firstSeen": "2026-08-10T09:55:28.592Z"
-  },
-  {
-    "id": "360a0e4f",
-    "agency": "LaSalle Network",
-    "title": "Senior Executive Recruiter",
-    "category": "Medical Records",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://www.thelasallenetwork.com/jobs/senior-executive-recruiter-161527/",
-    "postedAt": "2026-07-08T14:12:21.000Z",
-    "firstSeen": "2026-08-10T03:23:11.770Z"
   }
 ]
