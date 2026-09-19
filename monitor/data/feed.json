@@ -1,5 +1,24 @@
 [
   {
+    "id": "e73d51e8",
+    "agency": "Spherion",
+    "title": "Bilingual Spanish/English work-from-home Inbound support",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.spherion.com/jobs/bilingual-spanishenglish-workfromhome-inbound-support_spanish-fork_47468567/",
+    "postedAt": "2026-09-18T22:18:11.000Z",
+    "firstSeen": "2026-09-19T13:36:54.163Z"
+  },
+  {
     "id": "89181967",
     "agency": "Thrivas",
     "title": "Call Center Customer Service Specialist (Remote)",
@@ -11390,24 +11409,5 @@
     "url": "https://www.24seventalent.com/job/account-director-contract-remote-513984/",
     "postedAt": "2026-08-11T19:39:24.000Z",
     "firstSeen": "2026-08-11T19:56:25.284Z"
-  },
-  {
-    "id": "8831d176",
-    "agency": "LaSalle Network",
-    "title": "IT Support Specialist",
-    "category": "Customer Service",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "$24–32/hr",
-    "payMin": 24,
-    "payMax": 32,
-    "employment": "Temp-to-hire",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://www.thelasallenetwork.com/jobs/it-support-specialist-162417/",
-    "postedAt": "2026-08-11T17:17:48.000Z",
-    "firstSeen": "2026-08-11T18:52:00.435Z"
   }
 ]
