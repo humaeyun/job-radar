@@ -1,5 +1,24 @@
 [
   {
+    "id": "d8a4f26c",
+    "agency": "LaSalle Network",
+    "title": "Senior Collections Specialist",
+    "category": "Sales",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$30–40/hr",
+    "payMin": 30,
+    "payMax": 40,
+    "employment": "Contract",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/senior-collections-specialist-162996/",
+    "postedAt": "2026-09-23T17:36:14.000Z",
+    "firstSeen": "2026-09-23T20:55:05.787Z"
+  },
+  {
     "id": "d202f663",
     "agency": "Green Key Resources",
     "title": "Sales Assistant",
@@ -11392,24 +11411,5 @@
     "url": "https://www.thelasallenetwork.com/jobs/associate-network-engineer-161830/",
     "postedAt": "2026-08-12T21:12:28.000Z",
     "firstSeen": "2026-08-12T22:32:18.258Z"
-  },
-  {
-    "id": "e2e6b610",
-    "agency": "Medix",
-    "title": "Licensed Insurance Agent (Remote)",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Scottsdale",
-    "source": "Sitemap",
-    "url": "https://jobs.medixteam.com/jobs/257101/licensed-insurance-agent-remote-scottsdale",
-    "postedAt": null,
-    "firstSeen": "2026-08-12T17:26:45.953Z"
   }
 ]
