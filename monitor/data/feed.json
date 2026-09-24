@@ -1,5 +1,24 @@
 [
   {
+    "id": "6b4ac9bf",
+    "agency": "Dahl Consulting",
+    "title": "Licensed Remote ACA Enrollment Coordinator CST",
+    "category": "Member Services",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Austin Texas",
+    "source": "Haley",
+    "url": "https://careers.dahlconsulting.com/jb/Licensed-Remote-ACA-Enrollment-Coordinator-CST-Jobs-in-Austin-Texas/14122016",
+    "postedAt": null,
+    "firstSeen": "2026-09-24T20:59:23.730Z"
+  },
+  {
     "id": "bb5bee40",
     "agency": "24 Seven Talent",
     "title": "React Native Developer",
@@ -11392,24 +11411,5 @@
     "url": "https://www.remx.com/jobs/detail/1294635/",
     "postedAt": null,
     "firstSeen": "2026-08-14T18:14:06.092Z"
-  },
-  {
-    "id": "e7edc0a6",
-    "agency": "Medix",
-    "title": "Remote Customer Service Representative - Patient Accounts",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "$18.5/hr",
-    "payMin": 18.5,
-    "payMax": 18.5,
-    "employment": "Temp-to-hire",
-    "location": "x",
-    "source": "Sitemap",
-    "url": "https://jobs.medixteam.com/jobs/257226/remote-customer-service-representative-patient-accounts-x",
-    "postedAt": null,
-    "firstSeen": "2026-08-14T01:17:22.826Z"
   }
 ]
