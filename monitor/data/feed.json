@@ -1,5 +1,24 @@
 [
   {
+    "id": "c90896f7",
+    "agency": "LaSalle Network",
+    "title": "National Account Manager (E-Commerce)",
+    "category": "Medical Records",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$60–70/hr",
+    "payMin": 60,
+    "payMax": 70,
+    "employment": "Temp-to-hire",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/national-account-manager-e-commerce-162933/",
+    "postedAt": "2026-09-25T14:39:24.000Z",
+    "firstSeen": "2026-09-25T18:46:22.488Z"
+  },
+  {
     "id": "66c68187",
     "agency": "Green Key Resources",
     "title": "Senior Desktop Support Engineer",
@@ -11392,24 +11411,5 @@
     "url": "https://greenkeyllc.com/job/241645/trust-estates-paralegal",
     "postedAt": "2026-08-17T12:08:13.000Z",
     "firstSeen": "2026-08-17T12:28:04.374Z"
-  },
-  {
-    "id": "6876b6a6",
-    "agency": "Green Key Resources",
-    "title": "Hospitality Manager",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://greenkeyllc.com/job/241639/hospitality-manager-2",
-    "postedAt": "2026-08-17T11:00:41.000Z",
-    "firstSeen": "2026-08-17T11:18:40.885Z"
   }
 ]
