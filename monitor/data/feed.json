@@ -1,5 +1,24 @@
 [
   {
+    "id": "96f59a1a",
+    "agency": "RemX",
+    "title": "Remote Medical Benefits Specialist- $17/hr.- FLORIDA",
+    "category": "Member Services",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$17/hr",
+    "payMin": 17,
+    "payMax": 17,
+    "employment": "",
+    "location": "Remote",
+    "source": "Careers page",
+    "url": "https://www.remx.com/jobs/detail/1297592/",
+    "postedAt": null,
+    "firstSeen": "2026-09-26T05:14:39.047Z"
+  },
+  {
     "id": "3a9184ca",
     "agency": "RemX",
     "title": "$17 Remote Insurance Verification Specialists",
@@ -11392,24 +11411,5 @@
     "url": "https://www.thelasallenetwork.com/jobs/travel-expense-supervisor-162476/",
     "postedAt": "2026-08-17T21:11:13.000Z",
     "firstSeen": "2026-08-17T22:16:14.759Z"
-  },
-  {
-    "id": "55cfa5d5",
-    "agency": "Green Key Resources",
-    "title": "State Relations Coordinator",
-    "category": "Customer Service",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://greenkeyllc.com/job/241656/state-relations-coordinator",
-    "postedAt": "2026-08-17T14:34:08.000Z",
-    "firstSeen": "2026-08-17T15:18:15.323Z"
   }
 ]
