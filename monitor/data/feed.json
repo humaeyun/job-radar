@@ -1,5 +1,24 @@
 [
   {
+    "id": "5e8cf91a",
+    "agency": "Thrivas",
+    "title": "Customer Service Agent",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Coral Springs, FL · Remote",
+    "source": "Sitemap",
+    "url": "https://www.thrivas.com/job/customer-service-agent-67/",
+    "postedAt": null,
+    "firstSeen": "2026-09-28T05:39:24.583Z"
+  },
+  {
     "id": "c2d7d355",
     "agency": "Central Research",
     "title": "Customer Service Representative (remote)",
@@ -8706,25 +8725,6 @@
     "url": "https://careers.astoncarter.com/us/en/job/JP-006240289/Client-Support-Representative-Fully-Remote",
     "postedAt": null,
     "firstSeen": "2026-09-08T10:22:22.030Z"
-  },
-  {
-    "id": "5e8cf8f9",
-    "agency": "Thrivas",
-    "title": "Customer Service Agent",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Palm Coast, FL · Remote",
-    "source": "Sitemap",
-    "url": "https://www.thrivas.com/job/customer-service-agent-66/",
-    "postedAt": null,
-    "firstSeen": "2026-09-08T05:30:27.407Z"
   },
   {
     "id": "49e13849",
