@@ -1,5 +1,43 @@
 [
   {
+    "id": "9d50f465",
+    "agency": "Thrivas",
+    "title": "Remote Customer Service Representative",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Jacksonville, FL · Remote",
+    "source": "Sitemap",
+    "url": "https://www.thrivas.com/job/remote-customer-service-representative-69/",
+    "postedAt": null,
+    "firstSeen": "2026-09-29T05:56:54.889Z"
+  },
+  {
+    "id": "bbdbe21b",
+    "agency": "Insurance Relief",
+    "title": "Workers' Compensation Claims Examiner - Remote - Rocklin, CA job in Fresno, CALIFORNIA, US | Account Management / Customer Service jobs at Insurance Relief",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "Sitemap",
+    "url": "https://jobs.insurance-relief.com/job/590362/Workers-Compensation-Claims-Examiner-Remote-Rocklin-CA",
+    "postedAt": null,
+    "firstSeen": "2026-09-29T05:56:54.889Z"
+  },
+  {
     "id": "1d11ca7a",
     "agency": "LaSalle Network",
     "title": "Medical Coder-Multispecialty",
@@ -8630,25 +8668,6 @@
     "firstSeen": "2026-09-10T16:34:23.877Z"
   },
   {
-    "id": "9d50f444",
-    "agency": "Thrivas",
-    "title": "Remote Customer Service Representative",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Orlando, FL · Remote",
-    "source": "Sitemap",
-    "url": "https://www.thrivas.com/job/remote-customer-service-representative-68/",
-    "postedAt": null,
-    "firstSeen": "2026-09-10T07:26:13.360Z"
-  },
-  {
     "id": "c56b14ba",
     "agency": "24 Seven Talent",
     "title": "CRM Implementation Onboarding Specialist",
@@ -11384,30 +11403,6 @@
     "source": "RSS",
     "url": "https://greenkeyllc.com/job/241952/registered-nurse-hospital-liaison",
     "postedAt": "2026-08-18T19:37:46.000Z",
-    "firstSeen": "2026-08-18T19:47:07.635Z"
-  },
-  {
-    "id": "9650e97c",
-    "agency": "Medix",
-    "title": "Remote Radiology Scheduler",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [
-      "USB headset",
-      "Webcam",
-      "Dual monitors",
-      "Wired internet"
-    ],
-    "pay": "$22/hr",
-    "payMin": 22,
-    "payMax": 22,
-    "employment": "Temp-to-hire",
-    "location": "Minneapolis",
-    "source": "Sitemap",
-    "url": "https://jobs.medixteam.com/jobs/257292/remote-radiology-scheduler-minneapolis",
-    "postedAt": null,
     "firstSeen": "2026-08-18T19:47:07.635Z"
   }
 ]
