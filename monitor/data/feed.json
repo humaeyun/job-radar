@@ -1,5 +1,24 @@
 [
   {
+    "id": "4b69c62e",
+    "agency": "Green Key Resources",
+    "title": "Call Center Representative/Virtual Back Office Coordinator",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://greenkeyllc.com/job/251142/call-center-representative-virtual-back-office-coordinator-2",
+    "postedAt": "2026-10-02T11:00:37.000Z",
+    "firstSeen": "2026-10-02T11:52:34.967Z"
+  },
+  {
     "id": "ac807f04",
     "agency": "RemX",
     "title": "$17/hr Remote Medical Insurance Verification Specialist",
@@ -9825,25 +9844,6 @@
     "url": "https://jobs.burnettspecialists.com/jb/Remote-Pharmacy-Medical-CSR-Roles-Available-TEXAS-RESIDENTS-ONLY-Jobs-in-Remote-Texas/14282779",
     "postedAt": null,
     "firstSeen": "2026-09-01T23:42:36.278Z"
-  },
-  {
-    "id": "5a43be5c",
-    "agency": "Green Key Resources",
-    "title": "Call Center Representative/Virtual Back Office Coordinator",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://greenkeyllc.com/job/244819/call-center-representative-virtual-back-office-coordinator",
-    "postedAt": "2026-09-01T20:12:08.000Z",
-    "firstSeen": "2026-09-01T21:52:40.285Z"
   },
   {
     "id": "41577ee0",
