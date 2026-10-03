@@ -1,5 +1,24 @@
 [
   {
+    "id": "b9e416f9",
+    "agency": "Green Key Resources",
+    "title": "Individual Tax Senior",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://greenkeyllc.com/job/251397/individual-tax-senior-4",
+    "postedAt": "2026-10-03T11:00:46.000Z",
+    "firstSeen": "2026-10-03T11:02:54.777Z"
+  },
+  {
     "id": "ac810fc7",
     "agency": "RemX",
     "title": "$17/hr Remote Medical Insurance Verification Specialist",
@@ -9882,25 +9901,6 @@
     "url": "https://greenkeyllc.com/job/244992/provider-relations-manager",
     "postedAt": "2026-09-02T15:20:06.000Z",
     "firstSeen": "2026-09-02T16:44:28.468Z"
-  },
-  {
-    "id": "1b55f695",
-    "agency": "Green Key Resources",
-    "title": "Individual Tax Senior",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://greenkeyllc.com/job/244951/individual-tax-senior-2",
-    "postedAt": "2026-09-02T12:00:39.000Z",
-    "firstSeen": "2026-09-02T12:11:32.316Z"
   },
   {
     "id": "e47ab4f4",
