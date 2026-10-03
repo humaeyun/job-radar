@@ -1,5 +1,24 @@
 [
   {
+    "id": "d661310",
+    "agency": "RemX",
+    "title": "Remote Medical Insurance Verification Specialists $17/hr *TEXAS*",
+    "category": "Medical Records",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$17/hr",
+    "payMin": 17,
+    "payMax": 17,
+    "employment": "",
+    "location": "Remote",
+    "source": "Careers page",
+    "url": "https://www.remx.com/jobs/detail/1298142/",
+    "postedAt": null,
+    "firstSeen": "2026-10-03T18:45:28.241Z"
+  },
+  {
     "id": "b9e416f9",
     "agency": "Green Key Resources",
     "title": "Individual Tax Senior",
@@ -11383,25 +11402,6 @@
     "location": "Remote",
     "source": "Careers page",
     "url": "https://www.remx.com/jobs/detail/1295099/",
-    "postedAt": null,
-    "firstSeen": "2026-08-21T21:16:21.197Z"
-  },
-  {
-    "id": "4884b18e",
-    "agency": "RemX",
-    "title": "REMOTE Medical Customer Service Representatives $16/hr *Irving, TX*",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "$16/hr",
-    "payMin": 16,
-    "payMax": 16,
-    "employment": "",
-    "location": "Remote",
-    "source": "Careers page",
-    "url": "https://www.remx.com/jobs/detail/1295096/",
     "postedAt": null,
     "firstSeen": "2026-08-21T21:16:21.197Z"
   }
