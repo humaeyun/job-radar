@@ -1,5 +1,24 @@
 [
   {
+    "id": "c13865a2",
+    "agency": "Burnett Specialists",
+    "title": "Member Service Representative II Remote",
+    "category": "Member Services",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Houston Texas",
+    "source": "Haley",
+    "url": "https://jobs.burnettspecialists.com/jb/Member-Service-Representative-II-Remote-Jobs-in-Houston-Texas/14349566",
+    "postedAt": null,
+    "firstSeen": "2026-10-07T17:08:12.706Z"
+  },
+  {
     "id": "901981a3",
     "agency": "Robert Half",
     "title": "Support Specialist II in Remote | Information Technology & Cybersecurity at Robert Half",
@@ -11385,25 +11404,6 @@
     "location": "Remote",
     "source": "Careers page",
     "url": "https://www.remx.com/jobs/detail/1295161/",
-    "postedAt": null,
-    "firstSeen": "2026-08-22T17:43:17.788Z"
-  },
-  {
-    "id": "6b1025cf",
-    "agency": "RemX",
-    "title": "REMOTE $16/hr. Healthcare Customer Support Specialist *IRVING, TX*",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "$16/hr",
-    "payMin": 16,
-    "payMax": 16,
-    "employment": "",
-    "location": "Remote",
-    "source": "Careers page",
-    "url": "https://www.remx.com/jobs/detail/1295160/",
     "postedAt": null,
     "firstSeen": "2026-08-22T17:43:17.788Z"
   }
