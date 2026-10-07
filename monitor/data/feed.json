@@ -1,5 +1,24 @@
 [
   {
+    "id": "5a69edd3",
+    "agency": "24 Seven Talent",
+    "title": "Assistant Merchandiser",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "maybe",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "Seasonal",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.24seventalent.com/job/assistant-merchandiser-516494/",
+    "postedAt": "2026-10-06T23:49:18.000Z",
+    "firstSeen": "2026-10-07T02:37:33.067Z"
+  },
+  {
     "id": "1f05dc86",
     "agency": "RemX",
     "title": "$17/hr Remote Medical Insurance Verification Specialist| North Texas Residents Only",
@@ -11387,24 +11406,5 @@
     "url": "https://www.remx.com/jobs/detail/1295159/",
     "postedAt": null,
     "firstSeen": "2026-08-22T17:43:17.788Z"
-  },
-  {
-    "id": "e0c7b9bd",
-    "agency": "RemX",
-    "title": "NOW HIRING!!! $16/Hr. Remote Call Center Agents (Must live in/near Irving ,TX)",
-    "category": "Call Center",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "$16/hr",
-    "payMin": 16,
-    "payMax": 16,
-    "employment": "",
-    "location": "Remote",
-    "source": "Careers page",
-    "url": "https://www.remx.com/jobs/detail/1295157/",
-    "postedAt": null,
-    "firstSeen": "2026-08-22T16:14:49.166Z"
   }
 ]
