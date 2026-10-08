@@ -1,5 +1,24 @@
 [
   {
+    "id": "54e3b56c",
+    "agency": "TERRA Staffing Group",
+    "title": "Staffing Specialist",
+    "category": "Customer Service",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "$24–29/hr",
+    "payMin": 24,
+    "payMax": 29,
+    "employment": "",
+    "location": "Tacoma, Washington, United States",
+    "source": "Greenhouse",
+    "url": "https://job-boards.greenhouse.io/verstela/jobs/5447245008",
+    "postedAt": "2026-10-08T10:21:25-04:00",
+    "firstSeen": "2026-10-08T16:41:52.911Z"
+  },
+  {
     "id": "402d0220",
     "agency": "Medix",
     "title": "Inpatient Medical Coder (Remote)",
@@ -225,25 +244,6 @@
     "source": "RSS",
     "url": "https://www.thelasallenetwork.com/jobs/technical-admin-163130/",
     "postedAt": "2026-10-06T21:16:17.000Z",
-    "firstSeen": "2026-10-06T23:29:19.823Z"
-  },
-  {
-    "id": "e2451d8c",
-    "agency": "TERRA Staffing Group",
-    "title": "Staffing Specialist",
-    "category": "Customer Service",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "$20–24/hr",
-    "payMin": 20,
-    "payMax": 24,
-    "employment": "",
-    "location": "101 Foundry Dr, Suite 1200, Lafayette, IN 47906",
-    "source": "Greenhouse",
-    "url": "https://job-boards.greenhouse.io/verstela/jobs/5442880008",
-    "postedAt": "2026-10-06T15:40:49-04:00",
     "firstSeen": "2026-10-06T23:29:19.823Z"
   },
   {
