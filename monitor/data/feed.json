@@ -1,5 +1,24 @@
 [
   {
+    "id": "28bcab38",
+    "agency": "PrideStaff",
+    "title": "Remote Bilingual Spanish Call Center",
+    "category": "Call Center",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "Sitemap",
+    "url": "https://jobs.pridestaff.com/job/591547/Remote-Bilingual-Spanish-Call-Center",
+    "postedAt": null,
+    "firstSeen": "2026-10-15T09:36:10.486Z"
+  },
+  {
     "id": "bff48bb9",
     "agency": "Thrivas",
     "title": "Sales Representative (Remote Work From Home)",
@@ -11388,25 +11407,6 @@
     "source": "Careers page",
     "url": "https://www.remx.com/jobs/detail/1295551/",
     "postedAt": null,
-    "firstSeen": "2026-08-28T01:58:20.552Z"
-  },
-  {
-    "id": "3bc8c93a",
-    "agency": "Green Key Resources",
-    "title": "Client Services, Hedge Fund",
-    "category": "Customer Service",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://greenkeyllc.com/job/243832/client-services-hedge-fund",
-    "postedAt": "2026-08-27T23:04:09.000Z",
     "firstSeen": "2026-08-28T01:58:20.552Z"
   }
 ]
