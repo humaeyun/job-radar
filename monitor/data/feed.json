@@ -1,5 +1,24 @@
 [
   {
+    "id": "63c56c3c",
+    "agency": "TERRA Staffing Group",
+    "title": "Bensenville - Bilingual Staffing Coordinator",
+    "category": "Customer Service",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "$20–26/hr",
+    "payMin": 20,
+    "payMax": 26,
+    "employment": "",
+    "location": "Bensenville, Illinois, United States",
+    "source": "Greenhouse",
+    "url": "https://job-boards.greenhouse.io/verstela/jobs/5455608008",
+    "postedAt": "2026-10-16T14:50:32-04:00",
+    "firstSeen": "2026-10-16T20:20:54.100Z"
+  },
+  {
     "id": "58592aaa",
     "agency": "24 Seven Talent",
     "title": "Human Resources Coordinator",
@@ -11389,24 +11408,5 @@
     "url": "https://www.barringtonstaffing.com/2026/08/31/admin-assistant-experienced-24-00-25-00-hourly-strong-excel-outlook-northridge-ca/",
     "postedAt": "2026-08-31T09:01:06.000Z",
     "firstSeen": "2026-08-31T17:09:20.485Z"
-  },
-  {
-    "id": "8af391c0",
-    "agency": "Aston Carter",
-    "title": "us en JP REMOTE HR Call Center Agent",
-    "category": "Call Center",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "Sitemap",
-    "url": "https://careers.astoncarter.com/us/en/job/JP-006222047/REMOTE-HR-Call-Center-Agent",
-    "postedAt": null,
-    "firstSeen": "2026-08-29T11:15:41.597Z"
   }
 ]
