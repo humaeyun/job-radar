@@ -1,5 +1,24 @@
 [
   {
+    "id": "855ad25e",
+    "agency": "LaSalle Network",
+    "title": "Oncology Coder",
+    "category": "Medical Records",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$25–30/hr",
+    "payMin": 25,
+    "payMax": 30,
+    "employment": "Temp-to-hire",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/oncology-coder-163062/",
+    "postedAt": "2026-10-15T22:00:17.000Z",
+    "firstSeen": "2026-10-15T23:59:18.759Z"
+  },
+  {
     "id": "e2ca3846",
     "agency": "RemX",
     "title": "WORK FROM HOME – Healthcare Member Service Specialist (Georgia Residents)",
@@ -11388,25 +11407,6 @@
     "source": "RSS",
     "url": "https://www.24seventalent.com/job/sourcing-analyst-514737/",
     "postedAt": "2026-08-28T17:13:00.000Z",
-    "firstSeen": "2026-08-28T23:20:55.274Z"
-  },
-  {
-    "id": "d717321d",
-    "agency": "CRG",
-    "title": "Agency Recruiter | Professional Services",
-    "category": "Call Center",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://jobs.getcrg.com/jobs/?post_type=job/16694",
-    "postedAt": "2026-08-28T17:20:33.000Z",
     "firstSeen": "2026-08-28T23:20:55.274Z"
   }
 ]
