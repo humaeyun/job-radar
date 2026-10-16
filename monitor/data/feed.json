@@ -1,5 +1,24 @@
 [
   {
+    "id": "58592aaa",
+    "agency": "24 Seven Talent",
+    "title": "Human Resources Coordinator",
+    "category": "Member Services",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.24seventalent.com/job/human-resources-coordinator-516801/",
+    "postedAt": "2026-10-14T01:34:45.000Z",
+    "firstSeen": "2026-10-16T17:45:55.270Z"
+  },
+  {
     "id": "1f7d18f9",
     "agency": "Thrivas",
     "title": "Help Desk Technician (Remote)",
@@ -11389,24 +11408,5 @@
     "url": "https://careers.astoncarter.com/us/en/job/JP-006222047/REMOTE-HR-Call-Center-Agent",
     "postedAt": null,
     "firstSeen": "2026-08-29T11:15:41.597Z"
-  },
-  {
-    "id": "bb3ab49f",
-    "agency": "24 Seven Talent",
-    "title": "Sourcing Analyst",
-    "category": "Customer Service",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "$33/hr",
-    "payMin": 33,
-    "payMax": 33,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://www.24seventalent.com/job/sourcing-analyst-514737/",
-    "postedAt": "2026-08-28T17:13:00.000Z",
-    "firstSeen": "2026-08-28T23:20:55.274Z"
   }
 ]
