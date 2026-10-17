@@ -1,5 +1,24 @@
 [
   {
+    "id": "5e8cf93b",
+    "agency": "Thrivas",
+    "title": "Customer Service Agent",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Boca Raton, FL · Remote",
+    "source": "Sitemap",
+    "url": "https://www.thrivas.com/job/customer-service-agent-68/",
+    "postedAt": null,
+    "firstSeen": "2026-10-17T05:20:32.422Z"
+  },
+  {
     "id": "76443c6f",
     "agency": "CRG",
     "title": "Sales Coordinator | Hybrid",
@@ -9088,25 +9107,6 @@
     "url": "https://greenkeyllc.com/job/250211/information-technology-support-3",
     "postedAt": "2026-09-28T11:00:30.000Z",
     "firstSeen": "2026-09-28T12:32:28.073Z"
-  },
-  {
-    "id": "5e8cf91a",
-    "agency": "Thrivas",
-    "title": "Customer Service Agent",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Coral Springs, FL · Remote",
-    "source": "Sitemap",
-    "url": "https://www.thrivas.com/job/customer-service-agent-67/",
-    "postedAt": null,
-    "firstSeen": "2026-09-28T05:39:24.583Z"
   },
   {
     "id": "713bd3e6",
