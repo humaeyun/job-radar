@@ -1,5 +1,24 @@
 [
   {
+    "id": "ef9e215b",
+    "agency": "Aston Carter",
+    "title": "Virtual Assistant- Real Estate in Saratoga, California, USA | Office & Clerical at Aston Carter",
+    "category": "Sales",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "Sitemap",
+    "url": "https://careers.astoncarter.com/us/en/job/JP-006365896/Virtual-Assistant-Real-Estate",
+    "postedAt": null,
+    "firstSeen": "2026-10-21T06:14:08.912Z"
+  },
+  {
     "id": "5204eee8",
     "agency": "RemX",
     "title": "$16/Hr. WORK FROM HOME – Healthcare Member Service Specialist (Georgia Residents)",
@@ -11392,25 +11411,6 @@
     "source": "RSS",
     "url": "https://www.thelasallenetwork.com/jobs/network-engineer-ii-162651/",
     "postedAt": "2026-08-31T18:34:18.000Z",
-    "firstSeen": "2026-08-31T21:57:55.934Z"
-  },
-  {
-    "id": "66abb7b3",
-    "agency": "24 Seven Talent",
-    "title": "CRM Manager (Fashion)",
-    "category": "Customer Service",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://www.24seventalent.com/job/crm-manager-fashion-514531/",
-    "postedAt": "2026-08-25T01:05:23.000Z",
     "firstSeen": "2026-08-31T21:57:55.934Z"
   }
 ]
