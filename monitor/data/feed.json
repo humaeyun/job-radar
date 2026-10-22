@@ -1,5 +1,24 @@
 [
   {
+    "id": "17c4dc6",
+    "agency": "CRG",
+    "title": "Staff Accountant | Union Accounting",
+    "category": "Customer Service",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$32/hr",
+    "payMin": 32,
+    "payMax": 32,
+    "employment": "Contract",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://jobs.getcrg.com/jobs/?post_type=job/16810",
+    "postedAt": "2026-10-22T12:41:50.000Z",
+    "firstSeen": "2026-10-22T13:57:57.658Z"
+  },
+  {
     "id": "b27673de",
     "agency": "Military Spouse Corporate Career Network",
     "title": "Retention Customer Service Specialist - Remote - $15/Hr TP90724",
@@ -11393,24 +11412,5 @@
     "url": "https://jobs.pridestaff.com/job/588350/Customer-Service-Outbound-REMOTE-WORK",
     "postedAt": null,
     "firstSeen": "2026-09-01T01:00:32.281Z"
-  },
-  {
-    "id": "11c2c412",
-    "agency": "LaSalle Network",
-    "title": "Network Engineer II",
-    "category": "Medical Records",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "$70/hr",
-    "payMin": 70,
-    "payMax": 70,
-    "employment": "Temp-to-hire",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://www.thelasallenetwork.com/jobs/network-engineer-ii-162651/",
-    "postedAt": "2026-08-31T18:34:18.000Z",
-    "firstSeen": "2026-08-31T21:57:55.934Z"
   }
 ]
