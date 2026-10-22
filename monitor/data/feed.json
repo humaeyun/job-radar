@@ -1,5 +1,24 @@
 [
   {
+    "id": "9fa6b906",
+    "agency": "Green Key Resources",
+    "title": "Field Medical Assistant",
+    "category": "Call Center",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://greenkeyllc.com/job/255492/field-medical-assistant",
+    "postedAt": "2026-10-22T17:54:31.000Z",
+    "firstSeen": "2026-10-22T18:20:19.265Z"
+  },
+  {
     "id": "17c4dc6",
     "agency": "CRG",
     "title": "Staff Accountant | Union Accounting",
@@ -11390,27 +11409,6 @@
     "source": "RSS",
     "url": "https://www.24seventalent.com/job/website-marketing-specialist-514701/",
     "postedAt": "2026-08-27T19:47:13.000Z",
-    "firstSeen": "2026-09-01T01:00:32.281Z"
-  },
-  {
-    "id": "14370128",
-    "agency": "PrideStaff",
-    "title": "Customer Service - Outbound - REMOTE WORK",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [
-      "Windows 10/11"
-    ],
-    "pay": "$14/hr",
-    "payMin": 14,
-    "payMax": 14,
-    "employment": "",
-    "location": "Bethlehem, PENNSYLVANIA",
-    "source": "Sitemap",
-    "url": "https://jobs.pridestaff.com/job/588350/Customer-Service-Outbound-REMOTE-WORK",
-    "postedAt": null,
     "firstSeen": "2026-09-01T01:00:32.281Z"
   }
 ]
