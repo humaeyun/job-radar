@@ -1,5 +1,24 @@
 [
   {
+    "id": "eed0bbce",
+    "agency": "Thrivas",
+    "title": "Part Time Data Entry Clerk (Remote)",
+    "category": "Data Entry",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "maybe",
+    "equipment": [],
+    "pay": "$20/hr",
+    "payMin": 20,
+    "payMax": 20,
+    "employment": "Part-time",
+    "location": "Plantation, FL · Remote",
+    "source": "Sitemap",
+    "url": "https://www.thrivas.com/job/part-time-data-entry-clerk-remote-69/",
+    "postedAt": null,
+    "firstSeen": "2026-10-23T05:07:55.784Z"
+  },
+  {
     "id": "304b7d1a",
     "agency": "Medallion",
     "title": "Customer Support Specialist",
@@ -8794,25 +8813,6 @@
     "url": "https://careers.jacobsononline.com/job/workers-compensation-adjuster-medical-only-claims-west-virginiawork-at-home-39847/4a68ec60-bcec-11f1-b265-024201c20d84",
     "postedAt": null,
     "firstSeen": "2026-10-01T20:43:07.502Z"
-  },
-  {
-    "id": "eed0bbad",
-    "agency": "Thrivas",
-    "title": "Part Time Data Entry Clerk (Remote)",
-    "category": "Data Entry",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "maybe",
-    "equipment": [],
-    "pay": "$20/hr",
-    "payMin": 20,
-    "payMax": 20,
-    "employment": "Part-time",
-    "location": "Lake Worth, FL · Remote",
-    "source": "Sitemap",
-    "url": "https://www.thrivas.com/job/part-time-data-entry-clerk-remote-68/",
-    "postedAt": null,
-    "firstSeen": "2026-10-01T08:06:03.632Z"
   },
   {
     "id": "b5498535",
