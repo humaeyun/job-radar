@@ -1,5 +1,24 @@
 [
   {
+    "id": "602fb5f2",
+    "agency": "Thrivas",
+    "title": "Remote Customer Service Representative (Cosmetics Company)",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Tamarac, FL · Remote",
+    "source": "Sitemap",
+    "url": "https://www.thrivas.com/job/remote-customer-service-representative-cosmetics-company-69/",
+    "postedAt": null,
+    "firstSeen": "2026-10-27T07:08:24.903Z"
+  },
+  {
     "id": "d313b5a1",
     "agency": "LaSalle Network",
     "title": "Data Engineer",
@@ -8258,25 +8277,6 @@
     "url": "https://www.barringtonstaffing.com/2026/10/09/admin-assistant-experienced-24-00-25-00-hourly-strong-excel-outlook-northridge-ca/",
     "postedAt": "2026-10-09T09:01:06.000Z",
     "firstSeen": "2026-10-09T15:25:37.088Z"
-  },
-  {
-    "id": "602fb5d1",
-    "agency": "Thrivas",
-    "title": "Remote Customer Service Representative (Cosmetics Company)",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "West Palm Beach, FL · Remote",
-    "source": "Sitemap",
-    "url": "https://www.thrivas.com/job/remote-customer-service-representative-cosmetics-company-68/",
-    "postedAt": null,
-    "firstSeen": "2026-10-09T08:15:22.142Z"
   },
   {
     "id": "83da7576",
