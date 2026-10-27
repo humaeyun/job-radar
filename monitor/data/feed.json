@@ -1,5 +1,24 @@
 [
   {
+    "id": "afd1c64b",
+    "agency": "LaSalle Network",
+    "title": "Outside Sales Representative",
+    "category": "Sales",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/outside-sales-representative-163343/",
+    "postedAt": "2026-10-27T14:59:25.000Z",
+    "firstSeen": "2026-10-27T18:49:43.192Z"
+  },
+  {
     "id": "8ee27e3a",
     "agency": "Green Key Resources",
     "title": "Client Services, Hedge Fund",
@@ -11392,25 +11411,6 @@
     "source": "RSS",
     "url": "https://greenkeyllc.com/job/245226/billing-specialist-3",
     "postedAt": "2026-09-03T16:57:54.000Z",
-    "firstSeen": "2026-09-03T17:25:05.721Z"
-  },
-  {
-    "id": "cf26a69b",
-    "agency": "24 Seven Talent",
-    "title": "Advertising Sales &#038; Media Operations Director",
-    "category": "Customer Service",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://www.24seventalent.com/job/advertising-sales-media-operations-director-515002/",
-    "postedAt": "2026-09-03T17:13:20.000Z",
     "firstSeen": "2026-09-03T17:25:05.721Z"
   }
 ]
