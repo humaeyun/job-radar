@@ -1,5 +1,24 @@
 [
   {
+    "id": "8ee27e3a",
+    "agency": "Green Key Resources",
+    "title": "Client Services, Hedge Fund",
+    "category": "Customer Service",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://greenkeyllc.com/job/256342/client-services-hedge-fund-3",
+    "postedAt": "2026-10-27T08:00:41.000Z",
+    "firstSeen": "2026-10-27T13:26:33.971Z"
+  },
+  {
     "id": "602fb5f2",
     "agency": "Thrivas",
     "title": "Remote Customer Service Representative (Cosmetics Company)",
@@ -11392,25 +11411,6 @@
     "source": "RSS",
     "url": "https://www.24seventalent.com/job/advertising-sales-media-operations-director-515002/",
     "postedAt": "2026-09-03T17:13:20.000Z",
-    "firstSeen": "2026-09-03T17:25:05.721Z"
-  },
-  {
-    "id": "6d38686d",
-    "agency": "CRG",
-    "title": "Overnight POS Help Desk",
-    "category": "Customer Service",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "$30–35/hr",
-    "payMin": 30,
-    "payMax": 35,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://jobs.getcrg.com/jobs/?post_type=job/16705",
-    "postedAt": "2026-09-03T16:22:21.000Z",
     "firstSeen": "2026-09-03T17:25:05.721Z"
   }
 ]
