@@ -1,5 +1,24 @@
 [
   {
+    "id": "d313b5a1",
+    "agency": "LaSalle Network",
+    "title": "Data Engineer",
+    "category": "Data Entry",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$50/hr",
+    "payMin": 50,
+    "payMax": 50,
+    "employment": "Temp-to-hire",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/data-engineer-163281/",
+    "postedAt": "2026-10-26T22:12:06.000Z",
+    "firstSeen": "2026-10-27T01:50:55.716Z"
+  },
+  {
     "id": "ec8975b0",
     "agency": "LaSalle Network",
     "title": "Customer Service Representative (Facilities Administrator)",
@@ -11393,24 +11412,5 @@
     "url": "https://jobs.getcrg.com/jobs/?post_type=job/16705",
     "postedAt": "2026-09-03T16:22:21.000Z",
     "firstSeen": "2026-09-03T17:25:05.721Z"
-  },
-  {
-    "id": "6857aec0",
-    "agency": "24 Seven Talent",
-    "title": "Conference and Meeting Coordinator (freelance, contract)",
-    "category": "Customer Service",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "Contract",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://www.24seventalent.com/job/conference-and-meeting-coordinator-freelance-contract-514977/",
-    "postedAt": "2026-09-03T01:01:14.000Z",
-    "firstSeen": "2026-09-03T13:42:29.756Z"
   }
 ]
