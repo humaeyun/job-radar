@@ -1,5 +1,24 @@
 [
   {
+    "id": "8b1226c3",
+    "agency": "Aston Carter",
+    "title": "Crisis Support Representative-Remote",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$23/hr",
+    "payMin": 23,
+    "payMax": 23,
+    "employment": "Temporary",
+    "location": "St. Louis, Missouri",
+    "source": "Sitemap",
+    "url": "https://careers.astoncarter.com/us/en/job/JP-006382459/Crisis-Support-Representative-Remote",
+    "postedAt": null,
+    "firstSeen": "2026-10-29T23:27:03.124Z"
+  },
+  {
     "id": "fa253c66",
     "agency": "Green Key Resources",
     "title": "E-Billing Specialist",
@@ -11389,25 +11408,6 @@
     "location": "Remote",
     "source": "Careers page",
     "url": "https://www.remx.com/jobs/detail/1296116/",
-    "postedAt": null,
-    "firstSeen": "2026-09-06T20:40:18.022Z"
-  },
-  {
-    "id": "fb13e0ed",
-    "agency": "RemX",
-    "title": "$16/Hr. Remote Outbound Medical Records Agents (Must live near Houston or Dallas)",
-    "category": "Medical Records",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "$16/hr",
-    "payMin": 16,
-    "payMax": 16,
-    "employment": "",
-    "location": "Remote",
-    "source": "Careers page",
-    "url": "https://www.remx.com/jobs/detail/1296119/",
     "postedAt": null,
     "firstSeen": "2026-09-06T20:40:18.022Z"
   }
