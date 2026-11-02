@@ -1,5 +1,24 @@
 [
   {
+    "id": "d5eb485b",
+    "agency": "LaSalle Network",
+    "title": "Inpatient Facility Coder",
+    "category": "Medical Records",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$37–40/hr",
+    "payMin": 37,
+    "payMax": 40,
+    "employment": "Temp-to-hire",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/inpatient-facility-coder-163154/",
+    "postedAt": "2026-10-16T19:12:20.000Z",
+    "firstSeen": "2026-11-02T06:33:40.855Z"
+  },
+  {
     "id": "a910817d",
     "agency": "Afni",
     "title": "Remote Customer Service Representative",
@@ -11393,24 +11412,5 @@
     "url": "https://www.thelasallenetwork.com/jobs/hr-admin-coodinator-162774/",
     "postedAt": "2026-09-09T00:10:01.000Z",
     "firstSeen": "2026-09-09T01:24:27.972Z"
-  },
-  {
-    "id": "775e9970",
-    "agency": "LaSalle Network",
-    "title": "Senior Recruiter &#8211; Engineering &#038; Supply Chain",
-    "category": "Customer Service",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://www.thelasallenetwork.com/jobs/senior-recruiter-engineering-supply-chain-162775/",
-    "postedAt": "2026-09-08T21:10:04.000Z",
-    "firstSeen": "2026-09-08T23:29:21.503Z"
   }
 ]
