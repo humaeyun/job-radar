@@ -1,5 +1,24 @@
 [
   {
+    "id": "f2f1aad2",
+    "agency": "RemX",
+    "title": "Work from Home Dental Eligibility Specialist-Oakland CA",
+    "category": "Medical Records",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "Careers page",
+    "url": "https://www.remx.com/jobs/detail/1300213/",
+    "postedAt": null,
+    "firstSeen": "2026-11-03T04:48:48.640Z"
+  },
+  {
     "id": "baec3c9f",
     "agency": "Green Key Resources",
     "title": "Mental Health Clinician",
@@ -11393,24 +11412,5 @@
     "url": "https://www.24seventalent.com/job/implementation-consultant-515217/",
     "postedAt": "2026-09-09T22:48:52.000Z",
     "firstSeen": "2026-09-09T23:43:21.498Z"
-  },
-  {
-    "id": "faa00f24",
-    "agency": "Doherty Staffing Solutions",
-    "title": "Medical Billing Collections Fully Remote",
-    "category": "Sales",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "St Paul Minnesota",
-    "source": "Haley",
-    "url": "http://jobs.doherty.com/jb/Medical-Billing-Collections-Fully-Remote-Jobs-in-St-Paul-Minnesota/14301221",
-    "postedAt": null,
-    "firstSeen": "2026-09-09T18:58:14.758Z"
   }
 ]
