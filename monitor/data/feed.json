@@ -1,5 +1,24 @@
 [
   {
+    "id": "1dddea8",
+    "agency": "CRG",
+    "title": "Senior Billing Coordinator | Logistics & Transportation",
+    "category": "Customer Service",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$28/hr",
+    "payMin": 28,
+    "payMax": 28,
+    "employment": "Temp-to-hire",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://jobs.getcrg.com/jobs/?post_type=job/16843",
+    "postedAt": "2026-11-04T20:37:36.000Z",
+    "firstSeen": "2026-11-04T21:06:04.775Z"
+  },
+  {
     "id": "d96ad6b3",
     "agency": "LaSalle Network",
     "title": "Senior Manager, Marketing Automation &#038; Analytics",
@@ -11392,25 +11411,6 @@
     "source": "RSS",
     "url": "https://www.thelasallenetwork.com/jobs/broker-operations-specialist-162824/",
     "postedAt": "2026-09-10T14:42:14.000Z",
-    "firstSeen": "2026-09-10T16:34:23.877Z"
-  },
-  {
-    "id": "30005454",
-    "agency": "Medix",
-    "title": "REMOTE A/R Representative",
-    "category": "Medical Records",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Avon",
-    "source": "Sitemap",
-    "url": "https://jobs.medixteam.com/jobs/258190/remote-ar-representative-avon",
-    "postedAt": null,
     "firstSeen": "2026-09-10T16:34:23.877Z"
   }
 ]
