@@ -1,5 +1,24 @@
 [
   {
+    "id": "d96ad6b3",
+    "agency": "LaSalle Network",
+    "title": "Senior Manager, Marketing Automation &#038; Analytics",
+    "category": "Sales",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/senior-manager-marketing-automation-analytics-163454/",
+    "postedAt": "2026-11-04T00:36:21.000Z",
+    "firstSeen": "2026-11-04T06:47:49.446Z"
+  },
+  {
     "id": "d8b33026",
     "agency": "LaSalle Network",
     "title": "Senior Collections Specialist",
@@ -11393,24 +11412,5 @@
     "url": "https://jobs.medixteam.com/jobs/258190/remote-ar-representative-avon",
     "postedAt": null,
     "firstSeen": "2026-09-10T16:34:23.877Z"
-  },
-  {
-    "id": "c56b14ba",
-    "agency": "24 Seven Talent",
-    "title": "CRM Implementation Onboarding Specialist",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://www.24seventalent.com/job/crm-implementation-onboarding-specialist-515221/",
-    "postedAt": "2026-09-09T23:12:10.000Z",
-    "firstSeen": "2026-09-09T23:43:21.498Z"
   }
 ]
