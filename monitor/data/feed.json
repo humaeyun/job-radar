@@ -1,5 +1,24 @@
 [
   {
+    "id": "cc393105",
+    "agency": "Green Key Resources",
+    "title": "Legal Billing &#038; Collections Specialist",
+    "category": "Sales",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://greenkeyllc.com/job/258346/legal-billing-collections-specialist",
+    "postedAt": "2026-11-05T15:42:31.000Z",
+    "firstSeen": "2026-11-05T16:59:38.331Z"
+  },
+  {
     "id": "3bc549aa",
     "agency": "The Jacobson Group",
     "title": "Medicaid Eligibility Specialist",
@@ -11393,24 +11412,5 @@
     "url": "https://www.24seventalent.com/job/assistant-product-line-manager-for-merch-515192/",
     "postedAt": "2026-09-09T18:46:03.000Z",
     "firstSeen": "2026-09-10T21:43:28.120Z"
-  },
-  {
-    "id": "6903e077",
-    "agency": "Green Key Resources",
-    "title": "Outbound Sales Associate, Alternative Distribution",
-    "category": "Call Center",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://greenkeyllc.com/job/246743/outbound-sales-associate-alternative-distribution",
-    "postedAt": "2026-09-10T16:25:42.000Z",
-    "firstSeen": "2026-09-10T16:34:23.877Z"
   }
 ]
