@@ -1,5 +1,24 @@
 [
   {
+    "id": "54d75ba7",
+    "agency": "LaSalle Network",
+    "title": "Senior Human Resources Manager",
+    "category": "Medical Records",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/senior-human-resources-manager-163502/",
+    "postedAt": "2026-11-09T18:42:17.000Z",
+    "firstSeen": "2026-11-10T00:46:39.464Z"
+  },
+  {
     "id": "713bd428",
     "agency": "Thrivas",
     "title": "Remote Data Entry Clerk (Help Desk Support)",
@@ -11389,25 +11408,6 @@
     "location": "Remote",
     "source": "Careers page",
     "url": "https://www.remx.com/jobs/detail/1296639/",
-    "postedAt": null,
-    "firstSeen": "2026-09-14T19:53:47.142Z"
-  },
-  {
-    "id": "95c6e43c",
-    "agency": "RemX",
-    "title": "$17/Hr. REMOTE INSURANCE VERIFICATION SPECIALIST – WORK FROM HOME",
-    "category": "Medical Records",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "$17/hr",
-    "payMin": 17,
-    "payMax": 17,
-    "employment": "",
-    "location": "Remote",
-    "source": "Careers page",
-    "url": "https://www.remx.com/jobs/detail/1296636/",
     "postedAt": null,
     "firstSeen": "2026-09-14T19:53:47.142Z"
   }
