@@ -1,5 +1,24 @@
 [
   {
+    "id": "2dce19b8",
+    "agency": "Virtual Assist USA",
+    "title": "Small Business KPIs: The Weekly Numbers Worth Tracking",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "Contract",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.virtualassistusa.com/blog/small-business-kpis/",
+    "postedAt": "2026-11-10T13:59:40.000Z",
+    "firstSeen": "2026-11-10T15:59:50.676Z"
+  },
+  {
     "id": "776e62e8",
     "agency": "LaSalle Network",
     "title": "Senior Recruiter &#8211; Engineering &#038; Supply Chain",
@@ -11389,25 +11408,6 @@
     "location": "Remote",
     "source": "Careers page",
     "url": "https://www.remx.com/jobs/detail/1296655/",
-    "postedAt": null,
-    "firstSeen": "2026-09-14T19:53:47.142Z"
-  },
-  {
-    "id": "6fcfc07d",
-    "agency": "RemX",
-    "title": "$17/hr. Work From Home Healthcare Prior Authorization Specialist",
-    "category": "Medical Records",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "likely",
-    "equipment": [],
-    "pay": "$17/hr",
-    "payMin": 17,
-    "payMax": 17,
-    "employment": "",
-    "location": "Remote",
-    "source": "Careers page",
-    "url": "https://www.remx.com/jobs/detail/1296651/",
     "postedAt": null,
     "firstSeen": "2026-09-14T19:53:47.142Z"
   }
