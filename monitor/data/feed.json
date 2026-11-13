@@ -1,5 +1,24 @@
 [
   {
+    "id": "f82b5071",
+    "agency": "LaSalle Network",
+    "title": "DTC UI Designer (Contract)",
+    "category": "Data Entry",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "$50–60/hr",
+    "payMin": 50,
+    "payMax": 60,
+    "employment": "Contract",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.thelasallenetwork.com/jobs/dtc-ui-designer-contract-163509/",
+    "postedAt": "2026-11-12T21:22:26.000Z",
+    "firstSeen": "2026-11-13T01:17:29.017Z"
+  },
+  {
     "id": "16bfb0a5",
     "agency": "Green Key Resources",
     "title": "Public Accounting Audit And Tax Managers",
@@ -11389,24 +11408,5 @@
     "url": "https://www.thelasallenetwork.com/jobs/level-2-it-support-162821/",
     "postedAt": "2026-09-16T19:07:14.000Z",
     "firstSeen": "2026-09-16T21:57:30.665Z"
-  },
-  {
-    "id": "1a2e98e",
-    "agency": "The Jacobson Group",
-    "title": "Commercial Auto Liability Claims Examiner",
-    "category": "Customer Service",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "Sitemap",
-    "url": "https://careers.jacobsononline.com/job/commercial-auto-liability-claims-examiner-claims-work-at-home-39827/cc815c7d-b117-11f1-9a74-024201c20d84",
-    "postedAt": null,
-    "firstSeen": "2026-09-16T18:59:20.038Z"
   }
 ]
