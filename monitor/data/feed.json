@@ -1,5 +1,24 @@
 [
   {
+    "id": "eed0bee6",
+    "agency": "Thrivas",
+    "title": "Part Time Data Entry Clerk (Remote)",
+    "category": "Data Entry",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "maybe",
+    "equipment": [],
+    "pay": "$20/hr",
+    "payMin": 20,
+    "payMax": 20,
+    "employment": "Part-time",
+    "location": "Miami, FL · Remote",
+    "source": "Sitemap",
+    "url": "https://www.thrivas.com/job/part-time-data-entry-clerk-remote-70/",
+    "postedAt": null,
+    "firstSeen": "2026-11-14T09:40:54.607Z"
+  },
+  {
     "id": "2a12ecbd",
     "agency": "Dawson",
     "title": "Customer Service Representative",
@@ -8415,25 +8434,6 @@
     "url": "https://careers.astoncarter.com/us/en/job/JP-006365896/Virtual-Assistant-Real-Estate",
     "postedAt": null,
     "firstSeen": "2026-10-23T19:24:00.719Z"
-  },
-  {
-    "id": "eed0bbce",
-    "agency": "Thrivas",
-    "title": "Part Time Data Entry Clerk (Remote)",
-    "category": "Data Entry",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "maybe",
-    "equipment": [],
-    "pay": "$20/hr",
-    "payMin": 20,
-    "payMax": 20,
-    "employment": "Part-time",
-    "location": "Plantation, FL · Remote",
-    "source": "Sitemap",
-    "url": "https://www.thrivas.com/job/part-time-data-entry-clerk-remote-69/",
-    "postedAt": null,
-    "firstSeen": "2026-10-23T05:07:55.784Z"
   },
   {
     "id": "70329b62",
