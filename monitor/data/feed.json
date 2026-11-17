@@ -1,5 +1,24 @@
 [
   {
+    "id": "9cf16dda",
+    "agency": "LaSalle Network",
+    "title": "Procurement Specialist",
+    "category": "Medical Records",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "likely",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "Contract",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://lasalleintel.com/jobs/procurement-specialist-163613/",
+    "postedAt": "2026-11-17T15:16:08.000Z",
+    "firstSeen": "2026-11-17T18:00:22.382Z"
+  },
+  {
     "id": "891819ca",
     "agency": "Thrivas",
     "title": "Call Center Customer Service Specialist (Remote)",
@@ -11382,25 +11401,6 @@
     "source": "RSS",
     "url": "https://www.24seventalent.com/job/denim-designer-515537/",
     "postedAt": "2026-09-17T00:02:40.000Z",
-    "firstSeen": "2026-09-18T17:45:06.069Z"
-  },
-  {
-    "id": "ee99c552",
-    "agency": "Medix",
-    "title": "Healthcare Benefit Verification Team Lead – Remote",
-    "category": "Call Center",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "maybe",
-    "equipment": [],
-    "pay": "$21/hr",
-    "payMin": 21,
-    "payMax": 21,
-    "employment": "Seasonal",
-    "location": "Colony",
-    "source": "Sitemap",
-    "url": "https://jobs.medixteam.com/jobs/258540/healthcare-benefit-verification-team-lead-remote-colony",
-    "postedAt": null,
     "firstSeen": "2026-09-18T17:45:06.069Z"
   }
 ]
