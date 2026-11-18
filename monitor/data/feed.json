@@ -1,5 +1,24 @@
 [
   {
+    "id": "bd4426c8",
+    "agency": "LaSalle Network",
+    "title": "Customer Service Representative",
+    "category": "Customer Service",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://lasalleintel.com/jobs/customer-service-representative-163625/",
+    "postedAt": "2026-11-18T15:22:28.000Z",
+    "firstSeen": "2026-11-18T17:42:18.346Z"
+  },
+  {
     "id": "9cf16dda",
     "agency": "LaSalle Network",
     "title": "Procurement Specialist",
@@ -11383,24 +11402,5 @@
     "url": "https://careers.dahlconsulting.com/jb/Enrollment-Experience-Specialist-Jobs-in-Remote-Minnesota/14319470",
     "postedAt": null,
     "firstSeen": "2026-09-18T20:13:56.901Z"
-  },
-  {
-    "id": "698a252e",
-    "agency": "24 Seven Talent",
-    "title": "Denim Designer",
-    "category": "Sales",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "maybe",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "Seasonal",
-    "location": "New York, NY Onsite 4 days wfh Friday",
-    "source": "RSS",
-    "url": "https://www.24seventalent.com/job/denim-designer-515537/",
-    "postedAt": "2026-09-17T00:02:40.000Z",
-    "firstSeen": "2026-09-18T17:45:06.069Z"
   }
 ]
