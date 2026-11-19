@@ -1,5 +1,24 @@
 [
   {
+    "id": "496b1610",
+    "agency": "Aston Carter",
+    "title": "HR Call Center Representative *REMOTE",
+    "category": "Call Center",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Las Vegas, Nevada",
+    "source": "Sitemap",
+    "url": "https://careers.astoncarter.com/us/en/job/JP-006431000/HR-Call-Center-Representative-REMOTE",
+    "postedAt": null,
+    "firstSeen": "2026-11-19T14:35:05.189Z"
+  },
+  {
     "id": "c2af3633",
     "agency": "Green Key Resources",
     "title": "Talent Acquisition Coordinator",
@@ -11383,24 +11402,5 @@
     "url": "https://www.spherion.com/jobs/bilingual-spanishenglish-workfromhome-inbound-support_spanish-fork_47468567/",
     "postedAt": "2026-09-18T22:18:11.000Z",
     "firstSeen": "2026-09-19T13:36:54.163Z"
-  },
-  {
-    "id": "25c8e860",
-    "agency": "LaSalle Network",
-    "title": "Billing Specialist",
-    "category": "Customer Service",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://www.thelasallenetwork.com/jobs/billing-specialist-162957/",
-    "postedAt": "2026-09-18T18:59:09.000Z",
-    "firstSeen": "2026-09-18T20:13:56.901Z"
   }
 ]
