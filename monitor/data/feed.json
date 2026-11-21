@@ -1,5 +1,24 @@
 [
   {
+    "id": "5ac76c50",
+    "agency": "Green Key Resources",
+    "title": "Rfp Writer",
+    "category": "Customer Service",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://greenkeyllc.com/job/261998/rfp-writer-2",
+    "postedAt": "2026-11-21T09:00:32.000Z",
+    "firstSeen": "2026-11-21T09:01:01.941Z"
+  },
+  {
     "id": "610c9117",
     "agency": "Green Key Resources",
     "title": "Assistant Client Services Coordinator",
@@ -11387,25 +11406,6 @@
     "source": "RSS",
     "url": "https://greenkeyllc.com/job/249348/cmbs-real-estate-analyst",
     "postedAt": "2026-09-23T16:50:46.000Z",
-    "firstSeen": "2026-09-23T17:37:19.383Z"
-  },
-  {
-    "id": "ef34f326",
-    "agency": "24 Seven Talent",
-    "title": "Freelance Account Director (Agency)",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote Position Summary Our client is seeking an experienced freelance Account D",
-    "source": "RSS",
-    "url": "https://www.24seventalent.com/job/freelance-account-director-agency-515806/",
-    "postedAt": "2026-09-23T03:10:58.000Z",
     "firstSeen": "2026-09-23T17:37:19.383Z"
   }
 ]
