@@ -1,5 +1,24 @@
 [
   {
+    "id": "19e369b2",
+    "agency": "Thrivas",
+    "title": "Insurance Customer Service Representative (Part Time Remote)",
+    "category": "Customer Service",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "maybe",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "Part-time",
+    "location": "Pompano Beach, FL · Remote",
+    "source": "Sitemap",
+    "url": "https://www.thrivas.com/job/insurance-customer-service-representative-part-time-remote-71/",
+    "postedAt": null,
+    "firstSeen": "2026-11-22T09:09:47.974Z"
+  },
+  {
     "id": "5ac76c50",
     "agency": "Green Key Resources",
     "title": "Rfp Writer",
@@ -8134,25 +8153,6 @@
     "source": "RSS",
     "url": "https://greenkeyllc.com/job/257818/program-coordinator-training-3",
     "postedAt": "2026-11-03T09:00:26.000Z",
-    "firstSeen": "2026-11-03T12:32:18.022Z"
-  },
-  {
-    "id": "19e36991",
-    "agency": "Thrivas",
-    "title": "Insurance Customer Service Representative (Part Time Remote)",
-    "category": "Customer Service",
-    "maybeHybrid": false,
-    "byod": false,
-    "byodTier": "maybe",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "Part-time",
-    "location": "Kissimmee, FL · Remote",
-    "source": "Sitemap",
-    "url": "https://www.thrivas.com/job/insurance-customer-service-representative-part-time-remote-70/",
-    "postedAt": null,
     "firstSeen": "2026-11-03T12:32:18.022Z"
   },
   {
