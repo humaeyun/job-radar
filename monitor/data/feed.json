@@ -1,5 +1,24 @@
 [
   {
+    "id": "9330fb5f",
+    "agency": "Green Key Resources",
+    "title": "Fiduciary Administrator",
+    "category": "Customer Service",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://greenkeyllc.com/job/262195/fiduciary-administrator-3",
+    "postedAt": "2026-11-22T20:39:39.000Z",
+    "firstSeen": "2026-11-22T22:38:17.311Z"
+  },
+  {
     "id": "19e369b2",
     "agency": "Thrivas",
     "title": "Insurance Customer Service Representative (Part Time Remote)",
@@ -11387,25 +11406,6 @@
     "source": "RSS",
     "url": "https://greenkeyllc.com/job/249354/sales-assistant",
     "postedAt": "2026-09-23T17:33:42.000Z",
-    "firstSeen": "2026-09-23T17:37:19.383Z"
-  },
-  {
-    "id": "a24694b2",
-    "agency": "Green Key Resources",
-    "title": "Cmbs Real Estate Analyst",
-    "category": "Customer Service",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://greenkeyllc.com/job/249348/cmbs-real-estate-analyst",
-    "postedAt": "2026-09-23T16:50:46.000Z",
     "firstSeen": "2026-09-23T17:37:19.383Z"
   }
 ]
