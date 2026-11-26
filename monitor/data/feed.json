@@ -1,5 +1,24 @@
 [
   {
+    "id": "c7a8eb92",
+    "agency": "Virtual Assist USA",
+    "title": "Virtual Assistant Backup Coverage: Who Steps In",
+    "category": "Sales",
+    "maybeHybrid": false,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://www.virtualassistusa.com/blog/virtual-assistant-backup-coverage/",
+    "postedAt": "2026-11-26T01:44:46.000Z",
+    "firstSeen": "2026-11-26T05:15:33.415Z"
+  },
+  {
     "id": "509dc706",
     "agency": "Green Key Resources",
     "title": "Hr Assistant",
@@ -11388,24 +11407,5 @@
     "url": "https://jobs.getcrg.com/jobs/?post_type=job/16748",
     "postedAt": "2026-09-28T13:32:48.000Z",
     "firstSeen": "2026-09-28T19:55:46.825Z"
-  },
-  {
-    "id": "ef4bf83a",
-    "agency": "Green Key Resources",
-    "title": "Information Technology Support",
-    "category": "Customer Service",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://greenkeyllc.com/job/250211/information-technology-support-3",
-    "postedAt": "2026-09-28T11:00:30.000Z",
-    "firstSeen": "2026-09-28T12:32:28.073Z"
   }
 ]
