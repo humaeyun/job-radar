@@ -1,5 +1,24 @@
 [
   {
+    "id": "75656653",
+    "agency": "Green Key Resources",
+    "title": "Network Engineer",
+    "category": "Customer Service",
+    "maybeHybrid": true,
+    "byod": false,
+    "byodTier": "",
+    "equipment": [],
+    "pay": "",
+    "payMin": null,
+    "payMax": null,
+    "employment": "",
+    "location": "Remote",
+    "source": "RSS",
+    "url": "https://greenkeyllc.com/job/262959/network-engineer",
+    "postedAt": "2026-11-27T09:00:43.000Z",
+    "firstSeen": "2026-11-27T18:36:34.124Z"
+  },
+  {
     "id": "726412e5",
     "agency": "LaSalle Network",
     "title": "Bilingual Customer Service Representative",
@@ -8882,25 +8901,6 @@
     "url": "https://www.virtualassistusa.com/blog/decision-fatigue-business-owners/",
     "postedAt": "2026-10-28T21:46:48.000Z",
     "firstSeen": "2026-10-29T00:07:28.266Z"
-  },
-  {
-    "id": "7cd24937",
-    "agency": "Green Key Resources",
-    "title": "Network Engineer",
-    "category": "Customer Service",
-    "maybeHybrid": true,
-    "byod": false,
-    "byodTier": "",
-    "equipment": [],
-    "pay": "",
-    "payMin": null,
-    "payMax": null,
-    "employment": "",
-    "location": "Remote",
-    "source": "RSS",
-    "url": "https://greenkeyllc.com/job/256797/network-engineer-4",
-    "postedAt": "2026-10-28T17:31:35.000Z",
-    "firstSeen": "2026-10-28T20:00:14.616Z"
   },
   {
     "id": "3224e31c",
